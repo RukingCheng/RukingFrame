@@ -255,6 +255,9 @@ public class DialogActivity extends RKBaseBackActivity {
                         .setDialogChoiceList(
                                 new RKDialogChoiceList(activity)
                                         .setMultiselect(true)
+                                        .setProfile(new RKDialogProfile()
+                                                .setTextColorRes(android.R.color.darker_gray)
+                                                .setItmeColor(Color.parseColor("#ff0000")))
                                         .setChoices(new Choice("打球"),
                                                 new Choice("旅游"),
                                                 new Choice("开车"),

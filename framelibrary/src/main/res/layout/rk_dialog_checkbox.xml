@@ -11,8 +11,8 @@
 
     <ImageView
         android:id="@+id/item_imag"
-        android:layout_width="36px"
-        android:layout_height="36px"
+        android:layout_width="32px"
+        android:layout_height="32px"
         android:layout_marginRight="10px"
         android:contentDescription="@+id/item_imag"
         android:scaleType="fitCenter" />

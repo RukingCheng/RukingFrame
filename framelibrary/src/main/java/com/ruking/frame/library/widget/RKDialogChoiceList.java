@@ -21,9 +21,9 @@ import java.util.List;
 public class RKDialogChoiceList {
     protected final Context context;
     private List<Choice> mChoices;
-    private boolean isRadioIconHide = true;
+    private boolean isRadioIconHide = true;//是否显示Radio
     private RKDialogListener.OnSingleChoiceSelectListener onSingleChoiceSelectListener;
-    private boolean isMultiselect;
+    private boolean isMultiselect;//是否是多选
     private RKDialogProfile profile;
     @DrawableRes
     private int imageIconChecked = R.drawable.rk_radio_checked;
@@ -79,6 +79,12 @@ public class RKDialogChoiceList {
 
     public RKDialogChoiceList setMultiselect(boolean multiselect) {
         isMultiselect = multiselect;
+        if (multiselect) {
+            if (imageIconChecked == R.drawable.rk_radio_checked)
+                imageIconChecked = R.drawable.rk_choose_normal;
+            if (imageIconNormal == R.drawable.rk_radio_normal)
+                imageIconNormal = R.drawable.rk_choose_checked;
+        }
         return this;
     }
 

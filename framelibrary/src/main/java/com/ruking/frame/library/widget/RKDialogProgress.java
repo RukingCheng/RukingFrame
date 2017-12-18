@@ -15,6 +15,7 @@ import android.widget.TextView;
 
 import com.ruking.frame.library.R;
 import com.wang.avi.AVLoadingIndicatorView;
+import com.wang.avi.Indicator;
 
 import me.zhanghai.android.materialprogressbar.HorizontalProgressDrawable;
 import me.zhanghai.android.materialprogressbar.IndeterminateHorizontalProgressDrawable;
@@ -70,9 +71,15 @@ public class RKDialogProgress {
         return type;
     }
 
-    public RKDialogProgress setIndicator(String indicatorName) {
+    public RKDialogProgress setIndicator(@NonNull String indicatorName) {
         if (progressView instanceof AVLoadingIndicatorView)
             ((AVLoadingIndicatorView) progressView).setIndicator(indicatorName);
+        return this;
+    }
+
+    public RKDialogProgress setIndicator(@NonNull Indicator d) {
+        if (progressView instanceof AVLoadingIndicatorView)
+            ((AVLoadingIndicatorView) progressView).setIndicator(d);
         return this;
     }
 
