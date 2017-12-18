@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ruking.frame.library.view.animation.RKElasticScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:ignore="PxUsage,HardcodedText">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <com.ruking.frame.library.view.animation.RKAnimationButton
+            android:id="@+id/but_01"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="80px"
+            android:layout_margin="20px"
+            android:background="#abc"
+            android:text="一个按钮对话框"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+            android:textSize="30px"
+            app:round_corner="20px"
+            app:stroke_color="#cba"
+            app:stroke_width="2px" />
+
+        <com.ruking.frame.library.view.animation.RKAnimationButton
+            android:id="@+id/but_02"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="80px"
+            android:layout_marginBottom="20px"
+            android:layout_marginLeft="20px"
+            android:layout_marginRight="20px"
+            android:background="#abc"
+            android:text="两个按钮对话框"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+            android:textSize="30px"
+            app:round_corner="20px"
+            app:stroke_color="#cba"
+            app:stroke_width="2px" />
+
+        <com.ruking.frame.library.view.animation.RKAnimationButton
+            android:id="@+id/but_03"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="80px"
+            android:layout_marginBottom="20px"
+            android:layout_marginLeft="20px"
+            android:layout_marginRight="20px"
+            android:background="#abc"
+            android:text="底部弹出三个按钮对话框"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+            android:textSize="30px"
+            app:round_corner="20px"
+            app:stroke_color="#cba"
+            app:stroke_width="2px" />
+
+        <com.ruking.frame.library.view.animation.RKAnimationButton
+            android:id="@+id/but_04"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="80px"
+            android:layout_marginBottom="20px"
+            android:layout_marginLeft="20px"
+            android:layout_marginRight="20px"
+            android:background="#abc"
+            android:text="有一个选择项的对话框"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+            android:textSize="30px"
+            app:round_corner="20px"
+            app:stroke_color="#cba"
+            app:stroke_width="2px" />
+
+        <com.ruking.frame.library.view.animation.RKAnimationButton
+            android:id="@+id/but_05"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="80px"
+            android:layout_marginBottom="20px"
+            android:layout_marginLeft="20px"
+            android:layout_marginRight="20px"
+            android:background="#abc"
+            android:text="加载进度条对话框"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+            android:textSize="30px"
+            app:round_corner="20px"
+            app:stroke_color="#cba"
+            app:stroke_width="2px" />
+
+        <com.ruking.frame.library.view.animation.RKAnimationButton
+            android:id="@+id/but_06"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="80px"
+            android:layout_marginBottom="20px"
+            android:layout_marginLeft="20px"
+            android:layout_marginRight="20px"
+            android:background="#abc"
+            android:text="AVLoading加载对话框"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+            android:textSize="30px"
+            app:round_corner="20px"
+            app:stroke_color="#cba"
+            app:stroke_width="2px" />
+
+        <com.ruking.frame.library.view.animation.RKAnimationButton
+            android:id="@+id/but_07"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="80px"
+            android:layout_marginBottom="20px"
+            android:layout_marginLeft="20px"
+            android:layout_marginRight="20px"
+            android:background="#abc"
+            android:text="横向加载对话框"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+            android:textSize="30px"
+            app:round_corner="20px"
+            app:stroke_color="#cba"
+            app:stroke_width="2px" />
+
+        <com.ruking.frame.library.view.animation.RKAnimationButton
+            android:id="@+id/but_08"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="80px"
+            android:layout_marginBottom="20px"
+            android:layout_marginLeft="20px"
+            android:layout_marginRight="20px"
+            android:background="#abc"
+            android:text="选择列表对话框"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+            android:textSize="30px"
+            app:round_corner="20px"
+            app:stroke_color="#cba"
+            app:stroke_width="2px" />
+
+        <com.ruking.frame.library.view.animation.RKAnimationButton
+            android:id="@+id/but_09"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="80px"
+            android:layout_marginBottom="20px"
+            android:layout_marginLeft="20px"
+            android:layout_marginRight="20px"
+            android:background="#abc"
+            android:text="单选列表对话框"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+            android:textSize="30px"
+            app:round_corner="20px"
+            app:stroke_color="#cba"
+            app:stroke_width="2px" />
+
+        <com.ruking.frame.library.view.animation.RKAnimationButton
+            android:id="@+id/but_10"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="80px"
+            android:layout_marginBottom="20px"
+            android:layout_marginLeft="20px"
+            android:layout_marginRight="20px"
+            android:background="#abc"
+            android:text="对选列表对话框"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+            android:textSize="30px"
+            app:round_corner="20px"
+            app:stroke_color="#cba"
+            app:stroke_width="2px" />
+
+        <com.ruking.frame.library.view.animation.RKAnimationButton
+            android:id="@+id/but_11"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="80px"
+            android:layout_marginBottom="20px"
+            android:layout_marginLeft="20px"
+            android:layout_marginRight="20px"
+            android:background="#abc"
+            android:text="自定义视图对话框"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+            android:textSize="30px"
+            app:round_corner="20px"
+            app:stroke_color="#cba"
+            app:stroke_width="2px" />
+
+    </LinearLayout>
+</com.ruking.frame.library.view.animation.RKElasticScrollView>

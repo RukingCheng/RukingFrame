@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="rkframe"><attr format="boolean" name="round_as_circle"/><attr format="boolean" name="animati_oneffect"/><attr format="boolean" name="onclickable"/><attr format="integer|dimension" name="round_corner"/><attr format="integer|dimension" name="round_corner_top_left"/><attr format="integer|dimension" name="round_corner_top_right"/><attr format="integer|dimension" name="round_corner_bottom_left"/><attr format="integer|dimension" name="round_corner_bottom_right"/><attr format="color|reference" name="stroke_color"/><attr format="integer|dimension" name="stroke_width"/><attr format="integer" name="progress"/><attr format="integer" name="maxProgress"/><attr format="integer|dimension" name="progressTextSize"/><attr format="color|reference" name="progressColor"/><attr format="string|reference" name="companyText"/><attr format="color|reference" name="companyColor"/><attr format="integer|dimension" name="companySize"/><attr format="string|reference" name="bottomText"/><attr format="color|reference" name="bottomTextColor"/><attr format="integer|dimension" name="bottomTextSize"/><attr format="color|reference" name="upColor"/><attr format="color|reference" name="downColor"/></declare-styleable>
+    <style name="RKAnimationDialogStyle" parent="RKDialogStyle">
+        <item name="@android:windowEnterAnimation">@anim/bottom_in</item>
+        <item name="@android:windowExitAnimation">@anim/bottom_out</item>
+    </style>
+    <style name="RKDialogStyle" parent="Animation.AppCompat.Dialog">
+        <item name="@android:windowEnterAnimation">@anim/fade_in</item>
+        <item name="@android:windowExitAnimation">@anim/fade_out</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+    <style name="ThemeTranslucentActivity" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+</resources>

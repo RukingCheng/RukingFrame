@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="rkframe">
+        <!--圆形-->
+        <attr name="round_as_circle" format="boolean" />
+        <!--是否执行点击动画-->
+        <attr name="animati_oneffect" format="boolean" />
+        <!--是否可点击-->
+        <attr name="onclickable" format="boolean" />
+        <!--全部圆角半径-->
+        <attr name="round_corner" format="integer|dimension" />
+        <!--针对各个角的半径-->
+        <attr name="round_corner_top_left" format="integer|dimension" />
+        <attr name="round_corner_top_right" format="integer|dimension" />
+        <attr name="round_corner_bottom_left" format="integer|dimension" />
+        <attr name="round_corner_bottom_right" format="integer|dimension" />
+        <!--描边颜色／半径-->
+        <attr name="stroke_color" format="color|reference" />
+        <attr name="stroke_width" format="integer|dimension" />
+        <!--波浪进度球的特质样式-->
+        <!-- 进度-->
+        <attr name="progress" format="integer" />
+        <!--最大进度-->
+        <attr name="maxProgress" format="integer" />
+        <!--显示进度条字体大小-->
+        <attr name="progressTextSize" format="integer|dimension" />
+        <!--进度条文字颜色-->
+        <attr name="progressColor" format="color|reference" />
+        <!--单位-->
+        <attr name="companyText" format="string|reference" />
+        <!--单位文字颜色-->
+        <attr name="companyColor" format="color|reference" />
+        <!--单位文字大小-->
+        <attr name="companySize" format="integer|dimension" />
+        <!--底部描述文字-->
+        <attr name="bottomText" format="string|reference" />
+        <!--底部描述文字颜色-->
+        <attr name="bottomTextColor" format="color|reference" />
+        <!--底部描述文字大小-->
+        <attr name="bottomTextSize" format="integer|dimension" />
+        <!--进度条上面的颜色-->
+        <attr name="upColor" format="color|reference" />
+        <!--进度条下面颜色-->
+        <attr name="downColor" format="color|reference" />
+    </declare-styleable>
+</resources>

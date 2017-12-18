@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.ruking.frame.sdk_demo">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".MainActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/app_name"
+            android:launchMode="standard"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustResize|stateHidden">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".TransitionModeActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:launchMode="standard"
+            android:theme="@style/ThemeTranslucentActivity.AppTheme"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <!--android:screenOrientation="portrait"-->
+        <activity
+            android:name=".ElasticScrollActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:launchMode="standard"
+            android:theme="@style/ThemeTranslucentActivity.AppTheme"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".BusinessCaptureActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:launchMode="standard"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".DialogActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:launchMode="standard"
+            android:theme="@style/ThemeTranslucentActivity.AppTheme"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+
+        <meta-data
+            android:name="design_width"
+            android:value="750" />
+        <meta-data
+            android:name="design_height"
+            android:value="1280" />
+    </application>
+
+</manifest>

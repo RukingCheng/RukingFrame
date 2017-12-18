@@ -1,0 +1,838 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/whole_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:orientation="vertical"
+    tools:ignore="TooManyViews,PxUsage,HardcodedText,ObsoleteLayoutParam,ContentDescription">
+
+    <com.ruking.frame.library.view.animation.RKElasticScrollView
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginTop="-600px"
+        android:overScrollMode="never"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="900px">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentBottom="true"
+                    android:contentDescription="@string/app_name"
+                    android:scaleType="fitEnd"
+                    android:src="@drawable/test" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/color_e0e25f43" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="280px"
+                    android:layout_alignParentBottom="true"
+                    android:gravity="center">
+
+                    <com.ruking.frame.library.view.animation.RKAnimationImageView
+                        android:layout_width="180px"
+                        android:layout_height="180px"
+                        android:padding="6px"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/test"
+                        app:round_as_circle="true"
+                        app:round_corner_bottom_right="0px"
+                        app:stroke_color="#E39E83"
+                        app:stroke_width="4px" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="60px"
+                android:layout_alignParentBottom="true"
+                android:background="#e0000000"
+                android:gravity="center"
+                android:text="RKAnimationButton"
+                android:textColor="@android:color/white"
+                android:textSize="32px" />
+
+            <com.ruking.frame.library.view.custom.RKFlowLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.ruking.frame.library.view.animation.RKAnimationButton
+                    android:id="@+id/but_01"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_width="120px"
+                    android:layout_height="120px"
+                    android:layout_margin="20px"
+                    android:background="#55BB22"
+                    android:text="1"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/white"
+                    android:textSize="30px"
+                    app:round_corner="40px"
+                    app:round_corner_top_left="0px"
+                    app:stroke_color="#e00"
+                    app:stroke_width="2px" />
+
+                <com.ruking.frame.library.view.animation.RKAnimationButton
+                    android:id="@+id/but_02"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_width="120px"
+                    android:layout_height="120px"
+                    android:layout_margin="20px"
+                    android:background="#55BB22"
+                    android:text="2"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/white"
+                    android:textSize="30px"
+                    app:round_corner="40px"
+                    app:round_corner_top_right="0px"
+                    app:stroke_color="#e00"
+                    app:stroke_width="2px" />
+
+                <com.ruking.frame.library.view.animation.RKAnimationButton
+                    android:id="@+id/but_03"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_width="120px"
+                    android:layout_height="120px"
+                    android:layout_margin="20px"
+                    android:background="#55BB22"
+                    android:text="3"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/white"
+                    android:textSize="30px"
+                    app:round_corner="40px"
+                    app:round_corner_bottom_left="0px"
+                    app:stroke_color="#e00"
+                    app:stroke_width="2px" />
+
+                <com.ruking.frame.library.view.animation.RKAnimationButton
+                    android:id="@+id/but_04"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_width="120px"
+                    android:layout_height="120px"
+                    android:layout_margin="20px"
+                    android:background="#55BB22"
+                    android:text="4"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/white"
+                    android:textSize="30px"
+                    app:animati_oneffect="false"
+                    app:onclickable="true"
+                    app:round_corner="40px"
+                    app:round_corner_bottom_right="0px"
+                    app:stroke_color="#e00"
+                    app:stroke_width="2px" />
+
+                <com.ruking.frame.library.view.animation.RKAnimationButton
+                    android:id="@+id/but_05"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_width="120px"
+                    android:layout_height="120px"
+                    android:layout_margin="20px"
+                    android:background="#55BB22"
+                    android:text="5"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/white"
+                    android:textSize="30px"
+                    app:animati_oneffect="true"
+                    app:onclickable="true"
+                    app:round_corner="40px"
+                    app:stroke_color="#e00"
+                    app:stroke_width="2px" />
+
+                <com.ruking.frame.library.view.animation.RKAnimationButton
+                    android:id="@+id/but_06"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_width="120px"
+                    android:layout_height="120px"
+                    android:layout_margin="20px"
+                    android:background="#55BB22"
+                    android:text="6"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/white"
+                    android:textSize="30px"
+                    app:round_as_circle="true"
+                    app:stroke_color="#e00"
+                    app:stroke_width="2px" />
+            </com.ruking.frame.library.view.custom.RKFlowLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="60px"
+                android:layout_alignParentBottom="true"
+                android:background="#e0000000"
+                android:gravity="center"
+                android:text="RKAnimationLinearLayout"
+                android:textColor="@android:color/white"
+                android:textSize="32px" />
+
+            <com.ruking.frame.library.view.custom.RKFlowLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.ruking.frame.library.view.animation.RKAnimationLinearLayout
+                    android:id="@+id/ll_01"
+                    android:layout_width="120px"
+                    android:layout_height="120px"
+                    android:layout_margin="20px"
+                    android:background="#e25f43"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    app:round_corner="40px"
+                    app:round_corner_top_left="0px"
+                    app:stroke_color="#E39E83"
+                    app:stroke_width="2px">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="60px"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/test" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentBottom="true"
+                        android:background="#90000000"
+                        android:gravity="center"
+                        android:text="1"
+                        android:textColor="@android:color/white"
+                        android:textSize="32px" />
+                </com.ruking.frame.library.view.animation.RKAnimationLinearLayout>
+
+                <com.ruking.frame.library.view.animation.RKAnimationLinearLayout
+                    android:id="@+id/ll_02"
+                    android:layout_width="120px"
+                    android:layout_height="120px"
+                    android:layout_margin="20px"
+                    android:background="#e25f43"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    app:round_corner="40px"
+                    app:round_corner_top_right="0px"
+                    app:stroke_color="#E39E83"
+                    app:stroke_width="2px">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="60px"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/test" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentBottom="true"
+                        android:background="#90000000"
+                        android:gravity="center"
+                        android:text="2"
+                        android:textColor="@android:color/white"
+                        android:textSize="32px" />
+                </com.ruking.frame.library.view.animation.RKAnimationLinearLayout>
+
+                <com.ruking.frame.library.view.animation.RKAnimationLinearLayout
+                    android:id="@+id/ll_03"
+                    android:layout_width="120px"
+                    android:layout_height="120px"
+                    android:layout_margin="20px"
+                    android:background="#e25f43"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    app:round_corner="40px"
+                    app:round_corner_bottom_left="0px"
+                    app:stroke_color="#E39E83"
+                    app:stroke_width="2px">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="60px"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/test" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentBottom="true"
+                        android:background="#90000000"
+                        android:gravity="center"
+                        android:text="3"
+                        android:textColor="@android:color/white"
+                        android:textSize="32px" />
+                </com.ruking.frame.library.view.animation.RKAnimationLinearLayout>
+
+                <com.ruking.frame.library.view.animation.RKAnimationLinearLayout
+                    android:id="@+id/ll_04"
+                    android:layout_width="120px"
+                    android:layout_height="120px"
+                    android:layout_margin="20px"
+                    android:background="#e25f43"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    app:round_corner="40px"
+                    app:round_corner_bottom_right="0px"
+                    app:stroke_color="#E39E83"
+                    app:stroke_width="2px">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="60px"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/test" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentBottom="true"
+                        android:background="#90000000"
+                        android:gravity="center"
+                        android:text="4"
+                        android:textColor="@android:color/white"
+                        android:textSize="32px" />
+                </com.ruking.frame.library.view.animation.RKAnimationLinearLayout>
+
+                <com.ruking.frame.library.view.animation.RKAnimationLinearLayout
+                    android:id="@+id/ll_05"
+                    android:layout_width="120px"
+                    android:layout_height="120px"
+                    android:layout_margin="20px"
+                    android:background="#e25f43"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    app:round_corner="40px"
+                    app:stroke_color="#E39E83"
+                    app:stroke_width="2px">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="60px"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/test" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentBottom="true"
+                        android:background="#90000000"
+                        android:gravity="center"
+                        android:text="5"
+                        android:textColor="@android:color/white"
+                        android:textSize="32px" />
+                </com.ruking.frame.library.view.animation.RKAnimationLinearLayout>
+
+                <com.ruking.frame.library.view.animation.RKAnimationLinearLayout
+                    android:layout_width="120px"
+                    android:layout_height="120px"
+                    android:layout_margin="20px"
+                    android:background="#e25f43"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    app:round_as_circle="true"
+                    app:stroke_color="#E39E83"
+                    app:stroke_width="2px">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="60px"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/test" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentBottom="true"
+                        android:background="#90000000"
+                        android:gravity="center"
+                        android:text="6"
+                        android:textColor="@android:color/white"
+                        android:textSize="32px" />
+                </com.ruking.frame.library.view.animation.RKAnimationLinearLayout>
+            </com.ruking.frame.library.view.custom.RKFlowLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="60px"
+                android:layout_alignParentBottom="true"
+                android:background="#e0000000"
+                android:gravity="center"
+                android:text="RKAnimationRelativeLayout"
+                android:textColor="@android:color/white"
+                android:textSize="32px" />
+
+            <com.ruking.frame.library.view.custom.RKFlowLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.ruking.frame.library.view.animation.RKAnimationRelativeLayout
+                    android:layout_width="120px"
+                    android:layout_height="120px"
+                    android:layout_margin="20px"
+                    android:background="#e25f43"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    app:round_corner="40px"
+                    app:round_corner_top_left="0px"
+                    app:stroke_color="#E39E83"
+                    app:stroke_width="2px">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/test" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="60px"
+                        android:layout_alignParentBottom="true"
+                        android:background="#90000000"
+                        android:gravity="center"
+                        android:text="1"
+                        android:textColor="@android:color/white"
+                        android:textSize="32px" />
+                </com.ruking.frame.library.view.animation.RKAnimationRelativeLayout>
+
+                <com.ruking.frame.library.view.animation.RKAnimationRelativeLayout
+                    android:layout_width="120px"
+                    android:layout_height="120px"
+                    android:layout_margin="20px"
+                    android:background="#e25f43"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    app:round_corner="40px"
+                    app:round_corner_top_right="0px"
+                    app:stroke_color="#E39E83"
+                    app:stroke_width="2px">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/test" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="60px"
+                        android:layout_alignParentBottom="true"
+                        android:background="#90000000"
+                        android:gravity="center"
+                        android:text="2"
+                        android:textColor="@android:color/white"
+                        android:textSize="32px" />
+                </com.ruking.frame.library.view.animation.RKAnimationRelativeLayout>
+
+                <com.ruking.frame.library.view.animation.RKAnimationRelativeLayout
+                    android:layout_width="120px"
+                    android:layout_height="120px"
+                    android:layout_margin="20px"
+                    android:background="#e25f43"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    app:round_corner="40px"
+                    app:round_corner_bottom_left="0px"
+                    app:stroke_color="#E39E83"
+                    app:stroke_width="2px">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/test" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="60px"
+                        android:layout_alignParentBottom="true"
+                        android:background="#90000000"
+                        android:gravity="center"
+                        android:text="3"
+                        android:textColor="@android:color/white"
+                        android:textSize="32px" />
+                </com.ruking.frame.library.view.animation.RKAnimationRelativeLayout>
+
+                <com.ruking.frame.library.view.animation.RKAnimationRelativeLayout
+                    android:layout_width="120px"
+                    android:layout_height="120px"
+                    android:layout_margin="20px"
+                    android:background="#e25f43"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    app:round_corner="40px"
+                    app:round_corner_bottom_right="0px"
+                    app:stroke_color="#E39E83"
+                    app:stroke_width="2px">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/test" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="60px"
+                        android:layout_alignParentBottom="true"
+                        android:background="#90000000"
+                        android:gravity="center"
+                        android:text="4"
+                        android:textColor="@android:color/white"
+                        android:textSize="32px" />
+                </com.ruking.frame.library.view.animation.RKAnimationRelativeLayout>
+
+                <com.ruking.frame.library.view.animation.RKAnimationRelativeLayout
+                    android:layout_width="120px"
+                    android:layout_height="120px"
+                    android:layout_margin="20px"
+                    android:background="#e25f43"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    app:round_corner="40px"
+                    app:stroke_color="#E39E83"
+                    app:stroke_width="2px">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/test" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="60px"
+                        android:layout_alignParentBottom="true"
+                        android:background="#90000000"
+                        android:gravity="center"
+                        android:text="5"
+                        android:textColor="@android:color/white"
+                        android:textSize="32px" />
+                </com.ruking.frame.library.view.animation.RKAnimationRelativeLayout>
+
+                <com.ruking.frame.library.view.animation.RKAnimationRelativeLayout
+                    android:layout_width="120px"
+                    android:layout_height="120px"
+                    android:layout_margin="20px"
+                    android:background="#e25f43"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    app:round_as_circle="true"
+                    app:stroke_color="#E39E83"
+                    app:stroke_width="2px">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/test" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="60px"
+                        android:layout_alignParentBottom="true"
+                        android:background="#90000000"
+                        android:gravity="center"
+                        android:text="6"
+                        android:textColor="@android:color/white"
+                        android:textSize="32px" />
+                </com.ruking.frame.library.view.animation.RKAnimationRelativeLayout>
+
+            </com.ruking.frame.library.view.custom.RKFlowLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="60px"
+                android:layout_alignParentBottom="true"
+                android:background="#e0000000"
+                android:gravity="center"
+                android:text="RKAnimationFrameLayout"
+                android:textColor="@android:color/white"
+                android:textSize="32px" />
+
+            <com.ruking.frame.library.view.custom.RKFlowLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.ruking.frame.library.view.animation.RKAnimationFrameLayout
+                    android:layout_width="120px"
+                    android:layout_height="120px"
+                    android:layout_margin="20px"
+                    android:background="#e25f43"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    app:round_corner="40px"
+                    app:round_corner_top_left="0px"
+                    app:stroke_color="#E39E83"
+                    app:stroke_width="2px">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/test" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="60px"
+                        android:layout_alignParentBottom="true"
+                        android:layout_gravity="bottom"
+                        android:background="#90000000"
+                        android:gravity="center"
+                        android:text="1"
+                        android:textColor="@android:color/white"
+                        android:textSize="32px" />
+                </com.ruking.frame.library.view.animation.RKAnimationFrameLayout>
+
+                <com.ruking.frame.library.view.animation.RKAnimationFrameLayout
+                    android:layout_width="120px"
+                    android:layout_height="120px"
+                    android:layout_margin="20px"
+                    android:background="#e25f43"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    app:round_corner="40px"
+                    app:round_corner_top_right="0px"
+                    app:stroke_color="#E39E83"
+                    app:stroke_width="2px">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/test" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="60px"
+                        android:layout_alignParentBottom="true"
+                        android:layout_gravity="bottom"
+                        android:background="#90000000"
+                        android:gravity="center"
+                        android:text="2"
+                        android:textColor="@android:color/white"
+                        android:textSize="32px" />
+                </com.ruking.frame.library.view.animation.RKAnimationFrameLayout>
+
+                <com.ruking.frame.library.view.animation.RKAnimationFrameLayout
+                    android:layout_width="120px"
+                    android:layout_height="120px"
+                    android:layout_margin="20px"
+                    android:background="#e25f43"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    app:round_corner="40px"
+                    app:round_corner_bottom_left="0px"
+                    app:stroke_color="#E39E83"
+                    app:stroke_width="2px">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/test" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="60px"
+                        android:layout_alignParentBottom="true"
+                        android:layout_gravity="bottom"
+                        android:background="#90000000"
+                        android:gravity="center"
+                        android:text="3"
+                        android:textColor="@android:color/white"
+                        android:textSize="32px" />
+                </com.ruking.frame.library.view.animation.RKAnimationFrameLayout>
+
+                <com.ruking.frame.library.view.animation.RKAnimationFrameLayout
+                    android:layout_width="120px"
+                    android:layout_height="120px"
+                    android:layout_margin="20px"
+                    android:background="#e25f43"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    app:round_corner="40px"
+                    app:round_corner_bottom_right="0px"
+                    app:stroke_color="#E39E83"
+                    app:stroke_width="2px">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/test" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="60px"
+                        android:layout_alignParentBottom="true"
+                        android:layout_gravity="bottom"
+                        android:background="#90000000"
+                        android:gravity="center"
+                        android:text="4"
+                        android:textColor="@android:color/white"
+                        android:textSize="32px" />
+                </com.ruking.frame.library.view.animation.RKAnimationFrameLayout>
+
+                <com.ruking.frame.library.view.animation.RKAnimationFrameLayout
+                    android:layout_width="120px"
+                    android:layout_height="120px"
+                    android:layout_margin="20px"
+                    android:background="#e25f43"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    app:round_corner="40px"
+                    app:stroke_color="#E39E83"
+                    app:stroke_width="2px">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/test" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="60px"
+                        android:layout_alignParentBottom="true"
+                        android:layout_gravity="bottom"
+                        android:background="#90000000"
+                        android:gravity="center"
+                        android:text="5"
+                        android:textColor="@android:color/white"
+                        android:textSize="32px" />
+                </com.ruking.frame.library.view.animation.RKAnimationFrameLayout>
+
+                <com.ruking.frame.library.view.animation.RKAnimationFrameLayout
+                    android:layout_width="120px"
+                    android:layout_height="120px"
+                    android:layout_margin="20px"
+                    android:background="#e25f43"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    app:round_as_circle="true"
+                    app:stroke_color="#E39E83"
+                    app:stroke_width="2px">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/test" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="60px"
+                        android:layout_alignParentBottom="true"
+                        android:layout_gravity="bottom"
+                        android:background="#90000000"
+                        android:gravity="center"
+                        android:text="6"
+                        android:textColor="@android:color/white"
+                        android:textSize="32px" />
+                </com.ruking.frame.library.view.animation.RKAnimationFrameLayout>
+
+            </com.ruking.frame.library.view.custom.RKFlowLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="60px"
+                android:layout_alignParentBottom="true"
+                android:background="#e0000000"
+                android:gravity="center"
+                android:text="RKSinkingView"
+                android:textColor="@android:color/white"
+                android:textSize="32px" />
+
+
+            <com.ruking.frame.library.view.animation.RKAnimationFrameLayout
+                android:layout_width="200px"
+                android:layout_height="200px"
+                android:layout_margin="20px"
+                android:gravity="center"
+                android:orientation="vertical"
+                app:round_as_circle="true"
+                app:stroke_color="#E39E83"
+                app:stroke_width="2px">
+
+                <com.ruking.frame.library.view.animation.RKSinkingView
+                    android:id="@+id/q25_view1_sinking"
+                    android:layout_width="200px"
+                    android:layout_height="200px"
+                    android:background="@drawable/test"
+                    app:companyText="%"
+                    app:downColor="#90E39E83"
+                    app:maxProgress="100"
+                    app:progressColor="#f09"
+                    app:progressTextSize="60px"
+                    app:upColor="#90a39E83" />
+            </com.ruking.frame.library.view.animation.RKAnimationFrameLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <com.ruking.frame.library.view.animation.RKAnimationButton
+                    android:id="@+id/but01"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_width="120px"
+                    android:layout_height="120px"
+                    android:layout_margin="20px"
+                    android:background="#55BB22"
+                    android:text="正确率30%"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/white"
+                    android:textSize="20px"
+                    app:round_as_circle="true"
+                    app:stroke_color="#E39E83"
+                    app:stroke_width="2px" />
+
+                <com.ruking.frame.library.view.animation.RKAnimationButton
+                    android:id="@+id/but02"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_width="120px"
+                    android:layout_height="120px"
+                    android:layout_margin="20px"
+                    android:background="#e25f43"
+                    android:text="错误率70%"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/white"
+                    android:textSize="20px"
+                    app:round_as_circle="true"
+                    app:stroke_color="#E39E83"
+                    app:stroke_width="2px" />
+            </LinearLayout>
+
+            <com.ruking.frame.library.view.animation.RKAnimationButton
+                android:id="@+id/back"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="160px"
+                android:layout_height="160px"
+                android:layout_marginBottom="40px"
+                android:layout_marginTop="40px"
+                android:background="#55BB22"
+                android:text="BACK"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white"
+                android:textSize="30px"
+                app:round_as_circle="true"
+                app:round_corner_bottom_right="0px"
+                app:stroke_color="#E39E83"
+                app:stroke_width="10px" />
+        </LinearLayout>
+    </com.ruking.frame.library.view.animation.RKElasticScrollView>
+
+</LinearLayout>
