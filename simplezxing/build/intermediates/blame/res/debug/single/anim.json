@@ -1,5 +1,17 @@
 [
     {
+        "merged": "D:\\Ruking\\RukingFrame\\simplezxing\\build\\intermediates\\res\\merged\\debug\\anim\\top_out.xml",
+        "source": "D:\\Ruking\\RukingFrame\\simplezxing\\build\\intermediates\\exploded-aar\\com.github.RukingCheng\\rukingframelibrary\\unspecified\\res\\anim\\top_out.xml"
+    },
+    {
+        "merged": "D:\\Ruking\\RukingFrame\\simplezxing\\build\\intermediates\\res\\merged\\debug\\anim\\left_in.xml",
+        "source": "D:\\Ruking\\RukingFrame\\simplezxing\\build\\intermediates\\exploded-aar\\com.github.RukingCheng\\rukingframelibrary\\unspecified\\res\\anim\\left_in.xml"
+    },
+    {
+        "merged": "D:\\Ruking\\RukingFrame\\simplezxing\\build\\intermediates\\res\\merged\\debug\\anim\\abc_fade_in.xml",
+        "source": "D:\\Ruking\\RukingFrame\\simplezxing\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\26.0.0-alpha1\\res\\anim\\abc_fade_in.xml"
+    },
+    {
         "merged": "D:\\work\\source\\android\\CODE\\RukingFrame\\simplezxing\\build\\intermediates\\res\\merged\\debug\\anim\\right_out.xml",
         "source": "D:\\work\\source\\android\\CODE\\RukingFrame\\simplezxing\\build\\intermediates\\exploded-aar\\RukingFrame\\rukingframelibrary\\unspecified\\res\\anim\\right_out.xml"
     },
@@ -12,8 +24,12 @@
         "source": "D:\\work\\source\\android\\CODE\\RukingFrame\\simplezxing\\build\\intermediates\\exploded-aar\\RukingFrame\\rukingframelibrary\\unspecified\\res\\anim\\left_out.xml"
     },
     {
-        "merged": "D:\\work\\source\\android\\CODE\\RukingFrame\\simplezxing\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_in_bottom.xml",
-        "source": "D:\\work\\source\\android\\CODE\\RukingFrame\\simplezxing\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\26.0.0-alpha1\\res\\anim\\abc_slide_in_bottom.xml"
+        "merged": "D:\\Ruking\\RukingFrame\\simplezxing\\build\\intermediates\\res\\merged\\debug\\anim\\fade_out.xml",
+        "source": "D:\\Ruking\\RukingFrame\\simplezxing\\build\\intermediates\\exploded-aar\\com.github.RukingCheng\\rukingframelibrary\\unspecified\\res\\anim\\fade_out.xml"
+    },
+    {
+        "merged": "D:\\Ruking\\RukingFrame\\simplezxing\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_out_bottom.xml",
+        "source": "D:\\Ruking\\RukingFrame\\simplezxing\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\26.0.0-alpha1\\res\\anim\\abc_slide_out_bottom.xml"
     },
     {
         "merged": "D:\\work\\source\\android\\CODE\\RukingFrame\\simplezxing\\build\\intermediates\\res\\merged\\debug\\anim\\abc_fade_in.xml",
@@ -24,16 +40,16 @@
         "source": "D:\\work\\source\\android\\CODE\\RukingFrame\\simplezxing\\build\\intermediates\\exploded-aar\\RukingFrame\\rukingframelibrary\\unspecified\\res\\anim\\bottom_out.xml"
     },
     {
-        "merged": "D:\\work\\source\\android\\CODE\\RukingFrame\\simplezxing\\build\\intermediates\\res\\merged\\debug\\anim\\design_snackbar_out.xml",
-        "source": "D:\\work\\source\\android\\CODE\\RukingFrame\\simplezxing\\build\\intermediates\\exploded-aar\\com.android.support\\design\\26.0.0-alpha1\\res\\anim\\design_snackbar_out.xml"
-    },
-    {
         "merged": "D:\\work\\source\\android\\CODE\\RukingFrame\\simplezxing\\build\\intermediates\\res\\merged\\debug\\anim\\scale_in.xml",
         "source": "D:\\work\\source\\android\\CODE\\RukingFrame\\simplezxing\\build\\intermediates\\exploded-aar\\RukingFrame\\rukingframelibrary\\unspecified\\res\\anim\\scale_in.xml"
     },
     {
-        "merged": "D:\\work\\source\\android\\CODE\\RukingFrame\\simplezxing\\build\\intermediates\\res\\merged\\debug\\anim\\top_in.xml",
-        "source": "D:\\work\\source\\android\\CODE\\RukingFrame\\simplezxing\\build\\intermediates\\exploded-aar\\RukingFrame\\rukingframelibrary\\unspecified\\res\\anim\\top_in.xml"
+        "merged": "D:\\Ruking\\RukingFrame\\simplezxing\\build\\intermediates\\res\\merged\\debug\\anim\\abc_grow_fade_in_from_bottom.xml",
+        "source": "D:\\Ruking\\RukingFrame\\simplezxing\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\26.0.0-alpha1\\res\\anim\\abc_grow_fade_in_from_bottom.xml"
+    },
+    {
+        "merged": "D:\\Ruking\\RukingFrame\\simplezxing\\build\\intermediates\\res\\merged\\debug\\anim\\abc_popup_enter.xml",
+        "source": "D:\\Ruking\\RukingFrame\\simplezxing\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\26.0.0-alpha1\\res\\anim\\abc_popup_enter.xml"
     },
     {
         "merged": "D:\\work\\source\\android\\CODE\\RukingFrame\\simplezxing\\build\\intermediates\\res\\merged\\debug\\anim\\abc_popup_exit.xml",
@@ -52,8 +68,20 @@
         "source": "D:\\work\\source\\android\\CODE\\RukingFrame\\simplezxing\\build\\intermediates\\exploded-aar\\com.android.support\\design\\26.0.0-alpha1\\res\\anim\\design_bottom_sheet_slide_out.xml"
     },
     {
-        "merged": "D:\\work\\source\\android\\CODE\\RukingFrame\\simplezxing\\build\\intermediates\\res\\merged\\debug\\anim\\fade_out.xml",
-        "source": "D:\\work\\source\\android\\CODE\\RukingFrame\\simplezxing\\build\\intermediates\\exploded-aar\\RukingFrame\\rukingframelibrary\\unspecified\\res\\anim\\fade_out.xml"
+        "merged": "D:\\Ruking\\RukingFrame\\simplezxing\\build\\intermediates\\res\\merged\\debug\\anim\\bottom_out.xml",
+        "source": "D:\\Ruking\\RukingFrame\\simplezxing\\build\\intermediates\\exploded-aar\\com.github.RukingCheng\\rukingframelibrary\\unspecified\\res\\anim\\bottom_out.xml"
+    },
+    {
+        "merged": "D:\\Ruking\\RukingFrame\\simplezxing\\build\\intermediates\\res\\merged\\debug\\anim\\design_snackbar_out.xml",
+        "source": "D:\\Ruking\\RukingFrame\\simplezxing\\build\\intermediates\\exploded-aar\\com.android.support\\design\\26.0.0-alpha1\\res\\anim\\design_snackbar_out.xml"
+    },
+    {
+        "merged": "D:\\Ruking\\RukingFrame\\simplezxing\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_out_top.xml",
+        "source": "D:\\Ruking\\RukingFrame\\simplezxing\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\26.0.0-alpha1\\res\\anim\\abc_slide_out_top.xml"
+    },
+    {
+        "merged": "D:\\Ruking\\RukingFrame\\simplezxing\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_in_top.xml",
+        "source": "D:\\Ruking\\RukingFrame\\simplezxing\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\26.0.0-alpha1\\res\\anim\\abc_slide_in_top.xml"
     },
     {
         "merged": "D:\\work\\source\\android\\CODE\\RukingFrame\\simplezxing\\build\\intermediates\\res\\merged\\debug\\anim\\right_in.xml",
@@ -64,6 +92,82 @@
         "source": "D:\\work\\source\\android\\CODE\\RukingFrame\\simplezxing\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\26.0.0-alpha1\\res\\anim\\abc_shrink_fade_out_from_bottom.xml"
     },
     {
+        "merged": "D:\\Ruking\\RukingFrame\\simplezxing\\build\\intermediates\\res\\merged\\debug\\anim\\abc_popup_exit.xml",
+        "source": "D:\\Ruking\\RukingFrame\\simplezxing\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\26.0.0-alpha1\\res\\anim\\abc_popup_exit.xml"
+    },
+    {
+        "merged": "D:\\Ruking\\RukingFrame\\simplezxing\\build\\intermediates\\res\\merged\\debug\\anim\\left_out.xml",
+        "source": "D:\\Ruking\\RukingFrame\\simplezxing\\build\\intermediates\\exploded-aar\\com.github.RukingCheng\\rukingframelibrary\\unspecified\\res\\anim\\left_out.xml"
+    },
+    {
+        "merged": "D:\\work\\source\\android\\CODE\\RukingFrame\\simplezxing\\build\\intermediates\\res\\merged\\debug\\anim\\left_in.xml",
+        "source": "D:\\work\\source\\android\\CODE\\RukingFrame\\simplezxing\\build\\intermediates\\exploded-aar\\RukingFrame\\rukingframelibrary\\unspecified\\res\\anim\\left_in.xml"
+    },
+    {
+        "merged": "D:\\Ruking\\RukingFrame\\simplezxing\\build\\intermediates\\res\\merged\\debug\\anim\\design_bottom_sheet_slide_in.xml",
+        "source": "D:\\Ruking\\RukingFrame\\simplezxing\\build\\intermediates\\exploded-aar\\com.android.support\\design\\26.0.0-alpha1\\res\\anim\\design_bottom_sheet_slide_in.xml"
+    },
+    {
+        "merged": "D:\\work\\source\\android\\CODE\\RukingFrame\\simplezxing\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_out_top.xml",
+        "source": "D:\\work\\source\\android\\CODE\\RukingFrame\\simplezxing\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\26.0.0-alpha1\\res\\anim\\abc_slide_out_top.xml"
+    },
+    {
+        "merged": "D:\\Ruking\\RukingFrame\\simplezxing\\build\\intermediates\\res\\merged\\debug\\anim\\abc_shrink_fade_out_from_bottom.xml",
+        "source": "D:\\Ruking\\RukingFrame\\simplezxing\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\26.0.0-alpha1\\res\\anim\\abc_shrink_fade_out_from_bottom.xml"
+    },
+    {
+        "merged": "D:\\Ruking\\RukingFrame\\simplezxing\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_in_bottom.xml",
+        "source": "D:\\Ruking\\RukingFrame\\simplezxing\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\26.0.0-alpha1\\res\\anim\\abc_slide_in_bottom.xml"
+    },
+    {
+        "merged": "D:\\work\\source\\android\\CODE\\RukingFrame\\simplezxing\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_in_bottom.xml",
+        "source": "D:\\work\\source\\android\\CODE\\RukingFrame\\simplezxing\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\26.0.0-alpha1\\res\\anim\\abc_slide_in_bottom.xml"
+    },
+    {
+        "merged": "D:\\Ruking\\RukingFrame\\simplezxing\\build\\intermediates\\res\\merged\\debug\\anim\\scale_out.xml",
+        "source": "D:\\Ruking\\RukingFrame\\simplezxing\\build\\intermediates\\exploded-aar\\com.github.RukingCheng\\rukingframelibrary\\unspecified\\res\\anim\\scale_out.xml"
+    },
+    {
+        "merged": "D:\\Ruking\\RukingFrame\\simplezxing\\build\\intermediates\\res\\merged\\debug\\anim\\abc_fade_out.xml",
+        "source": "D:\\Ruking\\RukingFrame\\simplezxing\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\26.0.0-alpha1\\res\\anim\\abc_fade_out.xml"
+    },
+    {
+        "merged": "D:\\Ruking\\RukingFrame\\simplezxing\\build\\intermediates\\res\\merged\\debug\\anim\\fade_in.xml",
+        "source": "D:\\Ruking\\RukingFrame\\simplezxing\\build\\intermediates\\exploded-aar\\com.github.RukingCheng\\rukingframelibrary\\unspecified\\res\\anim\\fade_in.xml"
+    },
+    {
+        "merged": "D:\\Ruking\\RukingFrame\\simplezxing\\build\\intermediates\\res\\merged\\debug\\anim\\right_in.xml",
+        "source": "D:\\Ruking\\RukingFrame\\simplezxing\\build\\intermediates\\exploded-aar\\com.github.RukingCheng\\rukingframelibrary\\unspecified\\res\\anim\\right_in.xml"
+    },
+    {
+        "merged": "D:\\work\\source\\android\\CODE\\RukingFrame\\simplezxing\\build\\intermediates\\res\\merged\\debug\\anim\\design_snackbar_out.xml",
+        "source": "D:\\work\\source\\android\\CODE\\RukingFrame\\simplezxing\\build\\intermediates\\exploded-aar\\com.android.support\\design\\26.0.0-alpha1\\res\\anim\\design_snackbar_out.xml"
+    },
+    {
+        "merged": "D:\\Ruking\\RukingFrame\\simplezxing\\build\\intermediates\\res\\merged\\debug\\anim\\scale_in.xml",
+        "source": "D:\\Ruking\\RukingFrame\\simplezxing\\build\\intermediates\\exploded-aar\\com.github.RukingCheng\\rukingframelibrary\\unspecified\\res\\anim\\scale_in.xml"
+    },
+    {
+        "merged": "D:\\work\\source\\android\\CODE\\RukingFrame\\simplezxing\\build\\intermediates\\res\\merged\\debug\\anim\\top_in.xml",
+        "source": "D:\\work\\source\\android\\CODE\\RukingFrame\\simplezxing\\build\\intermediates\\exploded-aar\\RukingFrame\\rukingframelibrary\\unspecified\\res\\anim\\top_in.xml"
+    },
+    {
+        "merged": "D:\\Ruking\\RukingFrame\\simplezxing\\build\\intermediates\\res\\merged\\debug\\anim\\design_snackbar_in.xml",
+        "source": "D:\\Ruking\\RukingFrame\\simplezxing\\build\\intermediates\\exploded-aar\\com.android.support\\design\\26.0.0-alpha1\\res\\anim\\design_snackbar_in.xml"
+    },
+    {
+        "merged": "D:\\Ruking\\RukingFrame\\simplezxing\\build\\intermediates\\res\\merged\\debug\\anim\\right_out.xml",
+        "source": "D:\\Ruking\\RukingFrame\\simplezxing\\build\\intermediates\\exploded-aar\\com.github.RukingCheng\\rukingframelibrary\\unspecified\\res\\anim\\right_out.xml"
+    },
+    {
+        "merged": "D:\\work\\source\\android\\CODE\\RukingFrame\\simplezxing\\build\\intermediates\\res\\merged\\debug\\anim\\fade_out.xml",
+        "source": "D:\\work\\source\\android\\CODE\\RukingFrame\\simplezxing\\build\\intermediates\\exploded-aar\\RukingFrame\\rukingframelibrary\\unspecified\\res\\anim\\fade_out.xml"
+    },
+    {
+        "merged": "D:\\Ruking\\RukingFrame\\simplezxing\\build\\intermediates\\res\\merged\\debug\\anim\\bottom_in.xml",
+        "source": "D:\\Ruking\\RukingFrame\\simplezxing\\build\\intermediates\\exploded-aar\\com.github.RukingCheng\\rukingframelibrary\\unspecified\\res\\anim\\bottom_in.xml"
+    },
+    {
         "merged": "D:\\work\\source\\android\\CODE\\RukingFrame\\simplezxing\\build\\intermediates\\res\\merged\\debug\\anim\\fade_in.xml",
         "source": "D:\\work\\source\\android\\CODE\\RukingFrame\\simplezxing\\build\\intermediates\\exploded-aar\\RukingFrame\\rukingframelibrary\\unspecified\\res\\anim\\fade_in.xml"
     },
@@ -72,16 +176,8 @@
         "source": "D:\\work\\source\\android\\CODE\\RukingFrame\\simplezxing\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\26.0.0-alpha1\\res\\anim\\abc_popup_enter.xml"
     },
     {
-        "merged": "D:\\work\\source\\android\\CODE\\RukingFrame\\simplezxing\\build\\intermediates\\res\\merged\\debug\\anim\\left_in.xml",
-        "source": "D:\\work\\source\\android\\CODE\\RukingFrame\\simplezxing\\build\\intermediates\\exploded-aar\\RukingFrame\\rukingframelibrary\\unspecified\\res\\anim\\left_in.xml"
-    },
-    {
         "merged": "D:\\work\\source\\android\\CODE\\RukingFrame\\simplezxing\\build\\intermediates\\res\\merged\\debug\\anim\\design_bottom_sheet_slide_in.xml",
         "source": "D:\\work\\source\\android\\CODE\\RukingFrame\\simplezxing\\build\\intermediates\\exploded-aar\\com.android.support\\design\\26.0.0-alpha1\\res\\anim\\design_bottom_sheet_slide_in.xml"
-    },
-    {
-        "merged": "D:\\work\\source\\android\\CODE\\RukingFrame\\simplezxing\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_out_top.xml",
-        "source": "D:\\work\\source\\android\\CODE\\RukingFrame\\simplezxing\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\26.0.0-alpha1\\res\\anim\\abc_slide_out_top.xml"
     },
     {
         "merged": "D:\\work\\source\\android\\CODE\\RukingFrame\\simplezxing\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_out_bottom.xml",
@@ -100,7 +196,15 @@
         "source": "D:\\work\\source\\android\\CODE\\RukingFrame\\simplezxing\\build\\intermediates\\exploded-aar\\RukingFrame\\rukingframelibrary\\unspecified\\res\\anim\\top_out.xml"
     },
     {
+        "merged": "D:\\Ruking\\RukingFrame\\simplezxing\\build\\intermediates\\res\\merged\\debug\\anim\\top_in.xml",
+        "source": "D:\\Ruking\\RukingFrame\\simplezxing\\build\\intermediates\\exploded-aar\\com.github.RukingCheng\\rukingframelibrary\\unspecified\\res\\anim\\top_in.xml"
+    },
+    {
         "merged": "D:\\work\\source\\android\\CODE\\RukingFrame\\simplezxing\\build\\intermediates\\res\\merged\\debug\\anim\\scale_out.xml",
         "source": "D:\\work\\source\\android\\CODE\\RukingFrame\\simplezxing\\build\\intermediates\\exploded-aar\\RukingFrame\\rukingframelibrary\\unspecified\\res\\anim\\scale_out.xml"
+    },
+    {
+        "merged": "D:\\Ruking\\RukingFrame\\simplezxing\\build\\intermediates\\res\\merged\\debug\\anim\\design_bottom_sheet_slide_out.xml",
+        "source": "D:\\Ruking\\RukingFrame\\simplezxing\\build\\intermediates\\exploded-aar\\com.android.support\\design\\26.0.0-alpha1\\res\\anim\\design_bottom_sheet_slide_out.xml"
     }
 ]

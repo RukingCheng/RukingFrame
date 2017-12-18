@@ -2,5 +2,9 @@
     {
         "merged": "D:\\work\\source\\android\\CODE\\RukingFrame\\simplezxing\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi-v4\\sys_off.png",
         "source": "D:\\work\\source\\android\\CODE\\RukingFrame\\simplezxing\\src\\main\\res\\mipmap-xxhdpi\\sys_off.png"
+    },
+    {
+        "merged": "D:\\Ruking\\RukingFrame\\simplezxing\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi-v4\\sys_off.png",
+        "source": "D:\\Ruking\\RukingFrame\\simplezxing\\src\\main\\res\\mipmap-xxhdpi\\sys_off.png"
     }
 ]
