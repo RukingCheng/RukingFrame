@@ -259,7 +259,7 @@ public class DialogActivity extends RKBaseBackActivity {
                                                 .setTextColorRes(android.R.color.darker_gray)
                                                 .setItmeColor(Color.parseColor("#ff0000")))
                                         .setChoices(new Choice("打球"),
-                                                new Choice("旅游"),
+                                                new Choice("旅游", true).setClickable(false),
                                                 new Choice("开车"),
                                                 new Choice("旅游"),
                                                 new Choice("看电影")))

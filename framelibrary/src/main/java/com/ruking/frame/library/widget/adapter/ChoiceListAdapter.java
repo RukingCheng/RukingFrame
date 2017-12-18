@@ -87,7 +87,13 @@ public class ChoiceListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHol
                 }
             }
         }
+        if (choice.isClickable())
+            descHolder.itemView.setVisibility(View.GONE);
+        else
+            descHolder.itemView.setVisibility(View.VISIBLE);
         descHolder.itemLayout.setOnClickListener(v -> {
+            if (!choice.isClickable())
+                return;
             refreshCheckState(descHolder.getAdapterPosition());
             if (rkDialogChoiceList.getOnSingleChoiceSelectListener() != null) {
                 rkDialogChoiceList.getOnSingleChoiceSelectListener().onSelect(dialog,
@@ -126,6 +132,7 @@ public class ChoiceListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHol
         private TextView itemTitle;
         private TextView itemDescription;
         private LinearLayout itemLayout;
+        private View itemView;
 
         @SuppressLint("CutPasteId")
         DescViewHolder(View itemView) {
@@ -134,6 +141,7 @@ public class ChoiceListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHol
             itemTitle = itemView.findViewById(R.id.item_title);
             itemDescription = itemView.findViewById(R.id.item_description);
             itemImag = itemView.findViewById(R.id.item_imag);
+            this.itemView = itemView.findViewById(R.id.item_view);
         }
     }
 
