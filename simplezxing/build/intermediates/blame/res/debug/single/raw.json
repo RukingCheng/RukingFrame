@@ -1,9 +1,5 @@
 [
     {
-        "merged": "D:\\work\\source\\android\\CODE\\RukingFrame\\simplezxing\\build\\intermediates\\res\\merged\\debug\\raw\\beep.ogg",
-        "source": "D:\\work\\source\\android\\CODE\\RukingFrame\\simplezxing\\src\\main\\res\\raw\\beep.ogg"
-    },
-    {
         "merged": "D:\\Ruking\\RukingFrame\\simplezxing\\build\\intermediates\\res\\merged\\debug\\raw\\beep.ogg",
         "source": "D:\\Ruking\\RukingFrame\\simplezxing\\src\\main\\res\\raw\\beep.ogg"
     }

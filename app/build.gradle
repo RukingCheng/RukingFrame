@@ -51,6 +51,9 @@ dependencies {
     annotationProcessor 'com.jakewharton:butterknife-compiler:' + versions.butterKnife
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
     testCompile 'junit:junit:4.12'
-    compile project(':rukingframelibrary')
-    compile project(':simplezxing')
+//    compile project(':rukingframelibrary')
+//    compile project(':simplezxing')
+//    compile 'com.github.RukingCheng.RukingFrame:autolayout:1.0.0.1'
+    compile 'com.github.RukingCheng.RukingFrame:rukingframelibrary:1.0.0.1'
+    compile 'com.github.RukingCheng.RukingFrame:simplezxing:1.0.0.1'
 }
