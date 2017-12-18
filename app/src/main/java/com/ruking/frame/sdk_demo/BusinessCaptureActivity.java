@@ -10,7 +10,7 @@ import com.ruking.frame.library.base.RKTransitionMode;
 
 /**
  * @author Ruking.Cheng
- * @descrilbe 统一扫一扫界面（业务实现只需要在Main里面配置即可）dddddddddddddddddddd
+ * @descrilbe 统一扫一扫界面（业务实现只需要在Main里面配置即可）
  * @email 495095492@qq.com
  * @tel 18075121944
  * @date on 2017/7/11 17:37
