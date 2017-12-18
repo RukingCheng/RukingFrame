@@ -13,7 +13,7 @@
     },
     {
         "merged": "D:\\Ruking\\RukingFrame\\simplezxing\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rk_dialog_item_choice_desc.xml",
-        "source": "D:\\Ruking\\RukingFrame\\simplezxing\\build\\intermediates\\exploded-aar\\com.github.RukingCheng\\rukingframelibrary\\unspecified\\res\\layout\\rk_dialog_item_choice_desc.xml"
+        "source": "D:\\Ruking\\RukingFrame\\simplezxing\\build\\intermediates\\exploded-aar\\com.github.RukingCheng\\framelibrary\\unspecified\\res\\layout\\rk_dialog_item_choice_desc.xml"
     },
     {
         "merged": "D:\\Ruking\\RukingFrame\\simplezxing\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\design_bottom_sheet_dialog.xml",
@@ -29,7 +29,7 @@
     },
     {
         "merged": "D:\\Ruking\\RukingFrame\\simplezxing\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rk_dialog_progress_indeterminate_horizontal.xml",
-        "source": "D:\\Ruking\\RukingFrame\\simplezxing\\build\\intermediates\\exploded-aar\\com.github.RukingCheng\\rukingframelibrary\\unspecified\\res\\layout\\rk_dialog_progress_indeterminate_horizontal.xml"
+        "source": "D:\\Ruking\\RukingFrame\\simplezxing\\build\\intermediates\\exploded-aar\\com.github.RukingCheng\\framelibrary\\unspecified\\res\\layout\\rk_dialog_progress_indeterminate_horizontal.xml"
     },
     {
         "merged": "D:\\Ruking\\RukingFrame\\simplezxing\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\abc_action_menu_layout.xml",
@@ -73,7 +73,7 @@
     },
     {
         "merged": "D:\\Ruking\\RukingFrame\\simplezxing\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rk_dialog_progress.xml",
-        "source": "D:\\Ruking\\RukingFrame\\simplezxing\\build\\intermediates\\exploded-aar\\com.github.RukingCheng\\rukingframelibrary\\unspecified\\res\\layout\\rk_dialog_progress.xml"
+        "source": "D:\\Ruking\\RukingFrame\\simplezxing\\build\\intermediates\\exploded-aar\\com.github.RukingCheng\\framelibrary\\unspecified\\res\\layout\\rk_dialog_progress.xml"
     },
     {
         "merged": "D:\\Ruking\\RukingFrame\\simplezxing\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\capture.xml",
@@ -125,7 +125,7 @@
     },
     {
         "merged": "D:\\Ruking\\RukingFrame\\simplezxing\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rk_dialog.xml",
-        "source": "D:\\Ruking\\RukingFrame\\simplezxing\\build\\intermediates\\exploded-aar\\com.github.RukingCheng\\rukingframelibrary\\unspecified\\res\\layout\\rk_dialog.xml"
+        "source": "D:\\Ruking\\RukingFrame\\simplezxing\\build\\intermediates\\exploded-aar\\com.github.RukingCheng\\framelibrary\\unspecified\\res\\layout\\rk_dialog.xml"
     },
     {
         "merged": "D:\\Ruking\\RukingFrame\\simplezxing\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\design_menu_item_action_area.xml",
@@ -153,7 +153,7 @@
     },
     {
         "merged": "D:\\Ruking\\RukingFrame\\simplezxing\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rk_dialog_checkbox.xml",
-        "source": "D:\\Ruking\\RukingFrame\\simplezxing\\build\\intermediates\\exploded-aar\\com.github.RukingCheng\\rukingframelibrary\\unspecified\\res\\layout\\rk_dialog_checkbox.xml"
+        "source": "D:\\Ruking\\RukingFrame\\simplezxing\\build\\intermediates\\exploded-aar\\com.github.RukingCheng\\framelibrary\\unspecified\\res\\layout\\rk_dialog_checkbox.xml"
     },
     {
         "merged": "D:\\Ruking\\RukingFrame\\simplezxing\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\abc_list_menu_item_radio.xml",
@@ -173,7 +173,7 @@
     },
     {
         "merged": "D:\\Ruking\\RukingFrame\\simplezxing\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rk_dialog_progress_indeterminate.xml",
-        "source": "D:\\Ruking\\RukingFrame\\simplezxing\\build\\intermediates\\exploded-aar\\com.github.RukingCheng\\rukingframelibrary\\unspecified\\res\\layout\\rk_dialog_progress_indeterminate.xml"
+        "source": "D:\\Ruking\\RukingFrame\\simplezxing\\build\\intermediates\\exploded-aar\\com.github.RukingCheng\\framelibrary\\unspecified\\res\\layout\\rk_dialog_progress_indeterminate.xml"
     },
     {
         "merged": "D:\\Ruking\\RukingFrame\\simplezxing\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\design_navigation_item.xml",
@@ -197,7 +197,7 @@
     },
     {
         "merged": "D:\\Ruking\\RukingFrame\\simplezxing\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rk_dialog_button.xml",
-        "source": "D:\\Ruking\\RukingFrame\\simplezxing\\build\\intermediates\\exploded-aar\\com.github.RukingCheng\\rukingframelibrary\\unspecified\\res\\layout\\rk_dialog_button.xml"
+        "source": "D:\\Ruking\\RukingFrame\\simplezxing\\build\\intermediates\\exploded-aar\\com.github.RukingCheng\\framelibrary\\unspecified\\res\\layout\\rk_dialog_button.xml"
     },
     {
         "merged": "D:\\Ruking\\RukingFrame\\simplezxing\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\notification_template_part_time.xml",

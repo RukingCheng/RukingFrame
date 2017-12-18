@@ -1,1 +1,1 @@
-include ':app', ':rukingframelibrary', ':autolayout', ':simplezxing'
+include ':app', ':framelibrary', ':autolayout', ':simplezxing'

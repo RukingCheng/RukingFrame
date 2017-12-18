@@ -137,7 +137,7 @@
     },
     {
         "merged": "D:\\Ruking\\RukingFrame\\simplezxing\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\rk_radio_normal.xml",
-        "source": "D:\\Ruking\\RukingFrame\\simplezxing\\build\\intermediates\\exploded-aar\\com.github.RukingCheng\\rukingframelibrary\\unspecified\\res\\drawable\\rk_radio_normal.xml"
+        "source": "D:\\Ruking\\RukingFrame\\simplezxing\\build\\intermediates\\exploded-aar\\com.github.RukingCheng\\framelibrary\\unspecified\\res\\drawable\\rk_radio_normal.xml"
     },
     {
         "merged": "D:\\Ruking\\RukingFrame\\simplezxing\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\abc_item_background_holo_dark.xml",
@@ -157,7 +157,7 @@
     },
     {
         "merged": "D:\\Ruking\\RukingFrame\\simplezxing\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\rk_choice_item_bg.xml",
-        "source": "D:\\Ruking\\RukingFrame\\simplezxing\\build\\intermediates\\exploded-aar\\com.github.RukingCheng\\rukingframelibrary\\unspecified\\res\\drawable\\rk_choice_item_bg.xml"
+        "source": "D:\\Ruking\\RukingFrame\\simplezxing\\build\\intermediates\\exploded-aar\\com.github.RukingCheng\\framelibrary\\unspecified\\res\\drawable\\rk_choice_item_bg.xml"
     },
     {
         "merged": "D:\\Ruking\\RukingFrame\\simplezxing\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\abc_ic_arrow_drop_right_black_24dp.xml",
@@ -173,7 +173,7 @@
     },
     {
         "merged": "D:\\Ruking\\RukingFrame\\simplezxing\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\rk_radio_checked.xml",
-        "source": "D:\\Ruking\\RukingFrame\\simplezxing\\build\\intermediates\\exploded-aar\\com.github.RukingCheng\\rukingframelibrary\\unspecified\\res\\drawable\\rk_radio_checked.xml"
+        "source": "D:\\Ruking\\RukingFrame\\simplezxing\\build\\intermediates\\exploded-aar\\com.github.RukingCheng\\framelibrary\\unspecified\\res\\drawable\\rk_radio_checked.xml"
     },
     {
         "merged": "D:\\Ruking\\RukingFrame\\simplezxing\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\abc_switch_thumb_material.xml",

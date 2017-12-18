@@ -1,7 +1,7 @@
 [
     {
         "merged": "D:\\Ruking\\RukingFrame\\simplezxing\\build\\intermediates\\res\\merged\\debug\\anim\\top_out.xml",
-        "source": "D:\\Ruking\\RukingFrame\\simplezxing\\build\\intermediates\\exploded-aar\\com.github.RukingCheng\\rukingframelibrary\\unspecified\\res\\anim\\top_out.xml"
+        "source": "D:\\Ruking\\RukingFrame\\simplezxing\\build\\intermediates\\exploded-aar\\com.github.RukingCheng\\framelibrary\\unspecified\\res\\anim\\top_out.xml"
     },
     {
         "merged": "D:\\Ruking\\RukingFrame\\simplezxing\\build\\intermediates\\res\\merged\\debug\\anim\\abc_shrink_fade_out_from_bottom.xml",
@@ -9,7 +9,7 @@
     },
     {
         "merged": "D:\\Ruking\\RukingFrame\\simplezxing\\build\\intermediates\\res\\merged\\debug\\anim\\left_in.xml",
-        "source": "D:\\Ruking\\RukingFrame\\simplezxing\\build\\intermediates\\exploded-aar\\com.github.RukingCheng\\rukingframelibrary\\unspecified\\res\\anim\\left_in.xml"
+        "source": "D:\\Ruking\\RukingFrame\\simplezxing\\build\\intermediates\\exploded-aar\\com.github.RukingCheng\\framelibrary\\unspecified\\res\\anim\\left_in.xml"
     },
     {
         "merged": "D:\\Ruking\\RukingFrame\\simplezxing\\build\\intermediates\\res\\merged\\debug\\anim\\abc_fade_in.xml",
@@ -21,11 +21,11 @@
     },
     {
         "merged": "D:\\Ruking\\RukingFrame\\simplezxing\\build\\intermediates\\res\\merged\\debug\\anim\\scale_out.xml",
-        "source": "D:\\Ruking\\RukingFrame\\simplezxing\\build\\intermediates\\exploded-aar\\com.github.RukingCheng\\rukingframelibrary\\unspecified\\res\\anim\\scale_out.xml"
+        "source": "D:\\Ruking\\RukingFrame\\simplezxing\\build\\intermediates\\exploded-aar\\com.github.RukingCheng\\framelibrary\\unspecified\\res\\anim\\scale_out.xml"
     },
     {
         "merged": "D:\\Ruking\\RukingFrame\\simplezxing\\build\\intermediates\\res\\merged\\debug\\anim\\fade_out.xml",
-        "source": "D:\\Ruking\\RukingFrame\\simplezxing\\build\\intermediates\\exploded-aar\\com.github.RukingCheng\\rukingframelibrary\\unspecified\\res\\anim\\fade_out.xml"
+        "source": "D:\\Ruking\\RukingFrame\\simplezxing\\build\\intermediates\\exploded-aar\\com.github.RukingCheng\\framelibrary\\unspecified\\res\\anim\\fade_out.xml"
     },
     {
         "merged": "D:\\Ruking\\RukingFrame\\simplezxing\\build\\intermediates\\res\\merged\\debug\\anim\\abc_fade_out.xml",
@@ -33,11 +33,11 @@
     },
     {
         "merged": "D:\\Ruking\\RukingFrame\\simplezxing\\build\\intermediates\\res\\merged\\debug\\anim\\fade_in.xml",
-        "source": "D:\\Ruking\\RukingFrame\\simplezxing\\build\\intermediates\\exploded-aar\\com.github.RukingCheng\\rukingframelibrary\\unspecified\\res\\anim\\fade_in.xml"
+        "source": "D:\\Ruking\\RukingFrame\\simplezxing\\build\\intermediates\\exploded-aar\\com.github.RukingCheng\\framelibrary\\unspecified\\res\\anim\\fade_in.xml"
     },
     {
         "merged": "D:\\Ruking\\RukingFrame\\simplezxing\\build\\intermediates\\res\\merged\\debug\\anim\\right_in.xml",
-        "source": "D:\\Ruking\\RukingFrame\\simplezxing\\build\\intermediates\\exploded-aar\\com.github.RukingCheng\\rukingframelibrary\\unspecified\\res\\anim\\right_in.xml"
+        "source": "D:\\Ruking\\RukingFrame\\simplezxing\\build\\intermediates\\exploded-aar\\com.github.RukingCheng\\framelibrary\\unspecified\\res\\anim\\right_in.xml"
     },
     {
         "merged": "D:\\Ruking\\RukingFrame\\simplezxing\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_out_bottom.xml",
@@ -53,7 +53,7 @@
     },
     {
         "merged": "D:\\Ruking\\RukingFrame\\simplezxing\\build\\intermediates\\res\\merged\\debug\\anim\\scale_in.xml",
-        "source": "D:\\Ruking\\RukingFrame\\simplezxing\\build\\intermediates\\exploded-aar\\com.github.RukingCheng\\rukingframelibrary\\unspecified\\res\\anim\\scale_in.xml"
+        "source": "D:\\Ruking\\RukingFrame\\simplezxing\\build\\intermediates\\exploded-aar\\com.github.RukingCheng\\framelibrary\\unspecified\\res\\anim\\scale_in.xml"
     },
     {
         "merged": "D:\\Ruking\\RukingFrame\\simplezxing\\build\\intermediates\\res\\merged\\debug\\anim\\design_snackbar_in.xml",
@@ -61,11 +61,11 @@
     },
     {
         "merged": "D:\\Ruking\\RukingFrame\\simplezxing\\build\\intermediates\\res\\merged\\debug\\anim\\bottom_out.xml",
-        "source": "D:\\Ruking\\RukingFrame\\simplezxing\\build\\intermediates\\exploded-aar\\com.github.RukingCheng\\rukingframelibrary\\unspecified\\res\\anim\\bottom_out.xml"
+        "source": "D:\\Ruking\\RukingFrame\\simplezxing\\build\\intermediates\\exploded-aar\\com.github.RukingCheng\\framelibrary\\unspecified\\res\\anim\\bottom_out.xml"
     },
     {
         "merged": "D:\\Ruking\\RukingFrame\\simplezxing\\build\\intermediates\\res\\merged\\debug\\anim\\right_out.xml",
-        "source": "D:\\Ruking\\RukingFrame\\simplezxing\\build\\intermediates\\exploded-aar\\com.github.RukingCheng\\rukingframelibrary\\unspecified\\res\\anim\\right_out.xml"
+        "source": "D:\\Ruking\\RukingFrame\\simplezxing\\build\\intermediates\\exploded-aar\\com.github.RukingCheng\\framelibrary\\unspecified\\res\\anim\\right_out.xml"
     },
     {
         "merged": "D:\\Ruking\\RukingFrame\\simplezxing\\build\\intermediates\\res\\merged\\debug\\anim\\design_snackbar_out.xml",
@@ -85,11 +85,11 @@
     },
     {
         "merged": "D:\\Ruking\\RukingFrame\\simplezxing\\build\\intermediates\\res\\merged\\debug\\anim\\bottom_in.xml",
-        "source": "D:\\Ruking\\RukingFrame\\simplezxing\\build\\intermediates\\exploded-aar\\com.github.RukingCheng\\rukingframelibrary\\unspecified\\res\\anim\\bottom_in.xml"
+        "source": "D:\\Ruking\\RukingFrame\\simplezxing\\build\\intermediates\\exploded-aar\\com.github.RukingCheng\\framelibrary\\unspecified\\res\\anim\\bottom_in.xml"
     },
     {
         "merged": "D:\\Ruking\\RukingFrame\\simplezxing\\build\\intermediates\\res\\merged\\debug\\anim\\left_out.xml",
-        "source": "D:\\Ruking\\RukingFrame\\simplezxing\\build\\intermediates\\exploded-aar\\com.github.RukingCheng\\rukingframelibrary\\unspecified\\res\\anim\\left_out.xml"
+        "source": "D:\\Ruking\\RukingFrame\\simplezxing\\build\\intermediates\\exploded-aar\\com.github.RukingCheng\\framelibrary\\unspecified\\res\\anim\\left_out.xml"
     },
     {
         "merged": "D:\\Ruking\\RukingFrame\\simplezxing\\build\\intermediates\\res\\merged\\debug\\anim\\design_bottom_sheet_slide_in.xml",
@@ -97,7 +97,7 @@
     },
     {
         "merged": "D:\\Ruking\\RukingFrame\\simplezxing\\build\\intermediates\\res\\merged\\debug\\anim\\top_in.xml",
-        "source": "D:\\Ruking\\RukingFrame\\simplezxing\\build\\intermediates\\exploded-aar\\com.github.RukingCheng\\rukingframelibrary\\unspecified\\res\\anim\\top_in.xml"
+        "source": "D:\\Ruking\\RukingFrame\\simplezxing\\build\\intermediates\\exploded-aar\\com.github.RukingCheng\\framelibrary\\unspecified\\res\\anim\\top_in.xml"
     },
     {
         "merged": "D:\\Ruking\\RukingFrame\\simplezxing\\build\\intermediates\\res\\merged\\debug\\anim\\design_bottom_sheet_slide_out.xml",

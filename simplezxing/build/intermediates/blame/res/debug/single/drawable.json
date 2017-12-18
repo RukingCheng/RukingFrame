@@ -17,7 +17,7 @@
     },
     {
         "merged": "D:\\Ruking\\RukingFrame\\simplezxing\\build\\intermediates\\res\\merged\\debug\\drawable\\rk_radio_normal.xml",
-        "source": "D:\\Ruking\\RukingFrame\\simplezxing\\build\\intermediates\\exploded-aar\\com.github.RukingCheng\\rukingframelibrary\\unspecified\\res\\drawable\\rk_radio_normal.xml"
+        "source": "D:\\Ruking\\RukingFrame\\simplezxing\\build\\intermediates\\exploded-aar\\com.github.RukingCheng\\framelibrary\\unspecified\\res\\drawable\\rk_radio_normal.xml"
     },
     {
         "merged": "D:\\Ruking\\RukingFrame\\simplezxing\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_search_api_material.xml",
@@ -77,7 +77,7 @@
     },
     {
         "merged": "D:\\Ruking\\RukingFrame\\simplezxing\\build\\intermediates\\res\\merged\\debug\\drawable\\rk_radio_checked.xml",
-        "source": "D:\\Ruking\\RukingFrame\\simplezxing\\build\\intermediates\\exploded-aar\\com.github.RukingCheng\\rukingframelibrary\\unspecified\\res\\drawable\\rk_radio_checked.xml"
+        "source": "D:\\Ruking\\RukingFrame\\simplezxing\\build\\intermediates\\exploded-aar\\com.github.RukingCheng\\framelibrary\\unspecified\\res\\drawable\\rk_radio_checked.xml"
     },
     {
         "merged": "D:\\Ruking\\RukingFrame\\simplezxing\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_item_background_holo_dark.xml",
@@ -173,7 +173,7 @@
     },
     {
         "merged": "D:\\Ruking\\RukingFrame\\simplezxing\\build\\intermediates\\res\\merged\\debug\\drawable\\rk_choice_item_bg.xml",
-        "source": "D:\\Ruking\\RukingFrame\\simplezxing\\build\\intermediates\\exploded-aar\\com.github.RukingCheng\\rukingframelibrary\\unspecified\\res\\drawable\\rk_choice_item_bg.xml"
+        "source": "D:\\Ruking\\RukingFrame\\simplezxing\\build\\intermediates\\exploded-aar\\com.github.RukingCheng\\framelibrary\\unspecified\\res\\drawable\\rk_choice_item_bg.xml"
     },
     {
         "merged": "D:\\Ruking\\RukingFrame\\simplezxing\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_cab_background_internal_bg.xml",

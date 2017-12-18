@@ -39,7 +39,7 @@ dependencies {
     })
     compile 'com.android.support:appcompat-v7:'+ versions.supportLib
     compile 'com.android.support:design:'+ versions.supportLib
-    compile project(':rukingframelibrary')
+    compile project(':framelibrary')
 }
 
 //ext {
