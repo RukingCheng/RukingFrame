@@ -5,7 +5,8 @@
       <module fileurl="file://$PROJECT_DIR$/RukingFrame.iml" filepath="$PROJECT_DIR$/RukingFrame.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/autolayout/autolayout.iml" filepath="$PROJECT_DIR$/autolayout/autolayout.iml" />
-      <module fileurl="file://$PROJECT_DIR$/framelibrary/rukingframelibrary.iml" filepath="$PROJECT_DIR$/framelibrary/rukingframelibrary.iml" />
+      <module fileurl="file://$PROJECT_DIR$/framelibrary/framelibrary.iml" filepath="$PROJECT_DIR$/framelibrary/framelibrary.iml" />
+      <module fileurl="file://D:\Ruking\RukingFrame\framelibrary\rukingframelibrary.iml" filepath="D:\Ruking\RukingFrame\framelibrary\rukingframelibrary.iml" />
       <module fileurl="file://$PROJECT_DIR$/simplezxing/simplezxing.iml" filepath="$PROJECT_DIR$/simplezxing/simplezxing.iml" />
     </modules>
   </component>
