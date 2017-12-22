@@ -38,7 +38,7 @@
             android:layout_height="wrap_content"
             android:ellipsize="end"
             android:maxLines="2"
-            android:textColor="#5c5c5c"
+            android:textColor="#555"
             android:textSize="32px"
             android:textStyle="bold"
             android:visibility="gone"
@@ -73,7 +73,7 @@
                 android:gravity="center"
                 android:minHeight="100px"
                 android:padding="20px"
-                android:textColor="#3e3e3e"
+                android:textColor="#999"
                 android:textSize="24px"
                 tools:text="Message" />
         </com.zhy.autolayout.AutoLinearLayout>
