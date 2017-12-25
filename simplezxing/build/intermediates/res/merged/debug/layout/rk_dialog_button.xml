@@ -8,8 +8,8 @@
     android:background="@android:color/transparent"
     android:gravity="center"
     android:orientation="horizontal"
+    android:textColor="#999"
     app:round_corner="16px"
-    app:stroke_color="#dfdfdf"
     app:stroke_width="1px"
     tools:ignore="PxUsage,RtlHardcoded">
 
@@ -26,6 +26,6 @@
         android:id="@+id/item_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="#dfdfdf"
+        android:textColor="#999"
         android:textSize="24px" />
 </com.ruking.frame.library.view.animation.RKAnimationLinearLayout>

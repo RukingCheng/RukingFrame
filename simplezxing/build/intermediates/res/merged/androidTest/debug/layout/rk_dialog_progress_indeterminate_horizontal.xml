@@ -17,6 +17,7 @@
         android:layout_marginBottom="20px"
         android:fontFamily="sans-serif"
         android:gravity="center"
+        android:textColor="#999"
         android:textSize="32px"
         tools:text="Message" />
 

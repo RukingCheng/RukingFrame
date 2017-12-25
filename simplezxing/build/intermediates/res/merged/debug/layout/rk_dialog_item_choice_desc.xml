@@ -34,6 +34,7 @@
                 android:layout_height="wrap_content"
                 android:ellipsize="end"
                 android:lines="1"
+                android:textColor="#555"
                 android:textSize="32px"
                 tools:text="低电量模式" />
 
@@ -44,6 +45,7 @@
                 android:ellipsize="end"
                 android:lines="1"
                 android:paddingTop="8px"
+                android:textColor="#999"
                 android:textSize="24px"
                 tools:text="禁止后台应用无线网络、移动数据连接" />
 

@@ -26,6 +26,7 @@
         android:paddingLeft="20px"
         android:paddingStart="20px"
         android:textAlignment="viewStart"
+        android:textColor="#999"
         android:textSize="32px"
         tools:ignore="NewApi,RtlSymmetry,UnusedAttribute"
         tools:text="Message" />

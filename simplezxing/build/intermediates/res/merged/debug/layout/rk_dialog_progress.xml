@@ -17,6 +17,7 @@
         android:layout_marginBottom="20px"
         android:fontFamily="sans-serif"
         android:gravity="center"
+        android:textColor="#555"
         android:textSize="32px"
         tools:text="Message" />
 
@@ -42,6 +43,7 @@
             android:gravity="start"
             android:minWidth="60px"
             android:textAlignment="viewStart"
+            android:textColor="#999"
             android:textSize="24px"
             android:textStyle="bold"
             tools:text="100%" />
@@ -57,6 +59,7 @@
             android:gravity="end"
             android:minWidth="60px"
             android:textAlignment="viewEnd"
+            android:textColor="#999"
             android:textSize="24px"
             tools:text="100%" />
 
