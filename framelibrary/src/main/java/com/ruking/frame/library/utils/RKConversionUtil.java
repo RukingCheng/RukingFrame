@@ -1,6 +1,7 @@
 package com.ruking.frame.library.utils;
 
 import android.content.Context;
+import android.support.annotation.NonNull;
 import android.util.TypedValue;
 
 import java.text.DecimalFormat;
@@ -47,12 +48,12 @@ public class RKConversionUtil {
      * @author 史伟成 E-mail:495095492@qq.com 电话：15216801944
      * @version 创建时间：2015-7-9 上午10:45:20
      */
-    public String getHexString(byte[] b) {
-        String result = "";
-        for (int i = 0; i < b.length; i++) {
-            result += Integer.toString((b[i] & 0xff) + 0x100, 16).substring(1);
+    public String getHexString(@NonNull byte[] b) {
+        StringBuilder result = new StringBuilder();
+        for (byte aB : b) {
+            result.append(Integer.toString((aB & 0xff) + 0x100, 16).substring(1));
         }
-        return result;
+        return result.toString();
     }
 
     /**
@@ -65,7 +66,7 @@ public class RKConversionUtil {
      * @author 史伟成 E-mail:495095492@qq.com 电话：15216801944
      * @version 创建时间：2015-7-9 上午10:46:17
      */
-    public byte[] hex2byte(String hex) throws IllegalArgumentException {
+    public byte[] hex2byte(@NonNull String hex) throws IllegalArgumentException {
         if (hex.length() % 2 != 0)
             hex += "0";
         char[] arr = hex.toCharArray();
