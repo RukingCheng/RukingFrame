@@ -19,4 +19,5 @@
       compile 'com.github.RukingCheng.RukingFrame:framelibrary:1.0.0.3'
   
 ### 二维码扫一扫
-      compile 'com.github.RukingCheng.RukingFrame:simplezxing:1.0.0.3'
+      compile 'com.github.RukingCheng.RukingFrame:simplezxing:1.0.0.3'<br>
+      代码来源：[https://github.com/GuoJinyu/SimpleZXing](https://github.com/GuoJinyu/SimpleZXing)
