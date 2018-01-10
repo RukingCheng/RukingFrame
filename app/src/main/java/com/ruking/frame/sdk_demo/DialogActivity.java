@@ -66,6 +66,9 @@ public class DialogActivity extends RKBaseBackActivity {
                         .setMessage("南方的天气即将变冷，确定穿了秋裤吗？")
                         .addButton(new RKDialogButton(activity)
                                 .setText("取消")
+                                .setProfile(new RKDialogProfile()
+                                        .setStrokeColor(Color.parseColor("#aaaaaa"))
+                                        .setTextColor(Color.parseColor("#aaaaaa")))
                                 .setOnClickListener((dialog, button) -> dialog.dismiss()))
                         .addButton(new RKDialogButton(activity)
                                 .setText("确定")
@@ -164,7 +167,7 @@ public class DialogActivity extends RKBaseBackActivity {
                                 .setText("取消")
                                 .setImageResource(R.mipmap.ic_launcher)
                                 .setProfile(new RKDialogProfile()
-                                        .setBackgroundColorRes(R.color.colorPrimary)
+                                        .setBackgroundColorRes(R.color.colorAccent)
                                         .setTextColorRes(android.R.color.white))
                                 .setOnClickListener((dialog, button) -> dialog.dismiss()))
                         .show();
@@ -182,8 +185,8 @@ public class DialogActivity extends RKBaseBackActivity {
                                 .setIndicator("LineScalePulseOutIndicator")
                                 .setProfile(new RKDialogProfile()
                                         .setBackgroundColor(Color.parseColor("#00000000"))
-                                        .setTextColorRes(android.R.color.white)
-                                        .setItmeColorRes(android.R.color.white)))
+                                        .setTextColorRes(R.color.colorAccent)
+                                        .setItmeColorRes(R.color.colorAccent)))
                         .show();
                 break;
             case R.id.but_07:
@@ -197,9 +200,9 @@ public class DialogActivity extends RKBaseBackActivity {
                                 RKDialogProgress.ProgressType.INDETERMINATE_HORIZONTAL)
                                 .setText("加载中...")
                                 .setProfile(new RKDialogProfile()
-                                        .setBackgroundColor(Color.parseColor("#90000000"))
-                                        .setTextColorRes(android.R.color.white)
-                                        .setItmeColorRes(android.R.color.white)))
+                                        .setBackgroundColor(Color.parseColor("#00000000"))
+                                        .setTextColorRes(R.color.colorAccent)
+                                        .setItmeColorRes(R.color.colorAccent)))
                         .show();
                 break;
             case R.id.but_08:
