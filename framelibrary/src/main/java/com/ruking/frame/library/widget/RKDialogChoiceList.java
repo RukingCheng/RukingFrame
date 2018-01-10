@@ -26,9 +26,9 @@ public class RKDialogChoiceList {
     private boolean isMultiselect;//是否是多选
     private RKDialogProfile profile;
     @DrawableRes
-    private int imageIconChecked = R.drawable.rk_radio_checked;
+    private int imageIconChecked = R.mipmap.rk_radio_checked;
     @DrawableRes
-    private int imageIconNormal = R.drawable.rk_radio_normal;
+    private int imageIconNormal = R.mipmap.rk_radio_normal;
     private Object tag;
 
     public RKDialogChoiceList(Context context) {
@@ -80,10 +80,10 @@ public class RKDialogChoiceList {
     public RKDialogChoiceList setMultiselect(boolean multiselect) {
         isMultiselect = multiselect;
         if (multiselect) {
-            if (imageIconChecked == R.drawable.rk_radio_checked)
-                imageIconChecked = R.drawable.rk_choose_normal;
-            if (imageIconNormal == R.drawable.rk_radio_normal)
-                imageIconNormal = R.drawable.rk_choose_checked;
+            if (imageIconChecked == R.mipmap.rk_radio_checked)
+                imageIconChecked = R.mipmap.rk_choose_normal;
+            if (imageIconNormal == R.mipmap.rk_radio_normal)
+                imageIconNormal = R.mipmap.rk_choose_checked;
         }
         return this;
     }

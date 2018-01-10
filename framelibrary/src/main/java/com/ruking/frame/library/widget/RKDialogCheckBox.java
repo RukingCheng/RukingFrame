@@ -33,9 +33,9 @@ public class RKDialogCheckBox {
     private Object tag;
     private boolean isChecked = false;
     @DrawableRes
-    private int imageIconChecked = R.drawable.rk_choose_normal;
+    private int imageIconChecked = R.mipmap.rk_choose_normal;
     @DrawableRes
-    private int imageIconNormal = R.drawable.rk_choose_checked;
+    private int imageIconNormal = R.mipmap.rk_choose_checked;
     private boolean isClickable = true;
 
     @SuppressLint("InflateParams")
