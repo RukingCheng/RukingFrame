@@ -49,7 +49,7 @@ public class TransitionModeActivity extends RKBaseBackActivity {
     @Override
     protected int getStatusBarColor() {
 //        return Color.parseColor("#000");
-        return ContextCompat.getColor(activity, R.color.colorAccent);
+        return ContextCompat.getColor(activity, R.color.colorPrimaryDark);
     }
 
     @Override

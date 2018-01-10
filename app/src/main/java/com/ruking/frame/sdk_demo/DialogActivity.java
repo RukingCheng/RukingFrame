@@ -311,7 +311,7 @@ public class DialogActivity extends RKBaseBackActivity {
 
     @Override
     protected int getStatusBarColor() {
-        return ContextCompat.getColor(activity, R.color.colorPrimary);
+        return ContextCompat.getColor(activity, R.color.colorPrimaryDark);
     }
 
     @Override

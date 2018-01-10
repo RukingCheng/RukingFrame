@@ -106,7 +106,7 @@ public class MainActivity extends RKBaseActivity
     @Override
     protected int getStatusBarColor() {
 //        return Color.parseColor("#000");
-        return ContextCompat.getColor(activity, R.color.colorAccent);
+        return ContextCompat.getColor(activity, R.color.colorPrimaryDark);
     }
 
     @Override
