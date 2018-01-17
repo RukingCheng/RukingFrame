@@ -12,8 +12,8 @@
     </style>
 
     <style name="RKDialogStyle" parent="Animation.AppCompat.Dialog">
-        <item name="@android:windowEnterAnimation">@anim/fade_in</item>
-        <item name="@android:windowExitAnimation">@anim/fade_out</item>
+        <item name="android:windowEnterAnimation">@anim/fade_in</item>
+        <item name="android:windowExitAnimation">@anim/fade_out</item>
         <item name="android:windowBackground">@android:color/transparent</item>
         <item name="android:backgroundDimEnabled">false</item>
         <item name="android:windowNoTitle">true</item>
@@ -23,7 +23,7 @@
     </style>
 
     <style name="RKAnimationDialogStyle" parent="RKDialogStyle">
-        <item name="@android:windowEnterAnimation">@anim/bottom_in</item>
-        <item name="@android:windowExitAnimation">@anim/bottom_out</item>
+        <item name="android:windowEnterAnimation">@anim/bottom_in</item>
+        <item name="android:windowExitAnimation">@anim/bottom_out</item>
     </style>
 </resources>

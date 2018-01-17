@@ -21,7 +21,23 @@ android {
             // 还可以添加 'x86', 'x86_64', 'mips', 'mips64'
         }
         multiDexEnabled true
+        javaCompileOptions {
+            annotationProcessorOptions {
+                includeCompileClasspath true
+            }
+        }
     }
+    signingConfigs {
+        debug {
+            v1SigningEnabled true
+            v2SigningEnabled true
+        }
+        release {
+            v1SigningEnabled true
+            v2SigningEnabled true
+        }
+    }
+
     buildTypes {
         release {
             minifyEnabled false
@@ -32,12 +48,25 @@ android {
     lintOptions {
         abortOnError false
     }
-
-    android.applicationVariants.all {
-        variant ->
-            variant.outputs.each {
-                output -> output.outputFile = new File(output.outputFile.parent, "RukingFrame-" + defaultConfig.versionCode + "-v" + defaultConfig.versionName + "-" + buildType.name + ".apk");
+    android.applicationVariants.all { variant ->
+        variant.outputs.all {//这里是all，下面是根据自己的情况来定制
+            def date = new Date()
+            def formattedDate = date.format('yyyyMMdd')
+            def fileName
+            if (variant.buildType.name == "release") {
+                // 输出apk名称为app_100_release.apk
+                fileName = "RukingFrame_V${defaultConfig.versionName}.apk"
+            } else if (variant.buildType.name == "debug") {
+                // 输出apk名称为app_100_debug.apk
+                fileName = "RukingFrame_debug_V${defaultConfig.versionName}_${formattedDate}.apk"
+            } else {
+                // 输出apk名称为app_v1.0.0_2017-12-11_101_beta.apk
+                fileName = "RukingFrame_Beta_V${defaultConfig.versionName}.apk"
             }
+            //outputFileName = "HuaxiaSign_${defaultConfig.versionName}_${formattedDate}.apk"
+            //很多博客只是写了上面这句话，没有具体赋值，自己来选择赋值给outputFileName
+            outputFileName = fileName
+        }
     }
 }
 
@@ -46,8 +75,8 @@ dependencies {
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
-    compile 'com.android.support:appcompat-v7:'+ versions.supportLib
-    compile 'com.android.support:design:'+ versions.supportLib
+    compile 'com.android.support:appcompat-v7:' + versions.supportLib
+    compile 'com.android.support:design:' + versions.supportLib
     annotationProcessor 'com.jakewharton:butterknife-compiler:' + versions.butterKnife
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
     testCompile 'junit:junit:4.12'
