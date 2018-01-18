@@ -1,2 +1,0 @@
-int id slidable_content 0x7f020000
-int id slidable_panel 0x7f020001
