@@ -215,10 +215,13 @@ public class DialogActivity extends RKBaseBackActivity {
                                         .setRadioIconHide(false)
                                         .setChoices(new Choice("开发接口", "这是一个开发的接口"),
                                                 new Choice("测试接口", "这是一个测试的接口"),
-                                                new Choice("生产接口"))
+                                                new Choice("生产接口"), new Choice("ADD").setTag(1))
                                         .setOnSingleChoiceSelectListener((dialog, choice, position) -> {
                                             Log.e("demo", "choice=" + choice.getTitle());
-                                            dialog.dismiss();
+                                            if (choice.getTag() != null && choice.getTag().equals(1)) {
+                                                dialog.addChoice(new Choice("ADD(新增的)").setTag(1));
+                                            } else
+                                                dialog.dismiss();
                                         })
                         ).show();
                 break;

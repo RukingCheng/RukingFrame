@@ -19,7 +19,9 @@ import android.widget.ScrollView;
 import android.widget.TextView;
 
 import com.ruking.frame.library.R;
+import com.ruking.frame.library.bean.Choice;
 import com.ruking.frame.library.view.animation.RKAnimationLinearLayout;
+import com.ruking.frame.library.widget.adapter.ChoiceListAdapter;
 import com.ruking.frame.library.widget.adapter.DividerLineDecoration;
 import com.zhy.autolayout.AutoLinearLayout;
 import com.zhy.autolayout.utils.AutoUtils;
@@ -103,6 +105,22 @@ public class RKDialog extends AlertDialog {
             dialogListMessage.addItemDecoration(new DividerLineDecoration(getContext()));
             dialogListMessage.getItemAnimator().setChangeDuration(0);
             dialogListMessage.setAdapter(builder.dialogChoiceList.getAdapter(this));
+        }
+    }
+
+    public void addChoice(@NonNull CharSequence charSequence) {
+        if (builder.dialogChoiceList != null &&
+                dialogListMessage.getAdapter() != null &&
+                dialogListMessage.getAdapter() instanceof ChoiceListAdapter) {
+            ((ChoiceListAdapter) dialogListMessage.getAdapter()).addChoice(charSequence);
+        }
+    }
+
+    public void addChoice(@NonNull Choice choice) {
+        if (builder.dialogChoiceList != null &&
+                dialogListMessage.getAdapter() != null &&
+                dialogListMessage.getAdapter() instanceof ChoiceListAdapter) {
+            ((ChoiceListAdapter) dialogListMessage.getAdapter()).addChoice(choice);
         }
     }
 

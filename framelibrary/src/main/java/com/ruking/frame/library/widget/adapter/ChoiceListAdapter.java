@@ -38,6 +38,16 @@ public class ChoiceListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHol
     }
 
 
+    public void addChoice(@NonNull CharSequence charSequence) {
+        rkDialogChoiceList.addChoice(charSequence);
+        notifyDataSetChanged();
+    }
+
+    public void addChoice(@NonNull Choice choice) {
+        rkDialogChoiceList.addChoice(choice);
+        notifyDataSetChanged();
+    }
+
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(mContext).inflate(R.layout.rk_dialog_item_choice_desc, parent, false);

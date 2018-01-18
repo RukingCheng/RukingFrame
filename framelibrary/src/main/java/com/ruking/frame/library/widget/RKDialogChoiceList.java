@@ -2,6 +2,7 @@ package com.ruking.frame.library.widget;
 
 import android.content.Context;
 import android.support.annotation.DrawableRes;
+import android.support.annotation.NonNull;
 
 import com.ruking.frame.library.R;
 import com.ruking.frame.library.bean.Choice;
@@ -117,6 +118,16 @@ public class RKDialogChoiceList {
             mChoices.add(choice);
         }
         return this;
+    }
+
+    public void addChoice(@NonNull CharSequence charSequence) {
+        Choice choice = new Choice();
+        choice.setTitle(charSequence);
+        mChoices.add(choice);
+    }
+
+    public void addChoice(@NonNull Choice choice) {
+        mChoices.add(choice);
     }
 
     public RKDialogChoiceList setChoices(Choice... choices) {
