@@ -1,7 +1,6 @@
 package com.ruking.frame.sdk_demo;
 
 import android.content.Intent;
-import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 
 import com.acker.simplezxing.activity.CaptureActivity;
