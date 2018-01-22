@@ -134,12 +134,12 @@ public class RKProjectUtil {
             InputStreamReader inputReader = new InputStreamReader(context.getResources().getAssets().open(fileName),
                     "GBK");
             BufferedReader bufReader = new BufferedReader(inputReader);
-            String line = "";
-            String Result = "";
+            String line;
+            StringBuilder Result = new StringBuilder();
             while ((line = bufReader.readLine()) != null)
-                Result += line + "\n";
-            return Result;
-        } catch (Exception e) {
+                Result.append(line).append("\n");
+            return Result.toString();
+        } catch (Exception ignored) {
         }
         return "";
     }
