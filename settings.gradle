@@ -1,1 +1,1 @@
-include ':app', ':framelibrary', ':autolayout', ':simplezxing'
+include ':app', ':framelibrary', ':autolayout', ':simplezxing', ':swipebacklayout'
