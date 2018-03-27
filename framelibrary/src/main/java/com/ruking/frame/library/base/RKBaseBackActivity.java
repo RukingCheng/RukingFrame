@@ -23,11 +23,6 @@ public abstract class RKBaseBackActivity extends RKBaseActivity {
         if (getStatusBarColor() != 0) {
             primary = getStatusBarColor();
             secondary = getStatusBarColor();
-//            try {
-//                primary = ContextCompat.getColor(activity, getStatusBarColor());
-//                secondary = ContextCompat.getColor(activity, getStatusBarColor());
-//            } catch (Exception ignored) {
-//            }
         }
         /*
         primaryColor : 滑动时状态栏渐变结束的颜色

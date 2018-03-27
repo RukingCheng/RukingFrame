@@ -32,22 +32,37 @@ public class BusinessCaptureActivity extends CaptureActivity {
     }
 
     @Override
-    protected boolean isBindEventBusHere() {
+    public boolean isBindEventBusHere() {
         return false;
     }
 
     @Override
-    protected int getStatusBarColor() {
+    public int getStatusBarColor() {
         return 0;
     }
 
     @Override
-    protected boolean toggleOverridePendingTransition() {
+    public int getStatusBarPlaceColor() {
+        return 0;
+    }
+
+    @Override
+    public boolean isShowStatusBarPlaceColor() {
+        return false;
+    }
+
+    @Override
+    public boolean isWindowSetting() {
         return true;
     }
 
     @Override
-    protected RKTransitionMode getOverridePendingTransitionMode() {
+    public boolean toggleOverridePendingTransition() {
+        return true;
+    }
+
+    @Override
+    public RKTransitionMode getOverridePendingTransitionMode() {
         return RKTransitionMode.FADE;
     }
 }

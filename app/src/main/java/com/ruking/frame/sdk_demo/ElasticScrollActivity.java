@@ -1,8 +1,8 @@
 package com.ruking.frame.sdk_demo;
 
-import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v4.content.ContextCompat;
 
 import com.ruking.frame.library.base.RKBaseBackActivity;
 import com.ruking.frame.library.base.RKTransitionMode;
@@ -47,22 +47,38 @@ public class ElasticScrollActivity extends RKBaseBackActivity {
 
 
     @Override
-    protected boolean isBindEventBusHere() {
+    public boolean isBindEventBusHere() {
         return false;
     }
 
     @Override
-    protected int getStatusBarColor() {
-        return Color.BLACK;
+    public int getStatusBarColor() {
+//        return Color.parseColor("#000");
+        return ContextCompat.getColor(activity, R.color.color_9000);
     }
 
     @Override
-    protected boolean toggleOverridePendingTransition() {
+    public int getStatusBarPlaceColor() {
+        return ContextCompat.getColor(activity, R.color.colorPrimaryDark);
+    }
+
+    @Override
+    public boolean isShowStatusBarPlaceColor() {
         return true;
     }
 
     @Override
-    protected RKTransitionMode getOverridePendingTransitionMode() {
+    public boolean isWindowSetting() {
+        return true;
+    }
+
+    @Override
+    public boolean toggleOverridePendingTransition() {
+        return true;
+    }
+
+    @Override
+    public RKTransitionMode getOverridePendingTransitionMode() {
         return RKTransitionMode.RIGHT;
     }
 }

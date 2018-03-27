@@ -99,23 +99,38 @@ public class MainActivity extends RKBaseActivity
     }
 
     @Override
-    protected boolean isBindEventBusHere() {
+    public boolean isBindEventBusHere() {
         return false;
     }
 
     @Override
-    protected int getStatusBarColor() {
+    public int getStatusBarColor() {
 //        return Color.parseColor("#000");
+        return ContextCompat.getColor(activity, R.color.color_9000);
+    }
+
+    @Override
+    public int getStatusBarPlaceColor() {
         return ContextCompat.getColor(activity, R.color.colorPrimaryDark);
     }
 
     @Override
-    protected boolean toggleOverridePendingTransition() {
+    public boolean isShowStatusBarPlaceColor() {
         return false;
     }
 
     @Override
-    protected RKTransitionMode getOverridePendingTransitionMode() {
+    public boolean isWindowSetting() {
+        return false;
+    }
+
+    @Override
+    public boolean toggleOverridePendingTransition() {
+        return false;
+    }
+
+    @Override
+    public RKTransitionMode getOverridePendingTransitionMode() {
         return null;
     }
 

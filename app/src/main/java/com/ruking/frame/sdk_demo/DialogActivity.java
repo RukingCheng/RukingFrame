@@ -308,22 +308,38 @@ public class DialogActivity extends RKBaseBackActivity {
     }
 
     @Override
-    protected boolean isBindEventBusHere() {
+    public boolean isBindEventBusHere() {
         return false;
     }
 
     @Override
-    protected int getStatusBarColor() {
+    public int getStatusBarColor() {
+//        return Color.parseColor("#000");
+        return ContextCompat.getColor(activity, R.color.color_9000);
+    }
+
+    @Override
+    public int getStatusBarPlaceColor() {
         return ContextCompat.getColor(activity, R.color.colorPrimaryDark);
     }
 
     @Override
-    protected boolean toggleOverridePendingTransition() {
+    public boolean isShowStatusBarPlaceColor() {
         return true;
     }
 
     @Override
-    protected RKTransitionMode getOverridePendingTransitionMode() {
+    public boolean isWindowSetting() {
+        return true;
+    }
+
+    @Override
+    public boolean toggleOverridePendingTransition() {
+        return true;
+    }
+
+    @Override
+    public RKTransitionMode getOverridePendingTransitionMode() {
         return RKTransitionMode.RIGHT;
     }
 }

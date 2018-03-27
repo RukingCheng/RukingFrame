@@ -46,7 +46,6 @@ public abstract class CaptureActivity extends RKBaseActivity implements SurfaceH
     @Override
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
-        windowSetting();
         setContentView(R.layout.capture);
         ambientLightManager = new AmbientLightManager(this);
         beepManager = new BeepManager(this, true, true);
