@@ -46,7 +46,7 @@ public abstract class CaptureActivity extends RKBaseActivity implements SurfaceH
     @Override
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
-        setContentView(R.layout.capture);
+        super.setContentView(R.layout.capture);
         ambientLightManager = new AmbientLightManager(this);
         beepManager = new BeepManager(this, true, true);
         myOrientationDetector = new MyOrientationDetector(this);
@@ -54,10 +54,29 @@ public abstract class CaptureActivity extends RKBaseActivity implements SurfaceH
         initView();
     }
 
+    @Override
+    public int getStatusBarColor() {
+        return 0;
+    }
+
+    @Override
+    public int getStatusBarPlaceColor() {
+        return 0;
+    }
+
+    @Override
+    public boolean isShowStatusBarPlaceColor() {
+        return false;
+    }
+
+    @Override
+    public boolean isWindowSetting() {
+        return true;
+    }
+
     private void initView() {
         findViewById(R.id.sys_off).setOnClickListener(v -> onBackPressed());
     }
-
 
 
     @RequiresApi(api = Build.VERSION_CODES.ICE_CREAM_SANDWICH_MR1)

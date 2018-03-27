@@ -36,25 +36,6 @@ public class BusinessCaptureActivity extends CaptureActivity {
         return false;
     }
 
-    @Override
-    public int getStatusBarColor() {
-        return 0;
-    }
-
-    @Override
-    public int getStatusBarPlaceColor() {
-        return 0;
-    }
-
-    @Override
-    public boolean isShowStatusBarPlaceColor() {
-        return false;
-    }
-
-    @Override
-    public boolean isWindowSetting() {
-        return true;
-    }
 
     @Override
     public boolean toggleOverridePendingTransition() {

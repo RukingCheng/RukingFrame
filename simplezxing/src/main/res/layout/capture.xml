@@ -1,16 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<merge xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools">
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
     <SurfaceView
         android:id="@+id/preview_view"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"/>
 
     <com.acker.simplezxing.view.ViewfinderView
         android:id="@+id/viewfinder_view"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"/>
 
 
     <com.ruking.frame.library.view.animation.RKAnimationButton
@@ -22,5 +25,5 @@
         android:layout_marginTop="30dp"
         android:background="@mipmap/sys_off"
         android:textAllCaps="false"
-        tools:ignore="RtlHardcoded" />
-</merge>
+        tools:ignore="RtlHardcoded"/>
+</FrameLayout>
