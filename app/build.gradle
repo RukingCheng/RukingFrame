@@ -74,6 +74,8 @@ dependencies {
     testCompile 'junit:junit:4.12'
     compile project(':framelibrary')
     compile project(':simplezxing')
+    compile 'com.github.bumptech.glide:glide:4.6.1'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.6.1'
 //    compile 'com.github.RukingCheng.RukingFrame:framelibrary:1.0.0.5'
 //    compile 'com.github.RukingCheng.RukingFrame:simplezxing:1.0.0.5'
 }
