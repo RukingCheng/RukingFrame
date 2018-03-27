@@ -15,18 +15,18 @@
 ## Step 2. Add the dependency
 ### 自适应框架
 ``` 
-     compile 'com.github.RukingCheng.RukingFrame:autolayout:1.0.0.5'
+     compile 'com.github.RukingCheng.RukingFrame:autolayout:1.0.0.6'
  ```
      代码来源：[https://github.com/supengchao/AutoLayout](https://github.com/supengchao/AutoLayout)
    
 ### RK框架
 ``` 
-     compile 'com.github.RukingCheng.RukingFrame:framelibrary:1.0.0.5'
+     compile 'com.github.RukingCheng.RukingFrame:framelibrary:1.0.0.6'
 ```
   
 ### 二维码扫一扫
 ``` 
-     compile 'com.github.RukingCheng.RukingFrame:simplezxing:1.0.0.5'
+     compile 'com.github.RukingCheng.RukingFrame:simplezxing:1.0.0.6'
 ```
      代码来源：[https://github.com/GuoJinyu/SimpleZXing](https://github.com/GuoJinyu/SimpleZXing)
        
