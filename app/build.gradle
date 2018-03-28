@@ -1,5 +1,4 @@
 apply plugin: 'com.android.application'
-apply plugin: 'me.tatarka.retrolambda'
 
 android {
     compileSdkVersion versions.compileSdk
@@ -54,12 +53,12 @@ android {
 //        }
 //    }
 
-    android.applicationVariants.all {
-        variant ->
-            variant.outputs.each {
-                output -> output.outputFile = new File(output.outputFile.parent, "RukingFrame-" + defaultConfig.versionCode + "-v" + defaultConfig.versionName + "-" + buildType.name + ".apk");
-            }
-    }
+//    android.applicationVariants.all {
+//        variant ->
+//            variant.outputs.each {
+//                output -> output.outputFile = new File(output.outputFile.parent, "RukingFrame-" + defaultConfig.versionCode + "-v" + defaultConfig.versionName + "-" + buildType.name + ".apk");
+//            }
+//    }
 }
 
 dependencies {
