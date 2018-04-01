@@ -10,7 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.LinearLayout;
 
-import com.ruking.frame.library.base.RKBaseBackActivity;
+import com.ruking.frame.library.base.RKBaseActivity;
 import com.ruking.frame.library.base.RKTransitionMode;
 import com.ruking.frame.library.bean.Choice;
 import com.ruking.frame.library.widget.RKDialog;
@@ -29,11 +29,12 @@ import butterknife.OnClick;
  * @tel 18075121944
  * @date on 2017/12/15 16:36
  */
-public class DialogActivity extends RKBaseBackActivity {
+public class DialogActivity extends RKBaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dialog);
+        setSlidr();
     }
 
     @SuppressLint("InflateParams")

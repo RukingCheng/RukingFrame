@@ -12,7 +12,6 @@ import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.Window;
 import android.view.WindowManager;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.FrameLayout;
@@ -73,7 +72,7 @@ public abstract class RKBaseActivity extends AutoLayoutActivity {
             RKWindowUtil.windowSetting(this);
         super.onCreate(savedInstanceState);
         // 将系统自带的标题框隐藏
-        requestWindowFeature(Window.FEATURE_NO_TITLE);
+//        requestWindowFeature(Window.FEATURE_NO_TITLE);
         activity = this;
         super.setContentView(R.layout.rk_activity_compat_status_bar);
         if (getStatusBarColor() != 0) {

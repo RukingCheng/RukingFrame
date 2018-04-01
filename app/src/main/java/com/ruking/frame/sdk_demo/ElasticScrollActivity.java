@@ -4,7 +4,7 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.content.ContextCompat;
 
-import com.ruking.frame.library.base.RKBaseBackActivity;
+import com.ruking.frame.library.base.RKBaseActivity;
 import com.ruking.frame.library.base.RKTransitionMode;
 import com.ruking.frame.library.view.animation.RKAnimationButton;
 import com.ruking.frame.library.view.animation.RKSinkingView;
@@ -17,12 +17,13 @@ import com.ruking.frame.library.view.animation.RKSinkingView;
  * @time 创建时间：2017/5/6 10:25
  */
 
-public class ElasticScrollActivity extends RKBaseBackActivity {
+public class ElasticScrollActivity extends RKBaseActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 //        windowSetting();
         setContentView(R.layout.activityelasticscroll);
+        setSlidr();
         RKAnimationButton mRKAnimationButton = (RKAnimationButton) findViewById(R.id.back);
         mRKAnimationButton.getRKViewAnimationBase().setRoundCornerBottomLeft(60);
         mRKAnimationButton.getRKViewAnimationBase().setRoundAsCircle(false);

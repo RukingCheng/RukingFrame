@@ -4,7 +4,7 @@ import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
 import android.widget.TextView;
 
-import com.ruking.frame.library.base.RKBaseBackActivity;
+import com.ruking.frame.library.base.RKBaseActivity;
 import com.ruking.frame.library.base.RKTransitionMode;
 
 /**
@@ -14,12 +14,13 @@ import com.ruking.frame.library.base.RKTransitionMode;
  * @tel 18075121944
  * @date on 11/21 15:23
  */
-public class TransitionModeActivity extends RKBaseBackActivity {
+public class TransitionModeActivity extends RKBaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_transitionmode);
+        setSlidr();
         String text = "FADE";
         switch (getIntent().getExtras().getInt("type")) {
             case 0:
