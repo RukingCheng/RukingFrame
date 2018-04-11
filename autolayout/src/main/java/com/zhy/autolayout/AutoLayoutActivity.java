@@ -28,7 +28,9 @@ public class AutoLayoutActivity extends AppCompatActivity {
         if (name.equals("RecyclerView")) {
             view = new AutoRecyclerView(context, attrs);
         }
-
+        if (name.equals("ConstraintLayout")) {
+            view = new AutoConstraintLayout(context, attrs);
+        }
         if (view != null) return view;
 
         return super.onCreateView(name, context, attrs);
