@@ -3,7 +3,6 @@ package com.acker.simplezxing.decode;
 import android.os.Handler;
 import android.os.Looper;
 
-import com.acker.simplezxing.activity.CaptureActivity;
 import com.google.zxing.BarcodeFormat;
 import com.google.zxing.DecodeHintType;
 import com.google.zxing.ResultPointCallback;
@@ -15,12 +14,12 @@ import java.util.Map;
 import java.util.concurrent.CountDownLatch;
 
 public final class DecodeThread extends Thread {
-    private final CaptureActivity activity;
+    private final Decode activity;
     private final Map<DecodeHintType, Object> hints;
     private final CountDownLatch handlerInitLatch;
     private Handler handler;
 
-    public DecodeThread(CaptureActivity activity, ResultPointCallback resultPointCallback) {
+    public DecodeThread(Decode activity, ResultPointCallback resultPointCallback) {
         this.activity = activity;
         handlerInitLatch = new CountDownLatch(1);
         hints = new EnumMap<>(DecodeHintType.class);

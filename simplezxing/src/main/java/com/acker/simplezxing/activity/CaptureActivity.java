@@ -15,6 +15,8 @@ import com.acker.simplezxing.R;
 import com.acker.simplezxing.assit.AmbientLightManager;
 import com.acker.simplezxing.assit.BeepManager;
 import com.acker.simplezxing.camera.CameraManager;
+import com.acker.simplezxing.decode.CaptureActivityHandler;
+import com.acker.simplezxing.decode.Decode;
 import com.acker.simplezxing.view.ViewfinderView;
 import com.google.zxing.Result;
 import com.ruking.frame.library.base.RKBaseActivity;
@@ -22,7 +24,7 @@ import com.ruking.frame.library.base.RKBaseActivity;
 import java.io.UnsupportedEncodingException;
 import java.nio.charset.Charset;
 
-public abstract class CaptureActivity extends RKBaseActivity implements SurfaceHolder.Callback {
+public abstract class CaptureActivity extends RKBaseActivity implements SurfaceHolder.Callback, Decode {
     private CameraManager cameraManager;
     private CaptureActivityHandler handler;
     private ViewfinderView viewfinderView;
@@ -31,7 +33,7 @@ public abstract class CaptureActivity extends RKBaseActivity implements SurfaceH
     private AmbientLightManager ambientLightManager;
     private MyOrientationDetector myOrientationDetector;
 
-    ViewfinderView getViewfinderView() {
+    public ViewfinderView getViewfinderView() {
         return viewfinderView;
     }
 
@@ -85,7 +87,7 @@ public abstract class CaptureActivity extends RKBaseActivity implements SurfaceH
         super.onResume();
         myOrientationDetector.enable();
         cameraManager = new CameraManager(getApplication(), true, true);
-        viewfinderView = (ViewfinderView) findViewById(R.id.viewfinder_view);
+        viewfinderView = findViewById(R.id.viewfinder_view);
         viewfinderView.setCameraManager(cameraManager);
         viewfinderView.setNeedDrawText(true);
         viewfinderView.setScanAreaFullScreen(true);
@@ -94,7 +96,7 @@ public abstract class CaptureActivity extends RKBaseActivity implements SurfaceH
         if (ambientLightManager != null) {
             ambientLightManager.start(cameraManager);
         }
-        SurfaceView surfaceView = (SurfaceView) findViewById(R.id.preview_view);
+        SurfaceView surfaceView = findViewById(R.id.preview_view);
         SurfaceHolder surfaceHolder = surfaceView.getHolder();
         if (hasSurface) {
             initCamera(surfaceHolder);
@@ -116,7 +118,7 @@ public abstract class CaptureActivity extends RKBaseActivity implements SurfaceH
         beepManager.close();
         cameraManager.closeDriver();
         if (!hasSurface) {
-            SurfaceView surfaceView = (SurfaceView) findViewById(R.id.preview_view);
+            SurfaceView surfaceView = findViewById(R.id.preview_view);
             SurfaceHolder surfaceHolder = surfaceView.getHolder();
             surfaceHolder.removeCallback(this);
         }

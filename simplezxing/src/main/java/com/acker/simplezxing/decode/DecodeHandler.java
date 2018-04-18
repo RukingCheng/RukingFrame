@@ -5,7 +5,6 @@ import android.os.Looper;
 import android.os.Message;
 
 import com.acker.simplezxing.R;
-import com.acker.simplezxing.activity.CaptureActivity;
 import com.google.zxing.BinaryBitmap;
 import com.google.zxing.DecodeHintType;
 import com.google.zxing.MultiFormatReader;
@@ -18,11 +17,11 @@ import java.util.Map;
 
 final class DecodeHandler extends Handler {
 
-    private final CaptureActivity activity;
+    private final Decode activity;
     private final MultiFormatReader multiFormatReader;
     private boolean running = true;
 
-    DecodeHandler(CaptureActivity activity, Map<DecodeHintType, Object> hints) {
+    DecodeHandler(Decode activity, Map<DecodeHintType, Object> hints) {
         multiFormatReader = new MultiFormatReader();
         multiFormatReader.setHints(hints);
         this.activity = activity;

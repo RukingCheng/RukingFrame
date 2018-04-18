@@ -1,22 +1,21 @@
-package com.acker.simplezxing.activity;
+package com.acker.simplezxing.decode;
 
 import android.os.Handler;
 import android.os.Message;
 
 import com.acker.simplezxing.R;
 import com.acker.simplezxing.camera.CameraManager;
-import com.acker.simplezxing.decode.DecodeThread;
 import com.acker.simplezxing.view.ViewfinderResultPointCallback;
 import com.google.zxing.Result;
 
-final class CaptureActivityHandler extends Handler {
+public final class CaptureActivityHandler extends Handler {
 
-    private final CaptureActivity activity;
+    private final Decode activity;
     private final DecodeThread decodeThread;
     private final CameraManager cameraManager;
     private State state;
 
-    CaptureActivityHandler(CaptureActivity activity, CameraManager cameraManager) {
+    public CaptureActivityHandler(Decode activity, CameraManager cameraManager) {
         this.activity = activity;
         decodeThread = new DecodeThread(activity, new ViewfinderResultPointCallback(activity.getViewfinderView()));
         decodeThread.start();
@@ -38,7 +37,7 @@ final class CaptureActivityHandler extends Handler {
         }
     }
 
-    void quitSynchronously() {
+    public void quitSynchronously() {
         state = State.DONE;
         cameraManager.stopPreview();
         Message quit = Message.obtain(decodeThread.getHandler(), R.id.quit);
