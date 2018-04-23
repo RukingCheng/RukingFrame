@@ -1,11 +1,10 @@
 package com.ruking.frame.library.base;
 
-import java.util.Stack;
-
-
 import android.app.Activity;
 import android.app.ActivityManager;
 import android.content.Context;
+
+import java.util.Stack;
 
 /**
  * activity 管理栈
@@ -109,13 +108,16 @@ public class RKAppManager {
      * 结束所有Activity
      */
     public void finishAllActivity() {
-        for (int i = 0, size = activityStack.size(); i < size; i++) {
-            if (null != activityStack.get(i)) {
-                activityStack.get(i).finish();
+        try {
+            for (int i = 0, size = activityStack.size(); i < size; i++) {
+                if (null != activityStack.get(i)) {
+                    activityStack.get(i).finish();
+                }
             }
+            activityStack.clear();
+            activityStack = null;
+        } catch (Exception ignored) {
         }
-        activityStack.clear();
-        activityStack = null;
     }
 
     /**
