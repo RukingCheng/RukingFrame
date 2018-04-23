@@ -84,10 +84,14 @@ public class RKViewAnimationBase {
 
     public void onSizeChanged(int w, int h) {
         RectF areas = new RectF();
-        areas.left = view.getPaddingLeft();
-        areas.top = view.getPaddingTop();
-        areas.right = w - view.getPaddingRight();
-        areas.bottom = h - view.getPaddingBottom();
+        //        areas.left = view.getPaddingLeft();
+        //        areas.top = view.getPaddingTop();
+        //        areas.right = w - view.getPaddingRight();
+        //        areas.bottom = h - view.getPaddingBottom();
+        areas.left = 0;
+        areas.top = 0;
+        areas.right = w;
+        areas.bottom = h;
         mClipPath.reset();
         if (mRoundAsCircle) {
             float d = areas.width() >= areas.height() ? areas.height() : areas.width();
