@@ -42,7 +42,7 @@ public class MainActivity extends RKBaseActivity
         navigationView.setNavigationItemSelectedListener(this);
     }
 
-    @OnClick({R.id.LEFT, R.id.TOP, R.id.RIGHT, R.id.BOTTOM, R.id.SCALE, R.id.FADE, R.id.elasticScrollActivity, R.id.dialogactivity})
+    @OnClick({R.id.LEFT, R.id.TOP, R.id.RIGHT, R.id.BOTTOM, R.id.SCALE, R.id.FADE, R.id.elasticScrollActivity, R.id.CategoryActivity, R.id.dialogactivity})
     void OnClick(View view) {
         int type = 0;
         switch (view.getId()) {
@@ -69,6 +69,9 @@ public class MainActivity extends RKBaseActivity
                 return;
             case R.id.dialogactivity:
                 readyGo(DialogActivity.class);
+                return;
+            case R.id.CategoryActivity:
+                readyGo(CategoryActivity.class);
                 return;
         }
         Bundle bundle = new Bundle();

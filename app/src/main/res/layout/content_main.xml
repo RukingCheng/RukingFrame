@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#fff"
-    android:gravity="center"
-    android:orientation="vertical"
-    tools:context="com.ruking.frame.sdk_demo.MainActivity"
-    tools:ignore="HardcodedText,PxUsage"
-    tools:showIn="@layout/app_bar_main">
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="#fff"
+              android:gravity="center"
+              android:orientation="vertical"
+              tools:context="com.ruking.frame.sdk_demo.MainActivity"
+              tools:ignore="HardcodedText,PxUsage"
+              tools:showIn="@layout/app_bar_main">
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
@@ -21,7 +21,7 @@
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:background="?attr/colorPrimary"
-            app:popupTheme="@style/AppTheme.PopupOverlay" />
+            app:popupTheme="@style/AppTheme.PopupOverlay"/>
 
     </android.support.design.widget.AppBarLayout>
 
@@ -42,7 +42,7 @@
                 android:layout_marginTop="20px"
                 android:background="#000"
                 android:contentDescription="@+id/imageView2"
-                app:srcCompat="@drawable/test" />
+                app:srcCompat="@drawable/test"/>
 
 
             <com.ruking.frame.library.view.animation.RKAnimationButton
@@ -58,7 +58,7 @@
                 android:textSize="30px"
                 app:round_corner="20px"
                 app:stroke_color="#cba"
-                app:stroke_width="2px" />
+                app:stroke_width="2px"/>
 
             <com.ruking.frame.library.view.animation.RKAnimationButton
                 android:id="@+id/dialogactivity"
@@ -75,7 +75,24 @@
                 android:textSize="30px"
                 app:round_corner="20px"
                 app:stroke_color="#cba"
-                app:stroke_width="2px" />
+                app:stroke_width="2px"/>
+
+            <com.ruking.frame.library.view.animation.RKAnimationButton
+                android:id="@+id/CategoryActivity"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="80px"
+                android:layout_marginBottom="20px"
+                android:layout_marginLeft="20px"
+                android:layout_marginRight="20px"
+                android:background="#abc"
+                android:text="时间选择器"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white"
+                android:textSize="30px"
+                app:round_corner="20px"
+                app:stroke_color="#cba"
+                app:stroke_width="2px"/>
 
             <com.ruking.frame.library.view.animation.RKAnimationButton
                 android:id="@+id/LEFT"
@@ -92,7 +109,7 @@
                 android:textSize="30px"
                 app:round_corner="20px"
                 app:stroke_color="#cba"
-                app:stroke_width="2px" />
+                app:stroke_width="2px"/>
 
             <com.ruking.frame.library.view.animation.RKAnimationButton
                 android:id="@+id/RIGHT"
@@ -109,7 +126,7 @@
                 android:textSize="30px"
                 app:round_corner="20px"
                 app:stroke_color="#cba"
-                app:stroke_width="2px" />
+                app:stroke_width="2px"/>
 
             <com.ruking.frame.library.view.animation.RKAnimationButton
                 android:id="@+id/TOP"
@@ -126,7 +143,7 @@
                 android:textSize="30px"
                 app:round_corner="20px"
                 app:stroke_color="#cba"
-                app:stroke_width="2px" />
+                app:stroke_width="2px"/>
 
             <com.ruking.frame.library.view.animation.RKAnimationButton
                 android:id="@+id/BOTTOM"
@@ -143,7 +160,7 @@
                 android:textSize="30px"
                 app:round_corner="20px"
                 app:stroke_color="#cba"
-                app:stroke_width="2px" />
+                app:stroke_width="2px"/>
 
             <com.ruking.frame.library.view.animation.RKAnimationButton
                 android:id="@+id/SCALE"
@@ -160,7 +177,7 @@
                 android:textSize="30px"
                 app:round_corner="20px"
                 app:stroke_color="#cba"
-                app:stroke_width="2px" />
+                app:stroke_width="2px"/>
 
             <com.ruking.frame.library.view.animation.RKAnimationButton
                 android:id="@+id/FADE"
@@ -177,7 +194,7 @@
                 android:textSize="30px"
                 app:round_corner="20px"
                 app:stroke_color="#cba"
-                app:stroke_width="2px" />
+                app:stroke_width="2px"/>
 
 
         </LinearLayout>

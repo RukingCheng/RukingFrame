@@ -47,6 +47,12 @@
             android:launchMode="standard"
             android:theme="@style/ThemeTranslucentActivity.AppTheme"
             android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".CategoryActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:launchMode="standard"
+            android:theme="@style/ThemeTranslucentActivity.AppTheme"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
 
         <meta-data
             android:name="design_width"
