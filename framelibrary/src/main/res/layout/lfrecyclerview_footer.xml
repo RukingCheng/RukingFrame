@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:ignore="HardcodedText,PxUsage,RtlHardcoded">
+
+    <TextView
+        android:id="@+id/lfrecyclerview_footer_state"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="200px"
+        android:clickable="false"
+        android:gravity="center"
+        android:text="没有任何数据"
+        android:textColor="#999"
+        android:textSize="24px"/>
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:id="@+id/lfrecyclerview_footer_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20px">
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:id="@+id/lfrecyclerview_footer_progressbar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:visibility="invisible">
+
+            <com.wang.avi.AVLoadingIndicatorView
+                android:id="@+id/lfrecyclerview_footer_loadview"
+                android:layout_width="50px"
+                android:layout_height="50px"
+                android:layout_centerVertical="true"
+                app:indicatorColor="#999"
+                app:indicatorName="LineSpinFadeLoaderIndicator"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20px"
+                android:text="@string/lfrecyclerview_header_hint_loading"
+                android:textColor="#999"
+                android:textSize="24px"/>
+        </com.zhy.autolayout.AutoLinearLayout>
+
+        <TextView
+            android:id="@+id/lfrecyclerview_footer_hint_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/lfrecyclerview_footer_hint_normal"
+            android:textColor="#999"
+            android:textSize="24px"/>
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+</com.zhy.autolayout.AutoLinearLayout>

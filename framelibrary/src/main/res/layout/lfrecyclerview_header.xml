@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:gravity="bottom"
+    android:orientation="vertical"
+    tools:ignore="PxUsage,RtlHardcoded">
+
+    <com.zhy.autolayout.AutoLinearLayout
+        android:id="@+id/lfrecyclerview_header_content"
+        android:layout_width="fill_parent"
+        android:layout_height="120px"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <com.zhy.autolayout.AutoRelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/lfrecyclerview_header_arrow"
+                android:layout_width="50px"
+                android:layout_height="50px"
+                android:layout_centerVertical="true"
+                android:scaleType="fitCenter"
+                android:src="@mipmap/default_ptr_flip"
+                tools:ignore="ContentDescription"/>
+
+
+            <com.wang.avi.AVLoadingIndicatorView
+                android:id="@+id/lfrecyclerview_header_progressbar"
+                android:layout_width="50px"
+                android:layout_height="50px"
+                android:layout_centerVertical="true"
+                android:visibility="invisible"
+                app:indicatorColor="#999"
+                app:indicatorName="LineSpinFadeLoaderIndicator"/>
+        </com.zhy.autolayout.AutoRelativeLayout>
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:id="@+id/lfrecyclerview_header_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="20px"
+            android:layout_marginRight="70px"
+            android:gravity="center"
+            android:minWidth="200px"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/lfrecyclerview_header_hint_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/lfrecyclerview_header_hint_normal"
+                android:textColor="#999"
+                android:textSize="26px"/>
+
+            <TextView
+                android:id="@+id/lfrecyclerview_header_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:text="@string/lfrecyclerview_header_last_time"
+                android:textColor="#999"
+                android:textSize="24px"/>
+        </com.zhy.autolayout.AutoLinearLayout>
+    </com.zhy.autolayout.AutoLinearLayout>
+</com.zhy.autolayout.AutoLinearLayout>

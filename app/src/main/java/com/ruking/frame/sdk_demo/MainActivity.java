@@ -18,6 +18,7 @@ import android.view.View;
 import com.ruking.frame.library.base.RKBaseActivity;
 import com.ruking.frame.library.base.RKTransitionMode;
 import com.ruking.frame.library.view.SnackbarUtil;
+import com.ruking.frame.sdk_demo.recycleviewdemo.LFRecyclerViewActivity;
 
 import butterknife.OnClick;
 
@@ -42,7 +43,7 @@ public class MainActivity extends RKBaseActivity
         navigationView.setNavigationItemSelectedListener(this);
     }
 
-    @OnClick({R.id.LEFT, R.id.TOP, R.id.RIGHT, R.id.BOTTOM, R.id.SCALE, R.id.FADE, R.id.elasticScrollActivity, R.id.CategoryActivity, R.id.dialogactivity})
+    @OnClick({R.id.LEFT, R.id.TOP, R.id.RIGHT, R.id.BOTTOM, R.id.SCALE, R.id.FADE, R.id.elasticScrollActivity, R.id.listView, R.id.CategoryActivity, R.id.dialogactivity})
     void OnClick(View view) {
         int type = 0;
         switch (view.getId()) {
@@ -72,6 +73,9 @@ public class MainActivity extends RKBaseActivity
                 return;
             case R.id.CategoryActivity:
                 readyGo(CategoryActivity.class);
+                return;
+            case R.id.listView:
+                readyGo(LFRecyclerViewActivity.class);
                 return;
         }
         Bundle bundle = new Bundle();

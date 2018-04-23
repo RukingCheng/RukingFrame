@@ -95,6 +95,23 @@
                 app:stroke_width="2px"/>
 
             <com.ruking.frame.library.view.animation.RKAnimationButton
+                android:id="@+id/listView"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="80px"
+                android:layout_marginBottom="20px"
+                android:layout_marginLeft="20px"
+                android:layout_marginRight="20px"
+                android:background="#abc"
+                android:text="下拉刷新RecycleView"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white"
+                android:textSize="30px"
+                app:round_corner="20px"
+                app:stroke_color="#cba"
+                app:stroke_width="2px"/>
+
+            <com.ruking.frame.library.view.animation.RKAnimationButton
                 android:id="@+id/LEFT"
                 style="?android:attr/borderlessButtonStyle"
                 android:layout_width="match_parent"

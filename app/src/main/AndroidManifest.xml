@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.ruking.frame.sdk_demo">
+          package="com.ruking.frame.sdk_demo">
 
     <application
         android:allowBackup="true"
@@ -17,9 +17,9 @@
             android:theme="@style/AppTheme.NoActionBar"
             android:windowSoftInputMode="adjustResize|stateHidden">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.MAIN"/>
 
-                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
         <activity
@@ -27,39 +27,45 @@
             android:configChanges="keyboardHidden|orientation"
             android:launchMode="standard"
             android:theme="@style/ThemeTranslucentActivity.AppTheme"
-            android:windowSoftInputMode="adjustResize|stateHidden" />
+            android:windowSoftInputMode="adjustResize|stateHidden"/>
         <!--android:screenOrientation="portrait"-->
         <activity
             android:name=".ElasticScrollActivity"
             android:configChanges="keyboardHidden|orientation"
             android:launchMode="standard"
             android:theme="@style/ThemeTranslucentActivity.AppTheme"
-            android:windowSoftInputMode="adjustResize|stateHidden" />
+            android:windowSoftInputMode="adjustResize|stateHidden"/>
         <activity
             android:name=".BusinessCaptureActivity"
             android:configChanges="keyboardHidden|orientation"
             android:launchMode="standard"
             android:theme="@style/AppTheme.NoActionBar"
-            android:windowSoftInputMode="adjustResize|stateHidden" />
+            android:windowSoftInputMode="adjustResize|stateHidden"/>
         <activity
             android:name=".DialogActivity"
             android:configChanges="keyboardHidden|orientation"
             android:launchMode="standard"
             android:theme="@style/ThemeTranslucentActivity.AppTheme"
-            android:windowSoftInputMode="adjustResize|stateHidden" />
+            android:windowSoftInputMode="adjustResize|stateHidden"/>
         <activity
             android:name=".CategoryActivity"
             android:configChanges="keyboardHidden|orientation"
             android:launchMode="standard"
             android:theme="@style/ThemeTranslucentActivity.AppTheme"
-            android:windowSoftInputMode="adjustResize|stateHidden" />
+            android:windowSoftInputMode="adjustResize|stateHidden"/>
+        <activity
+            android:name=".recycleviewdemo.LFRecyclerViewActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:launchMode="standard"
+            android:theme="@style/ThemeTranslucentActivity.AppTheme"
+            android:windowSoftInputMode="adjustResize|stateHidden"/>
 
         <meta-data
             android:name="design_width"
-            android:value="750" />
+            android:value="750"/>
         <meta-data
             android:name="design_height"
-            android:value="1280" />
+            android:value="1280"/>
     </application>
 
 </manifest>
