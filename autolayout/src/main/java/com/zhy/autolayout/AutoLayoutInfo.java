@@ -6,6 +6,7 @@ import android.widget.TextView;
 
 import com.zhy.autolayout.attr.Attrs;
 import com.zhy.autolayout.attr.AutoAttr;
+import com.zhy.autolayout.attr.DrawablePaddingAttr;
 import com.zhy.autolayout.attr.HeightAttr;
 import com.zhy.autolayout.attr.MarginBottomAttr;
 import com.zhy.autolayout.attr.MarginLeftAttr;
@@ -109,6 +110,10 @@ public class AutoLayoutInfo {
         if (view instanceof TextView) {
             if ((attrs & Attrs.TEXTSIZE) != 0) {
                 autoLayoutInfo.addAttr(TextSizeAttr.generate((int) ((TextView) view).getTextSize(), base));
+            }
+            if ((attrs & Attrs.DRAWABLE_PADDING) != 0) {
+                autoLayoutInfo.addAttr(DrawablePaddingAttr.generate(((TextView) view).getCompoundDrawablePadding(),
+                        base));
             }
         }
         return autoLayoutInfo;

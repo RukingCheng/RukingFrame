@@ -23,5 +23,6 @@ public interface Attrs {
     public static final int MAX_WIDTH = MIN_WIDTH << 1;
     public static final int MIN_HEIGHT = MAX_WIDTH << 1;
     public static final int MAX_HEIGHT = MIN_HEIGHT << 1;
+    public static final int DRAWABLE_PADDING = MAX_HEIGHT << 1;
 
 }
