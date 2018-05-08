@@ -3,7 +3,6 @@ package com.zhy.autolayout;
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.res.TypedArray;
-import android.graphics.Color;
 import android.util.AttributeSet;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,13 +12,7 @@ import com.zhy.autolayout.utils.AutoUtils;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Random;
 
-/**
- * Created by zhy on 15/12/10.
- * <p>
- * //do not use
- */
 public class AutoViewGroup extends ViewGroup {
 
     private final AutoLayoutHelper mHelper = new AutoLayoutHelper(this);

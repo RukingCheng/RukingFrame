@@ -1,5 +1,6 @@
 package com.ruking.frame.library.view.animation;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.graphics.Canvas;
 import android.util.AttributeSet;
@@ -55,6 +56,7 @@ public class RKAnimationConstraintLayout extends AutoConstraintLayout {
         return mRKViewAnimationBase;
     }
 
+    @SuppressLint("ClickableViewAccessibility")
     @Override
     public boolean onTouchEvent(MotionEvent event) {
         if (!mRKViewAnimationBase.isOnClickable())

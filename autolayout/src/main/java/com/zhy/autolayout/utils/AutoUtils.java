@@ -1,6 +1,12 @@
 package com.zhy.autolayout.utils;
 
+import android.content.res.TypedArray;
+import android.graphics.drawable.Drawable;
+import android.support.annotation.NonNull;
+import android.util.AttributeSet;
+import android.util.TypedValue;
 import android.view.View;
+import android.widget.TextView;
 
 import com.zhy.autolayout.AutoLayoutInfo;
 import com.zhy.autolayout.R;
@@ -123,4 +129,27 @@ public class AutoUtils {
 
         return (int) (val * 1.0f / designHeight * screenHeight);
     }
+
+    public static void setTextViewDrawableSize(@NonNull TextView textView, AttributeSet attrs) {
+        TypedArray a = textView.getContext().obtainStyledAttributes(attrs, R.styleable.AutoTextView);
+        int iconWidth = a.getDimensionPixelOffset(R.styleable.AutoTextView_icon_width, 0);
+        int iconHeight = a.getDimensionPixelOffset(R.styleable.AutoTextView_icon_height, 0);
+        TypedValue val = a.peekValue(R.styleable.AutoTextView_icon_width);
+        if (DimenUtils.isPxVal(val)) {
+            iconWidth = AutoUtils.getPercentWidthSizeBigger(iconWidth);
+        }
+        TypedValue val1 = a.peekValue(R.styleable.AutoTextView_icon_height);
+        if (DimenUtils.isPxVal(val1)) {
+            iconHeight = AutoUtils.getPercentWidthSizeBigger(iconHeight);
+        }
+        Drawable[] drawables = textView.getCompoundDrawables();
+        for (Drawable drawable : drawables) {
+            if (drawable != null) {
+                drawable.setBounds(0, 0, iconWidth, iconHeight);
+            }
+        }
+        textView.setCompoundDrawables(drawables[0], drawables[1], drawables[2], drawables[3]);
+        a.recycle();
+    }
+
 }

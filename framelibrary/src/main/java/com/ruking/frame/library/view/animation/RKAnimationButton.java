@@ -1,11 +1,13 @@
 package com.ruking.frame.library.view.animation;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.graphics.Canvas;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
 
 import com.ruking.frame.library.view.animation.base.RKViewAnimationBase;
+import com.zhy.autolayout.AutoButton;
 
 
 /**
@@ -14,7 +16,7 @@ import com.ruking.frame.library.view.animation.base.RKViewAnimationBase;
  * @author 史伟成 E-mail:495095492@qq.com 电话：18075121944
  * @version 创建时间：2014-5-7 下午6:08:35
  */
-public class RKAnimationButton extends android.support.v7.widget.AppCompatButton {
+public class RKAnimationButton extends AutoButton {
     private RKViewAnimationBase mRKViewAnimationBase;
 
     public RKAnimationButton(Context context) {
@@ -53,6 +55,7 @@ public class RKAnimationButton extends android.support.v7.widget.AppCompatButton
         return mRKViewAnimationBase;
     }
 
+    @SuppressLint("ClickableViewAccessibility")
     @Override
     public boolean onTouchEvent(MotionEvent event) {
         if (!mRKViewAnimationBase.isOnClickable())
