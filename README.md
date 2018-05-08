@@ -17,7 +17,7 @@
 ``` 
      compile 'com.github.RukingCheng.RukingFrame:autolayout:1.0.1.7'
  ```
-     代码来源：[https://github.com/hongyangAndroid/AndroidAutoLayout)
+     代码来源：[https://github.com/hongyangAndroid/AndroidAutoLayout](https://github.com/hongyangAndroid/AndroidAutoLayout)
    
 ### RK框架
 ``` 
