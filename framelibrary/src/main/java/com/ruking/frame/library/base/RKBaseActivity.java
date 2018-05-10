@@ -86,7 +86,7 @@ public abstract class RKBaseActivity extends AutoLayoutActivity {
             }
         }
         viewStatusBarPlace = findViewById(R.id.view_status_bar_place);
-        frameLayoutContentPlace = (FrameLayout) findViewById(R.id.frame_layout_content_place);
+        frameLayoutContentPlace = findViewById(R.id.frame_layout_content_place);
         if (isShowStatusBarPlaceColor()) {
             ViewGroup.LayoutParams params = viewStatusBarPlace.getLayoutParams();
             params.height = RKWindowUtil.getStatusBarHeight(this);

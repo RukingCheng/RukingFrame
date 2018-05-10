@@ -13,6 +13,7 @@ import android.widget.LinearLayout;
 import com.ruking.frame.library.base.RKBaseActivity;
 import com.ruking.frame.library.base.RKTransitionMode;
 import com.ruking.frame.library.bean.Choice;
+import com.ruking.frame.library.view.animation.RKAnimationButton;
 import com.ruking.frame.library.widget.RKDialog;
 import com.ruking.frame.library.widget.RKDialogButton;
 import com.ruking.frame.library.widget.RKDialogCheckBox;
@@ -20,6 +21,7 @@ import com.ruking.frame.library.widget.RKDialogChoiceList;
 import com.ruking.frame.library.widget.RKDialogProfile;
 import com.ruking.frame.library.widget.RKDialogProgress;
 
+import butterknife.BindView;
 import butterknife.OnClick;
 
 /**
@@ -30,11 +32,19 @@ import butterknife.OnClick;
  * @date on 2017/12/15 16:36
  */
 public class DialogActivity extends RKBaseActivity {
+    @BindView(R.id.but_01)
+    RKAnimationButton but01;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dialog);
         setSlidr();
+//        LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(LinearLayout.LayoutParams
+//                .MATCH_PARENT, AutoUtils.getPercentHeightSizeBigger(300));
+//        int m = AutoUtils.getPercentHeightSizeBigger(20);
+//        params.setMargins(m, m, m, m);
+//        but01.setLayoutParams(params);
     }
 
     @SuppressLint("InflateParams")

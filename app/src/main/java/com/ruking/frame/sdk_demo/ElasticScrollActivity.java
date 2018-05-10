@@ -24,22 +24,22 @@ public class ElasticScrollActivity extends RKBaseActivity {
 //        windowSetting();
         setContentView(R.layout.activityelasticscroll);
         setSlidr();
-        RKAnimationButton mRKAnimationButton = (RKAnimationButton) findViewById(R.id.back);
+        RKAnimationButton mRKAnimationButton = findViewById(R.id.back);
         mRKAnimationButton.getRKViewAnimationBase().setRoundCornerBottomLeft(60);
         mRKAnimationButton.getRKViewAnimationBase().setRoundAsCircle(false);
         mRKAnimationButton.getRKViewAnimationBase().setStrokeWidth(10);
         mRKAnimationButton.setOnClickListener(v -> onBackPressed());
-        final RKSinkingView mSinkingView = (RKSinkingView) findViewById(R.id.q25_view1_sinking);
+        final RKSinkingView mSinkingView = findViewById(R.id.q25_view1_sinking);
 //        mSinkingView.setBackgroundBitmap(R.mipmap.bg_tk_003);
         mSinkingView.setBottomText("正确率");
         mSinkingView.setPercentThread(80);
 //        mSinkingView.setCompanyText("%");
-        RKAnimationButton but01 = (RKAnimationButton) findViewById(R.id.but01);
+        RKAnimationButton but01 = findViewById(R.id.but01);
         but01.setOnClickListener(v -> {
             mSinkingView.setBottomText("正确率");
             mSinkingView.setPercentThread(30);
         });
-        RKAnimationButton but02 = (RKAnimationButton) findViewById(R.id.but02);
+        RKAnimationButton but02 = findViewById(R.id.but02);
         but02.setOnClickListener(v -> {
             mSinkingView.setBottomText("错误率");
             mSinkingView.setPercentThread(70);
