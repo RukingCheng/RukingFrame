@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">PhotoLibrary</string>
+    <string name="image_index">%1$d/%2$d</string>
+    <string name="only_choose_num">超出可选图片张数</string>
+    <string name="album_all">所有图片</string>
+    <string name="album_complete">完成</string>
+    <string name="album_err">请选择图片</string>
+</resources>

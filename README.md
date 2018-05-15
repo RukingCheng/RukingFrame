@@ -15,20 +15,32 @@
 ## Step 2. Add the dependency
 ### 自适应框架
 ``` 
-     compile 'com.github.RukingCheng.RukingFrame:autolayout:1.0.1.7'
+     implementation 'com.github.RukingCheng.RukingFrame:autolayout:1.0.1.8'
  ```
      代码来源：[https://github.com/hongyangAndroid/AndroidAutoLayout](https://github.com/hongyangAndroid/AndroidAutoLayout)
    
 ### RK框架
 ``` 
-     compile 'com.github.RukingCheng.RukingFrame:framelibrary:1.0.1.7'
+     implementation 'com.github.RukingCheng.RukingFrame:framelibrary:1.0.1.8'
 ```
   
 ### 二维码扫一扫
 ``` 
-     compile 'com.github.RukingCheng.RukingFrame:simplezxing:1.0.1.7'
+     implementation 'com.github.RukingCheng.RukingFrame:simplezxing:1.0.1.8'
 ```
      代码来源：[https://github.com/GuoJinyu/SimpleZXing](https://github.com/GuoJinyu/SimpleZXing)
-       
+
+### 图片选择器
+```
+     implementation 'com.github.RukingCheng.RukingFrame:photolibrary:1.0.1.8'
+```
+#### 需要添加
+```
+    //glide
+    implementation 'com.github.bumptech.glide:glide:4.6.1'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.6.1'
+    implementation "com.github.bumptech.glide:okhttp3-integration:4.0.0-RC0"
+```
+
 
       

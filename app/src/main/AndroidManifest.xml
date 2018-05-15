@@ -3,6 +3,7 @@
           package="com.ruking.frame.sdk_demo">
 
     <application
+        android:name=".CrashApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -49,6 +50,18 @@
             android:windowSoftInputMode="adjustResize|stateHidden"/>
         <activity
             android:name=".CategoryActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:launchMode="standard"
+            android:theme="@style/ThemeTranslucentActivity.AppTheme"
+            android:windowSoftInputMode="adjustResize|stateHidden"/>
+        <activity
+            android:name=".picturedemo.PictureActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:launchMode="standard"
+            android:theme="@style/ThemeTranslucentActivity.AppTheme"
+            android:windowSoftInputMode="adjustResize|stateHidden"/>
+        <activity
+            android:name=".picturedemo.PhotoDemoActivity"
             android:configChanges="keyboardHidden|orientation"
             android:launchMode="standard"
             android:theme="@style/ThemeTranslucentActivity.AppTheme"

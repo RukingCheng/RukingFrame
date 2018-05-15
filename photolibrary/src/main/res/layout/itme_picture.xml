@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoRelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="400px"
+    tools:ignore="PxUsage,RtlHardcoded">
+
+    <ImageView
+        android:id="@+id/image_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"/>
+
+    <View
+        android:id="@+id/but"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/rk_choice_item_bg"/>
+
+    <ImageView
+        android:id="@+id/item_choose"
+        android:layout_width="52px"
+        android:layout_height="52px"
+        android:layout_alignParentRight="true"
+        android:contentDescription="@+id/item_imag"
+        android:padding="10px"
+        android:scaleType="fitCenter"
+        android:src="@mipmap/rk_choose_checked"/>
+
+</com.zhy.autolayout.AutoRelativeLayout>

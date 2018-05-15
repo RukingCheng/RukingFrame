@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:orientation="vertical"
+    tools:ignore="PxUsage">
+
+
+    <com.zhy.autolayout.AutoRecyclerView
+        android:id="@+id/img_list"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:overScrollMode="never"
+        android:scrollbars="none"/>
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="96px"
+        android:background="@color/transparent20_white">
+
+        <TextView
+            android:id="@+id/album_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@drawable/rk_choice_item_bg"
+            android:gravity="center"
+            android:padding="20px"
+            android:textColor="@color/white"
+            android:textSize="32px"
+            tools:text="所有照片"/>
+
+
+        <com.ruking.frame.library.view.animation.RKAnimationButton
+            android:id="@+id/album_but"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_margin="20px"
+            android:background="@color/colorAccent"
+            android:paddingLeft="5px"
+            android:paddingRight="5px"
+            android:text="完成"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+            android:textSize="32px"
+            app:round_corner="8px"
+            app:stroke_color="@color/colorAccent"
+            app:stroke_width="0px"
+            tools:ignore="HardcodedText,RtlHardcoded"/>
+    </com.zhy.autolayout.AutoRelativeLayout>
+</com.zhy.autolayout.AutoLinearLayout>
