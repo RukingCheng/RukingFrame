@@ -12,6 +12,7 @@ import android.widget.Scroller;
 import android.widget.TextView;
 
 import com.ruking.frame.library.R;
+import com.zhy.autolayout.AutoRecyclerView;
 
 
 /**
@@ -20,7 +21,7 @@ import com.ruking.frame.library.R;
  * https://github.com/limxing
  * Blog: http://www.leefeng.me
  */
-public class LFRecyclerView extends RecyclerView {
+public class LFRecyclerView extends AutoRecyclerView {
     private Scroller mScroller;
     private LFRecyclerViewAdapter lfAdapter;
     private boolean isLoadMore;
