@@ -77,8 +77,16 @@ public class RKDialog extends AlertDialog {
                 window.setWindowAnimations(R.style.RKDialogStyle);
             }
         }
-        if (window != null && builder.typeSystemAlert != -1) {
-            window.setType(builder.typeSystemAlert);
+        if (window != null) {
+            if (builder.typeSystemAlert != -1) {
+                window.setType(builder.typeSystemAlert);
+            }
+            if (builder.isAllowPopAoftKey || builder.isPopAoftKey)
+                window.clearFlags(
+                        WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE |
+                                WindowManager.LayoutParams.FLAG_ALT_FOCUSABLE_IM);
+            if (builder.isPopAoftKey)
+                window.setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_VISIBLE);
         }
         setCanceledOnTouchOutside(builder.canceledOnTouchOutside);
         setCancelable(builder.cancelable);
@@ -355,6 +363,8 @@ public class RKDialog extends AlertDialog {
     public static class Builder {
         protected final Context context;
         protected boolean isBottomDisplay = false;//局中还是底部弹出
+        protected boolean isAllowPopAoftKey = false;//允许弹出软键盘
+        protected boolean isPopAoftKey = false;//直接弹出软键盘
         //------
         protected List<RKDialogProfile> profiles = new ArrayList<>();//配置集合
         protected OnDismissListener onDismissListener;//监听对话框关闭
@@ -440,6 +450,16 @@ public class RKDialog extends AlertDialog {
 
         public Builder setBottomDisplay(boolean bottomDisplay) {
             isBottomDisplay = bottomDisplay;
+            return this;
+        }
+
+        public Builder setAllowPopAoftKey(boolean allowPopAoftKey) {
+            isAllowPopAoftKey = allowPopAoftKey;
+            return this;
+        }
+
+        public Builder setPopAoftKey(boolean popAoftKey) {
+            isPopAoftKey = popAoftKey;
             return this;
         }
 

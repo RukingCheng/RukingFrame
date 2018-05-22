@@ -312,7 +312,7 @@ public class DialogActivity extends RKBaseActivity {
                                 .setRroundCorner(0))
                         .setCustomView(
                                 LayoutInflater.from(activity)
-                                        .inflate(R.layout.nav_header_main, null))
+                                        .inflate(R.layout.textview, null))
                         .show();
                 break;
         }
