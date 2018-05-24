@@ -342,18 +342,18 @@ public class RKDialog extends AlertDialog {
     }
 
     private void findViews() {
-        dialogTitle = (TextView) findViewById(R.id.dialog_title);
+        dialogTitle = findViewById(R.id.dialog_title);
         dialogTitleLine = findViewById(R.id.dialog_title_line);
-        dialogMessage = (TextView) findViewById(R.id.dialog_message);
-        dialogMessageLayout = (ScrollView) findViewById(R.id.dialog_message_layout);
-        dialogListMessage = (RecyclerView) findViewById(R.id.dialog_list_message);
-        dialogCustom = (AutoLinearLayout) findViewById(R.id.dialog_custom);
-        dialogCheckBox = (AutoLinearLayout) findViewById(R.id.dialog_checkbox);
+        dialogMessage = findViewById(R.id.dialog_message);
+        dialogMessageLayout = findViewById(R.id.dialog_message_layout);
+        dialogListMessage = findViewById(R.id.dialog_list_message);
+        dialogCustom = findViewById(R.id.dialog_custom);
+        dialogCheckBox = findViewById(R.id.dialog_checkbox);
         dialogButtonLine = findViewById(R.id.dialog_button_line);
-        dialogButtonLayout = (AutoLinearLayout) findViewById(R.id.dialog_button_layout);
-        dialogBackgroundLayout = (RKAnimationLinearLayout) findViewById(R.id.dialog_background_layout);
-        dialogIcon = (ImageView) findViewById(R.id.dialog_icon);
-        dialogTitleLayout = (AutoLinearLayout) findViewById(R.id.dialog_title_layout);
+        dialogButtonLayout = findViewById(R.id.dialog_button_layout);
+        dialogBackgroundLayout = findViewById(R.id.dialog_background_layout);
+        dialogIcon = findViewById(R.id.dialog_icon);
+        dialogTitleLayout = findViewById(R.id.dialog_title_layout);
     }
 
     public RecyclerView getMessageList() {
