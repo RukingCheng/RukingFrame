@@ -21,14 +21,13 @@ import com.photolibrary.bean.ImageAttr;
 import com.photolibrary.bean.ImageBucket;
 import com.photolibrary.util.AlbumHelper;
 import com.ruking.frame.library.bean.Choice;
+import com.ruking.frame.library.rxbus.RxBus;
 import com.ruking.frame.library.view.ToastUtil;
 import com.ruking.frame.library.view.animation.RKAnimationButton;
 import com.ruking.frame.library.widget.RKDialog;
 import com.ruking.frame.library.widget.RKDialogChoiceList;
 import com.ruking.frame.library.widget.RKDialogProfile;
 import com.zhy.autolayout.AutoRecyclerView;
-
-import org.greenrobot.eventbus.EventBus;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -52,8 +51,7 @@ public class PictureSelectionModular {
     private int what = PictureSelectionCache.PICTURE_SELECTION_CACHE;
 
     public static Intent getPictureSelectionModularIntent(@NonNull Activity activity, @NonNull
-            Class<?>
-            cls, @NonNull List<ImageAttr> images) {
+            Class<?> cls, @NonNull List<ImageAttr> images) {
         return getPictureSelectionModularIntent(activity, cls, images, PictureSelectionCache
                 .PICTURE_SELECTION_CACHE);
     }
@@ -124,8 +122,7 @@ public class PictureSelectionModular {
             for (int i = 0; i < contentList.size(); i++) {
                 choices.add(new Choice(contentList.get(i).bucketName + "\t(" + contentList.get(i)
                         .count + ")",
-                        type == i).setTag
-                        (i));
+                        type == i).setTag(i));
             }
             new RKDialog.Builder(activity)
                     .setBottomDisplay(true)
@@ -154,7 +151,7 @@ public class PictureSelectionModular {
             Message message = new Message();
             message.what = what;
             message.obj = PictureSelectionCache.getImagetAttr();
-            EventBus.getDefault().post(message);
+            RxBus.getDefault().post(message);
             PictureSelectionCache.clear();
         });
     }

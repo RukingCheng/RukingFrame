@@ -7,7 +7,6 @@ import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.animation.TranslateAnimation;
-import android.widget.ScrollView;
 
 /**
  * 有弹性的ScrollView+阻尼
@@ -15,7 +14,7 @@ import android.widget.ScrollView;
  * @author 史伟成 E-mail:495095492@qq.com 电话：15216801944
  * @version 创建时间：2015-3-27 下午3:50:10
  */
-public class RKElasticScrollView extends ScrollView {
+public class RKElasticScrollView extends android.support.v4.widget.NestedScrollView {
     // 拖动的距离 size = 4 的意思 只允许拖动屏幕的1/4
     private static final int size = 4;
     private View inner;

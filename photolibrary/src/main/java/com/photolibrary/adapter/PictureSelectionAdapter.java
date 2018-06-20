@@ -12,14 +12,13 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
-import com.bumptech.glide.Glide;
 import com.photolibrary.PictureSelectionCache;
 import com.photolibrary.R;
-import com.photolibrary.bean.ImageAttr;
 import com.photolibrary.activity.ImagesActivity;
+import com.photolibrary.bean.ImageAttr;
+import com.photolibrary.util.GlideUtil;
 import com.ruking.frame.library.view.ToastUtil;
 
-import java.io.File;
 import java.util.List;
 
 /**
@@ -57,8 +56,7 @@ public abstract class PictureSelectionAdapter extends RecyclerView.Adapter<Recyc
         final DescViewHolder descHolder = (DescViewHolder) holder;
         ImageAttr attr = imageAttrs.get(position);
         String url = TextUtils.isEmpty(attr.thumbnailUrl) ? attr.url : attr.thumbnailUrl;
-        File file = new File(url);
-        Glide.with(mContext).load(file).into(descHolder.imageView);
+        GlideUtil.load(mContext, url, descHolder.imageView);
         if (PictureSelectionCache.tempSelectBitmap.containsKey(attr.url)) {
             descHolder.itemChoose.setImageResource(R.mipmap.rk_choose_normal);
             descHolder.itemChoose.setColorFilter(ContextCompat.getColor(mContext, R.color.colorAccent));

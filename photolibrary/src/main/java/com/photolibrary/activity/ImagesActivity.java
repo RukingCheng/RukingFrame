@@ -23,13 +23,12 @@ import android.widget.TextView;
 
 import com.photolibrary.PictureSelectionCache;
 import com.photolibrary.R;
-import com.photolibrary.util.ColorUtil;
 import com.photolibrary.bean.ImageAttr;
+import com.photolibrary.util.ColorUtil;
+import com.ruking.frame.library.rxbus.RxBus;
 import com.ruking.frame.library.utils.RKWindowUtil;
 import com.ruking.frame.library.view.ToastUtil;
 import com.ruking.frame.library.view.animation.RKAnimationButton;
-
-import org.greenrobot.eventbus.EventBus;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -54,7 +53,7 @@ public class ImagesActivity extends AppCompatActivity {
     private float scaleY;
     private float translationX;
     private float translationY;
-    private int type;
+    private int type;//0:只是展示图片，1，从本地图片列表来，2：需要显示选择按钮
 
     private ImageView imgeChoose;
     private RKAnimationButton albumBut;
@@ -85,6 +84,13 @@ public class ImagesActivity extends AppCompatActivity {
         starUrlsActivity(activity, images, view, index, 0);
     }
 
+    /**
+     * @param activity activity
+     * @param images   图片列表
+     * @param view     弹出开始的位置
+     * @param index    选择第几张
+     * @param type     类别
+     */
     public static void starUrlsActivity(@NonNull Activity activity, @NonNull List<String>
             images, View view, int index, int type) {
         List<ImageAttr> images02 = new ArrayList<>();
@@ -198,6 +204,8 @@ public class ImagesActivity extends AppCompatActivity {
         if (type == 0) {
             imgeChoose.setVisibility(View.GONE);
             albumBut.setVisibility(View.GONE);
+            findViewById(R.id.layout).setBackgroundColor(ContextCompat.getColor(this,
+                    android.R.color.transparent));
         } else {
             imgeChoose.setVisibility(View.VISIBLE);
             albumBut.setVisibility(View.VISIBLE);
@@ -229,13 +237,19 @@ public class ImagesActivity extends AppCompatActivity {
                         .tempSelectBitmap.size() + "/" + PictureSelectionCache.num + ")");
             albumBut.setOnClickListener(view -> {
                 if (PictureSelectionCache.tempSelectBitmap.size() <= 0) {
-                    ToastUtil.show(ImagesActivity.this, R.string.album_err);
-                    return;
+                    //ToastUtil.show(ImagesActivity.this, R.string.album_err);
+                    //return;
+                    ImageAttr attr = imageAttrs.get(curPosition);
+                    attr.isSelected = true;
+                    PictureSelectionCache.tempSelectBitmap.put(attr.url, attr);
+                    showImgeChoose();
+                    albumBut.setText(getString(R.string.album_complete) + "(" + PictureSelectionCache
+                            .tempSelectBitmap.size() + "/" + PictureSelectionCache.num + ")");
                 }
                 Message message = new Message();
                 message.what = intent.getIntExtra("what", PictureSelectionCache.PICTURE_SELECTION_CACHE);
                 message.obj = PictureSelectionCache.getImagetAttr();
-                EventBus.getDefault().post(message);
+                RxBus.getDefault().post(message);
                 PictureSelectionCache.clear();
                 finish();
             });

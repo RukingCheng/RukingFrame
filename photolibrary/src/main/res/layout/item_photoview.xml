@@ -2,6 +2,7 @@
 <com.zhy.autolayout.AutoRelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -11,16 +12,14 @@
         android:layout_height="match_parent"
         android:layout_centerInParent="true"/>
 
-    <com.photolibrary.progress.CircleProgressView
+    <com.wang.avi.AVLoadingIndicatorView
         android:id="@+id/progressView"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_centerInParent="true"
-        android:progress="0"
-        app:cpv_innerPadding="2dp"
-        app:cpv_outerColor="@color/transparent90_white"
-        app:cpv_outerSize="1dp"
-        app:cpv_progressNormalColor="@color/transparent"
-        app:cpv_progressReachColor="@color/transparent90_white"
-        app:cpv_progressStyle="FillInnerArc"/>
+        android:layout_width="80px"
+        android:layout_height="80px"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:visibility="visible"
+        app:indicatorColor="@android:color/white"
+        app:indicatorName="BallClipRotateIndicator"
+        tools:ignore="PxUsage"/>
 </com.zhy.autolayout.AutoRelativeLayout>

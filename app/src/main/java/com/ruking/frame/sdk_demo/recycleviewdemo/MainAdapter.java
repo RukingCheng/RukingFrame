@@ -12,7 +12,7 @@ import java.util.List;
 
 /**
  * Created by limxing on 16/7/23.
- *
+ * <p>
  * https://github.com/limxing
  * Blog: http://www.leefeng.me
  */
@@ -22,12 +22,12 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.MasonryView> {
 
     public MainAdapter(List<String> list) {
 
-        this.list=list;
+        this.list = list;
     }
 
     @Override
     public MasonryView onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item,parent,false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item, parent, false);
         return new MasonryView(view);
     }
 
