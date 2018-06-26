@@ -310,6 +310,7 @@ public class DialogActivity extends RKBaseActivity {
                                 .setStrokeWidth(0)
                                 .setBackgroundColorRes(android.R.color.transparent)
                                 .setRroundCorner(0))
+                        .setAllowPopAoftKey(true)
                         .setCustomView(
                                 LayoutInflater.from(activity)
                                         .inflate(R.layout.textview, null))
@@ -319,7 +320,7 @@ public class DialogActivity extends RKBaseActivity {
     }
 
     @Override
-    public boolean isRxBusHere() {
+    public boolean isBindEventBusHere() {
         return false;
     }
 

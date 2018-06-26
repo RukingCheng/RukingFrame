@@ -24,8 +24,6 @@ import com.photolibrary.activity.PictureSelectionModular;
 import com.photolibrary.bean.ImageAttr;
 import com.ruking.frame.library.base.RKBaseActivity;
 import com.ruking.frame.library.base.RKTransitionMode;
-import com.ruking.frame.library.rxbus.Subscribe;
-import com.ruking.frame.library.rxbus.ThreadMode;
 import com.ruking.frame.library.utils.RKExternalStorageUtil;
 import com.ruking.frame.library.view.custom.RKFlowLayout;
 import com.ruking.frame.library.widget.RKDialog;
@@ -34,6 +32,9 @@ import com.ruking.frame.library.widget.RKDialogProfile;
 import com.ruking.frame.sdk_demo.R;
 import com.tbruyelle.rxpermissions2.RxPermissions;
 import com.zhy.autolayout.utils.AutoUtils;
+
+import org.greenrobot.eventbus.Subscribe;
+import org.greenrobot.eventbus.ThreadMode;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -210,9 +211,10 @@ public class PhotoDemoActivity extends RKBaseActivity {
     }
 
     @Override
-    public boolean isRxBusHere() {
+    public boolean isBindEventBusHere() {
         return true;
     }
+
 
     @Override
     public int getStatusBarColor() {

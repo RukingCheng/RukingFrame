@@ -60,7 +60,7 @@ public class PictureActivity extends RKBaseActivity {
     }
 
     @Override
-    public boolean isRxBusHere() {
+    public boolean isBindEventBusHere() {
         return false;
     }
 

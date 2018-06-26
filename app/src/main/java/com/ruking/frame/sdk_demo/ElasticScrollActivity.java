@@ -48,7 +48,7 @@ public class ElasticScrollActivity extends RKBaseActivity {
 
 
     @Override
-    public boolean isRxBusHere() {
+    public boolean isBindEventBusHere() {
         return false;
     }
 

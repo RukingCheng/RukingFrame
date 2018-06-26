@@ -6,6 +6,7 @@ ext.versions = [
         publishVersionCode: 1,
 
         supportLib        : '27.+',
-        slidableactivity  : '2.0.5',
+        eventbus          : '3.0.0',
+        slidableactivity  : '2.0.6',
         butterKnife       : '8.8.1'
 ]

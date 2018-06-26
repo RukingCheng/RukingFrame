@@ -43,7 +43,7 @@ public class TransitionModeActivity extends RKBaseActivity {
     }
 
     @Override
-    public boolean isRxBusHere() {
+    public boolean isBindEventBusHere() {
         return false;
     }
 

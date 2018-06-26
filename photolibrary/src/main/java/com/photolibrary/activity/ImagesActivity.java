@@ -25,10 +25,11 @@ import com.photolibrary.PictureSelectionCache;
 import com.photolibrary.R;
 import com.photolibrary.bean.ImageAttr;
 import com.photolibrary.util.ColorUtil;
-import com.ruking.frame.library.rxbus.RxBus;
 import com.ruking.frame.library.utils.RKWindowUtil;
 import com.ruking.frame.library.view.ToastUtil;
 import com.ruking.frame.library.view.animation.RKAnimationButton;
+
+import org.greenrobot.eventbus.EventBus;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -249,7 +250,7 @@ public class ImagesActivity extends AppCompatActivity {
                 Message message = new Message();
                 message.what = intent.getIntExtra("what", PictureSelectionCache.PICTURE_SELECTION_CACHE);
                 message.obj = PictureSelectionCache.getImagetAttr();
-                RxBus.getDefault().post(message);
+                EventBus.getDefault().post(message);
                 PictureSelectionCache.clear();
                 finish();
             });

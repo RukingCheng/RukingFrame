@@ -32,7 +32,7 @@ public class BusinessCaptureActivity extends CaptureActivity {
     }
 
     @Override
-    public boolean isRxBusHere() {
+    public boolean isBindEventBusHere() {
         return false;
     }
 

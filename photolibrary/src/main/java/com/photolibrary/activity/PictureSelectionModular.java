@@ -21,13 +21,14 @@ import com.photolibrary.bean.ImageAttr;
 import com.photolibrary.bean.ImageBucket;
 import com.photolibrary.util.AlbumHelper;
 import com.ruking.frame.library.bean.Choice;
-import com.ruking.frame.library.rxbus.RxBus;
 import com.ruking.frame.library.view.ToastUtil;
 import com.ruking.frame.library.view.animation.RKAnimationButton;
 import com.ruking.frame.library.widget.RKDialog;
 import com.ruking.frame.library.widget.RKDialogChoiceList;
 import com.ruking.frame.library.widget.RKDialogProfile;
 import com.zhy.autolayout.AutoRecyclerView;
+
+import org.greenrobot.eventbus.EventBus;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -151,7 +152,7 @@ public class PictureSelectionModular {
             Message message = new Message();
             message.what = what;
             message.obj = PictureSelectionCache.getImagetAttr();
-            RxBus.getDefault().post(message);
+            EventBus.getDefault().post(message);
             PictureSelectionCache.clear();
         });
     }

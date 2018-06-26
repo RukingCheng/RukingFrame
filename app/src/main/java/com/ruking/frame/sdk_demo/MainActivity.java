@@ -135,7 +135,7 @@ public class MainActivity extends RKBaseActivity
     }
 
     @Override
-    public boolean isRxBusHere() {
+    public boolean isBindEventBusHere() {
         return false;
     }
 

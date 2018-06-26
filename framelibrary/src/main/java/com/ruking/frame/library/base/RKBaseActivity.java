@@ -20,9 +20,10 @@ import com.r0adkll.slidr.Slidr;
 import com.r0adkll.slidr.model.SlidrConfig;
 import com.r0adkll.slidr.model.SlidrPosition;
 import com.ruking.frame.library.R;
-import com.ruking.frame.library.rxbus.RxBus;
 import com.ruking.frame.library.utils.RKWindowUtil;
 import com.zhy.autolayout.AutoLayoutActivity;
+
+import org.greenrobot.eventbus.EventBus;
 
 import butterknife.ButterKnife;
 
@@ -96,8 +97,8 @@ public abstract class RKBaseActivity extends AutoLayoutActivity {
         } else {
             viewStatusBarPlace.setVisibility(View.GONE);
         }
-        if (isRxBusHere()) {
-            RxBus.getDefault().register(this);
+        if (isBindEventBusHere()) {
+            EventBus.getDefault().register(this);
         }
         RKAppManager.getAppManager().addActivity(this);
     }
@@ -208,8 +209,8 @@ public abstract class RKBaseActivity extends AutoLayoutActivity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        if (isRxBusHere()) {
-            RxBus.getDefault().unRegister(this);
+        if (isBindEventBusHere()) {
+            EventBus.getDefault().unregister(this);
         }
     }
 
@@ -229,9 +230,9 @@ public abstract class RKBaseActivity extends AutoLayoutActivity {
 
 
     /**
-     * 是否打开RxBus
+     * 是否打开EventBus
      */
-    public abstract boolean isRxBusHere();
+    public abstract boolean isBindEventBusHere();
 
 
     /**

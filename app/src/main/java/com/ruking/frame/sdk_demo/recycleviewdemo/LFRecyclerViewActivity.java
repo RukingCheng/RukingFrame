@@ -82,7 +82,7 @@ public class LFRecyclerViewActivity extends RKBaseActivity implements OnItemClic
     }
 
     @Override
-    public boolean isRxBusHere() {
+    public boolean isBindEventBusHere() {
         return false;
     }
 
