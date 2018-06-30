@@ -27,8 +27,19 @@ public class GlideUtil {
         load(context, null, url, photoView);
     }
 
+    public static void load(Context context, String url, ImageView photoView, int mipmap) {
+        load(context, null, url, photoView, mipmap);
+    }
+
     public static void load(Context context, View progressView, String url, ImageView photoView) {
+        load(context, progressView, url, photoView, 0);
+    }
+
+    public static void load(Context context, View progressView, String url, ImageView photoView,
+                            int mipmap) {
         RequestManager requestManager = Glide.with(context);
+        if (mipmap != 0)
+            photoView.setImageResource(mipmap);
         if (url.endsWith(".gif")) {
             requestManager.asGif().load(url).listener(new RequestListener<GifDrawable>() {
                 @Override
@@ -36,6 +47,8 @@ public class GlideUtil {
                     //ToastUtil.show(getContext(), "图片加载失败");
                     if (progressView != null)
                         progressView.setVisibility(View.GONE);
+                    if (mipmap != 0)
+                        photoView.setImageResource(mipmap);
                     return false;
                 }
 
@@ -54,6 +67,8 @@ public class GlideUtil {
                     //ToastUtil.show(getContext(), "图片加载失败");
                     if (progressView != null)
                         progressView.setVisibility(View.GONE);
+                    if (mipmap != 0)
+                        photoView.setImageResource(mipmap);
                     return false;
                 }
 
