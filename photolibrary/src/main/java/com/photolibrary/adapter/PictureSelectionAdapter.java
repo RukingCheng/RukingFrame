@@ -56,7 +56,7 @@ public abstract class PictureSelectionAdapter extends RecyclerView.Adapter<Recyc
         final DescViewHolder descHolder = (DescViewHolder) holder;
         ImageAttr attr = imageAttrs.get(position);
         String url = TextUtils.isEmpty(attr.thumbnailUrl) ? attr.url : attr.thumbnailUrl;
-        GlideUtil.load(mContext, url, descHolder.imageView);
+        GlideUtil.load(mContext, url, descHolder.imageView, R.mipmap.wuxianshitupian);
         if (PictureSelectionCache.tempSelectBitmap.containsKey(attr.url)) {
             descHolder.itemChoose.setImageResource(R.mipmap.rk_choose_normal);
             descHolder.itemChoose.setColorFilter(ContextCompat.getColor(mContext, R.color.colorAccent));

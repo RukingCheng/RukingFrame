@@ -1,5 +1,6 @@
 package com.photolibrary.util;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.graphics.drawable.Drawable;
 import android.support.annotation.Nullable;
@@ -7,11 +8,13 @@ import android.view.View;
 import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.RequestBuilder;
 import com.bumptech.glide.RequestManager;
 import com.bumptech.glide.load.DataSource;
 import com.bumptech.glide.load.engine.GlideException;
 import com.bumptech.glide.load.resource.gif.GifDrawable;
 import com.bumptech.glide.request.RequestListener;
+import com.bumptech.glide.request.RequestOptions;
 import com.bumptech.glide.request.target.Target;
 
 /**
@@ -35,40 +38,52 @@ public class GlideUtil {
         load(context, progressView, url, photoView, 0);
     }
 
+    @SuppressLint("CheckResult")
     public static void load(Context context, View progressView, String url, ImageView photoView,
                             int mipmap) {
+//        RequestOptions options = new RequestOptions()
+//                .placeholder(mipmap)	//加载成功之前占位图
+//                .error(mipmap)	//加载错误之后的错误图
+//                .override(400,400)	//指定图片的尺寸
+//                //指定图片的缩放类型为fitCenter （等比例缩放图片，宽或者是高等于ImageView的宽或者是高。）
+//                .fitCenter()
+//                //指定图片的缩放类型为centerCrop （等比例缩放图片，直到图片的狂高都大于等于ImageView的宽度，然后截取中间的显示。）
+//                .centerCrop()
+//                .circleCrop()//指定图片的缩放类型为centerCrop （圆形）
+//                .skipMemoryCache(true)	//跳过内存缓存
+//                .diskCacheStrategy(DiskCacheStrategy.ALL)	//缓存所有版本的图像
+//                .diskCacheStrategy(DiskCacheStrategy.NONE)	//跳过磁盘缓存
+//                .diskCacheStrategy(DiskCacheStrategy.DATA)	//只缓存原来分辨率的图片
+//                .diskCacheStrategy(DiskCacheStrategy.RESOURCE)	//只缓存最终的图片
+//                ;
         RequestManager requestManager = Glide.with(context);
-        if (mipmap != 0)
-            photoView.setImageResource(mipmap);
+        RequestBuilder<?> requestBuilder;
         if (url.endsWith(".gif")) {
-            requestManager.asGif().load(url).listener(new RequestListener<GifDrawable>() {
-                @Override
-                public boolean onLoadFailed(@Nullable GlideException e, Object model, Target<GifDrawable> target, boolean isFirstResource) {
-                    //ToastUtil.show(getContext(), "图片加载失败");
-                    if (progressView != null)
-                        progressView.setVisibility(View.GONE);
-                    if (mipmap != 0)
-                        photoView.setImageResource(mipmap);
-                    return false;
-                }
+            requestBuilder = requestManager.asGif().load(url)
+                    .listener(new RequestListener<GifDrawable>() {
+                        @Override
+                        public boolean onLoadFailed(@Nullable GlideException e, Object model, Target<GifDrawable> target, boolean isFirstResource) {
+                            //ToastUtil.show(getContext(), "图片加载失败");
+                            if (progressView != null)
+                                progressView.setVisibility(View.GONE);
+                            return false;
+                        }
 
-                @Override
-                public boolean onResourceReady(GifDrawable resource, Object model, Target<GifDrawable> target, DataSource dataSource, boolean isFirstResource) {
-                    //ToastUtil.show(getContext(), "图片加载成功");
-                    if (progressView != null)
-                        progressView.setVisibility(View.GONE);
-                    return false;
-                }
-            }).into(photoView);
+                        @Override
+                        public boolean onResourceReady(GifDrawable resource, Object model, Target<GifDrawable> target, DataSource dataSource, boolean isFirstResource) {
+                            //ToastUtil.show(getContext(), "图片加载成功");
+                            if (progressView != null)
+                                progressView.setVisibility(View.GONE);
+                            return false;
+                        }
+                    });
         } else {
-            requestManager.load(url).listener(new RequestListener<Drawable>() {
+            requestBuilder = requestManager.load(url).listener(new RequestListener<Drawable>() {
                 @Override
                 public boolean onLoadFailed(@Nullable GlideException e, Object model, Target<Drawable> target, boolean isFirstResource) {
                     //ToastUtil.show(getContext(), "图片加载失败");
                     if (progressView != null)
                         progressView.setVisibility(View.GONE);
-                    if (mipmap != 0)
-                        photoView.setImageResource(mipmap);
                     return false;
                 }
 
@@ -80,7 +95,15 @@ public class GlideUtil {
                     return false;
                 }
 
-            }).into(photoView);
+            });
         }
+        if (mipmap != 0) {
+            RequestOptions options = new RequestOptions()
+                    .placeholder(mipmap)    //加载成功之前占位图
+                    .error(mipmap)    //加载错误之后的错误图
+                    ;
+            requestBuilder.apply(options);
+        }
+        requestBuilder.into(photoView);
     }
 }

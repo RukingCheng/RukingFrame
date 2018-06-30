@@ -39,7 +39,7 @@ public class ImagesFragment extends Fragment {
             url = TextUtils.isEmpty(attr.thumbnailUrl) ? attr.url : attr.thumbnailUrl;
         }
         if (url != null) {
-            GlideUtil.load(getContext(), progressView, url, photoView);
+            GlideUtil.load(getContext(), progressView, url, photoView, R.mipmap.wuxianshitupian);
         }
         return view;
     }
