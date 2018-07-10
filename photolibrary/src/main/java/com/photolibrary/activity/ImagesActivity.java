@@ -295,8 +295,8 @@ public class ImagesActivity extends AppCompatActivity {
     }
 
     private void initImageAttr(ImageAttr attr) {
-        int originalWidth = attr.width;
-        int originalHeight = attr.height;
+        int originalWidth = attr.width == 0 ? 1 : attr.width;
+        int originalHeight = attr.height == 0 ? 1 : attr.height;
         int originalCenterX = attr.left + originalWidth / 2;
         int originalCenterY = attr.top + originalHeight / 2;
         float widthRatio = screenWidth * 1.0f / originalWidth;
