@@ -1,6 +1,7 @@
 package com.ruking.frame.library.view.lfrecyclerview;
 
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
@@ -103,6 +104,7 @@ public class LFRecyclerViewFooter extends LinearLayout {
     }
 
     private void initView(Context context) {
+        @SuppressLint("InflateParams")
         LinearLayout moreView = (LinearLayout) LayoutInflater.from(context).inflate(R.layout
                 .lfrecyclerview_footer, null);
         addView(moreView);

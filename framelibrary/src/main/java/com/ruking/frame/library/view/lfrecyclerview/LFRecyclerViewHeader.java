@@ -51,6 +51,7 @@ public class LFRecyclerViewHeader extends LinearLayout {
         initView(context);
     }
 
+    @SuppressLint("InflateParams")
     private void initView(Context context) {
         preferences = PreferenceManager.getDefaultSharedPreferences(context);
         // 初始情况，设置下拉刷新view高度为0

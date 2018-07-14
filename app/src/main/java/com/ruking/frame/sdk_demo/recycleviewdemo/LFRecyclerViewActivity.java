@@ -46,7 +46,7 @@ public class LFRecyclerViewActivity extends RKBaseActivity implements OnItemClic
         recycleview = findViewById(R.id.recycleview);
         recycleview.addItemDecoration(new DividerLineDecoration(activity));
         recycleview.getItemAnimator().setChangeDuration(0);
-        recycleview.setLoadMore(true);
+        recycleview.setLoadMore(false);
         recycleview.setRefresh(true);
         recycleview.setNoDateShow();
         recycleview.setAutoLoadMore(true);
@@ -125,6 +125,8 @@ public class LFRecyclerViewActivity extends RKBaseActivity implements OnItemClic
             adapter.notifyItemInserted(0);
             adapter.notifyItemRangeChanged(0, list.size());
 
+            recycleview.setLoadMore(true);
+
         }, 2000);
     }
 
@@ -136,6 +138,7 @@ public class LFRecyclerViewActivity extends RKBaseActivity implements OnItemClic
 //                list.add(list.size(), "leefeng.me" + "==onLoadMore");
             adapter.notifyItemRangeInserted(list.size() - 1, 1);
 
+            recycleview.setLoadMore(false);
         }, 2000);
     }
 

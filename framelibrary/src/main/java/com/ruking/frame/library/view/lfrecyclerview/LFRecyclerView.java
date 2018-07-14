@@ -42,12 +42,10 @@ public class LFRecyclerView extends AutoRecyclerView {
     private final static int SCROLLBACK_HEADER = 4;
     private final static int SCROLLBACK_FOOTER = 3;
     private LFRecyclerViewListener mRecyclerViewListener;
-    private boolean mPullLoad;
     private TextView mHeaderTimeView;
     private boolean isNoDateShow = false;
     private LFRecyclerViewScrollChange scrollerListener;//滑动监听
     private boolean isAutoLoadMore;
-
     /*添加头*/
     private View headerView;
     private Adapter adapter;
@@ -190,7 +188,6 @@ public class LFRecyclerView extends AutoRecyclerView {
             } else {
                 recyclerViewFooter.setState(LFRecyclerViewFooter.STATE_NORMAL);
                 mPullLoading = false;
-                mPullLoad = false;
             }
         }
         recyclerViewFooter.setBottomMargin(height);
@@ -222,10 +219,11 @@ public class LFRecyclerView extends AutoRecyclerView {
             case MotionEvent.ACTION_MOVE:
                 float moveY = ev.getRawY() - mLastY;
                 mLastY = ev.getRawY();
-                if (isRefresh && !mPullLoad && layoutManager.findFirstVisibleItemPosition() <= 1 &&
+                if (isRefresh && !mPullLoading && !mPullRefreshing && layoutManager
+                        .findFirstVisibleItemPosition() <= 1 &&
                         (recyclerViewHeader.getVisiableHeight() > 0 || moveY > 0)) {
                     updateHeaderHeight(moveY / OFFSET_RADIO);
-                } else if (isLoadMore && !mPullRefreshing && !mPullLoad &&
+                } else if (isLoadMore && !mPullRefreshing && !mPullLoading && !mPullRefreshing &&
                         layoutManager.findLastVisibleItemPosition() == lfAdapter.getItemCount() - 1 &&
                         (recyclerViewFooter.getBottomMargin() > 0 || moveY < 0) && adapter.getItemCount() > 0) {
                     updateFooterHeight(-moveY / OFFSET_RADIO);
@@ -243,13 +241,11 @@ public class LFRecyclerView extends AutoRecyclerView {
                             mRecyclerViewListener.onRefresh();
                         }
                     }
-
                 }
-                if (isLoadMore && mPullLoading && layoutManager.findLastVisibleItemPosition() == lfAdapter.getItemCount() - 1
-                        && recyclerViewFooter.getBottomMargin() > PULL_LOAD_MORE_DELTA
-                        ) {
+                if (isLoadMore && !mPullLoading && layoutManager.findLastVisibleItemPosition() == lfAdapter.getItemCount() - 1
+                        && recyclerViewFooter.getBottomMargin() > PULL_LOAD_MORE_DELTA) {
                     recyclerViewFooter.setState(LFRecyclerViewFooter.STATE_LOADING);
-                    mPullLoad = true;
+                    mPullLoading = true;
                     startLoadMore();
                 }
                 resetHeaderHeight();
@@ -264,7 +260,6 @@ public class LFRecyclerView extends AutoRecyclerView {
         if (mRecyclerViewListener != null) {
             recyclerViewFooter.setState(LFRecyclerViewFooter.STATE_LOADING);
             mRecyclerViewListener.onLoadMore();
-
         }
     }
 
@@ -273,7 +268,6 @@ public class LFRecyclerView extends AutoRecyclerView {
      */
     public void stopLoadMore() {
         if (mPullLoading) {
-            mPullLoad = false;
             mPullLoading = false;
             recyclerViewFooter.setState(LFRecyclerViewFooter.STATE_NORMAL);
             resetFooterHeight();
@@ -347,14 +341,15 @@ public class LFRecyclerView extends AutoRecyclerView {
         this.isLoadMore = b;
         if (!isLoadMore) {
             recyclerViewFooter.hide();
+        } else {
+            recyclerViewFooter.show();
         }
-
+        if (lfAdapter != null)
+            lfAdapter.notifyDataSetChanged();
     }
 
     public void setRefresh(boolean b) {
         this.isRefresh = b;
-
-
     }
 
     public void setOnItemClickListener(OnItemClickListener itemListener) {
@@ -386,16 +381,13 @@ public class LFRecyclerView extends AutoRecyclerView {
      * @param i1   ii
      */
     public void onScrollChange(View view, int i, int i1) {
-
         if (lfAdapter.itemHeight > 0 && num == 0) {
             num = (int) Math.ceil(getHeight() / lfAdapter.itemHeight);
         }
-        if (isAutoLoadMore && (layoutManager.findLastVisibleItemPosition() == lfAdapter.getItemCount()
-                - 1)
+        if (isLoadMore && isAutoLoadMore && (layoutManager.findLastVisibleItemPosition() == lfAdapter.getItemCount() - 1)
                 && currentLastNum != layoutManager.findLastVisibleItemPosition()
                 && num > 0 && adapter.getItemCount() > num
-                && !mPullLoading) {
-
+                && !mPullLoading && !mPullRefreshing) {
             currentLastNum = layoutManager.findLastVisibleItemPosition();
             mPullLoading = true;
             startLoadMore();

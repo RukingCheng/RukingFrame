@@ -122,18 +122,10 @@ public class LFRecyclerViewAdapter extends RecyclerView.Adapter {
 
         }
         if (itemListener != null) {
-            holder.itemView.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    itemListener.onClick(po);
-                }
-            });
-            holder.itemView.setOnLongClickListener(new View.OnLongClickListener() {
-                @Override
-                public boolean onLongClick(View view) {
-                    itemListener.onLongClick(po);
-                    return true;
-                }
+            holder.itemView.setOnClickListener(view -> itemListener.onClick(po));
+            holder.itemView.setOnLongClickListener(view -> {
+                itemListener.onLongClick(po);
+                return true;
             });
         }
     }
