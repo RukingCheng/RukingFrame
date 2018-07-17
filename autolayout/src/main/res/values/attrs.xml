@@ -48,7 +48,7 @@
 
 
     <declare-styleable name="AutoTextView">
-        <attr name="iconSize" format="dimension"/>
+        <attr name="icon_size" format="dimension"/>
     </declare-styleable>
 
     <declare-styleable name="AutoTabLayout">
