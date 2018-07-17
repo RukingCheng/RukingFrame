@@ -132,19 +132,15 @@ public class AutoUtils {
 
     public static void setTextViewDrawableSize(@NonNull TextView textView, AttributeSet attrs) {
         TypedArray a = textView.getContext().obtainStyledAttributes(attrs, R.styleable.AutoTextView);
-        int iconWidth = a.getDimensionPixelOffset(R.styleable.AutoTextView_icon_width, 0);
-        int iconHeight = a.getDimensionPixelOffset(R.styleable.AutoTextView_icon_height, 0);
-        TypedValue val = a.peekValue(R.styleable.AutoTextView_icon_width);
+        int iconHeight = a.getDimensionPixelOffset(R.styleable.AutoTextView_iconSize, 0);
+        TypedValue val = a.peekValue(R.styleable.AutoTextView_iconSize);
         if (DimenUtils.isPxVal(val)) {
-            iconWidth = AutoUtils.getPercentWidthSizeBigger(iconWidth);
-        }
-        TypedValue val1 = a.peekValue(R.styleable.AutoTextView_icon_height);
-        if (DimenUtils.isPxVal(val1)) {
             iconHeight = AutoUtils.getPercentWidthSizeBigger(iconHeight);
         }
         Drawable[] drawables = textView.getCompoundDrawables();
         for (Drawable drawable : drawables) {
             if (drawable != null) {
+                int iconWidth = iconHeight * drawable.getIntrinsicWidth() * drawable.getIntrinsicHeight();
                 drawable.setBounds(0, 0, iconWidth, iconHeight);
             }
         }
