@@ -4,6 +4,7 @@ import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
+import android.support.annotation.ColorInt;
 import android.util.AttributeSet;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -15,6 +16,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.ruking.frame.library.R;
+import com.wang.avi.AVLoadingIndicatorView;
 
 /**
  * Created by limxing on 16/7/23.
@@ -49,6 +51,22 @@ public class LFRecyclerViewHeader extends LinearLayout {
     public LFRecyclerViewHeader(Context context, AttributeSet attrs) {
         super(context, attrs);
         initView(context);
+    }
+
+    public void setContainerBackgroundColor(@ColorInt int color) {
+        if (this.mContainer != null)
+            this.mContainer.setBackgroundColor(color);
+    }
+
+    public void setTextViewColor(@ColorInt int color) {
+        if (this.mArrowImageView != null)
+            this.mArrowImageView.setColorFilter(color);
+        if (this.mHintTextView != null)
+            this.mHintTextView.setTextColor(color);
+        if (this.lfrecyclerview_header_time != null)
+            this.lfrecyclerview_header_time.setTextColor(color);
+        if (this.mProgressBar != null)
+            ((AVLoadingIndicatorView) mProgressBar).setIndicatorColor(color);
     }
 
     @SuppressLint("InflateParams")

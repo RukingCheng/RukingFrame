@@ -3,6 +3,7 @@ package com.ruking.frame.library.view.lfrecyclerview;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
+import android.support.annotation.ColorInt;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -36,6 +37,11 @@ public class LFRecyclerViewFooter extends LinearLayout {
     public LFRecyclerViewFooter(Context context, AttributeSet attrs) {
         super(context, attrs);
         initView(context);
+    }
+
+    public void setContainerBackgroundColor(@ColorInt int color) {
+        if (this.mContentView != null)
+            this.mContentView.setBackgroundColor(color);
     }
 
     public int getmState() {

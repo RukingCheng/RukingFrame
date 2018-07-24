@@ -274,6 +274,13 @@ public class LFRecyclerView extends AutoRecyclerView {
         }
     }
 
+    public LFRecyclerViewFooter getRecyclerViewFooter() {
+        return recyclerViewFooter;
+    }
+
+    public LFRecyclerViewHeader getRecyclerViewHeader() {
+        return recyclerViewHeader;
+    }
 
     private void initWithContext(Context context) {
         mScroller = new Scroller(context, new DecelerateInterpolator());
