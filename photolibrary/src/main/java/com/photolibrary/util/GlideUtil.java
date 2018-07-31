@@ -26,20 +26,20 @@ import com.bumptech.glide.request.target.Target;
  */
 public class GlideUtil {
 
-    public static void load(Context context, String url, ImageView photoView) {
+    public static void load(@Nullable Context context, String url, @Nullable ImageView photoView) {
         load(context, null, url, photoView);
     }
 
-    public static void load(Context context, String url, ImageView photoView, int mipmap) {
+    public static void load(@Nullable Context context, String url, @Nullable ImageView photoView, int mipmap) {
         load(context, null, url, photoView, mipmap);
     }
 
-    public static void load(Context context, View progressView, String url, ImageView photoView) {
+    public static void load(@Nullable Context context, View progressView, String url, @Nullable ImageView photoView) {
         load(context, progressView, url, photoView, 0);
     }
 
     @SuppressLint("CheckResult")
-    public static void load(Context context, View progressView, String url, ImageView photoView,
+    public static void load(@Nullable Context context, View progressView, String url, @Nullable ImageView photoView,
                             int mipmap) {
 //        RequestOptions options = new RequestOptions()
 //                .placeholder(mipmap)	//加载成功之前占位图
@@ -56,6 +56,8 @@ public class GlideUtil {
 //                .diskCacheStrategy(DiskCacheStrategy.DATA)	//只缓存原来分辨率的图片
 //                .diskCacheStrategy(DiskCacheStrategy.RESOURCE)	//只缓存最终的图片
 //                ;
+        if (url == null) url = "";
+        if (context == null) return;
         RequestManager requestManager = Glide.with(context);
         RequestBuilder<?> requestBuilder;
         if (url.endsWith(".gif")) {
@@ -104,6 +106,8 @@ public class GlideUtil {
                     ;
             requestBuilder.apply(options);
         }
-        requestBuilder.into(photoView);
+        if (photoView != null) {
+            requestBuilder.into(photoView);
+        }
     }
 }

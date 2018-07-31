@@ -114,7 +114,8 @@ public class PictureSelectionModular {
         imgList.addItemDecoration(new GridItemDecoration());
         imgList.getItemAnimator().setChangeDuration(0);
         imgList.setAdapter(adapter);
-        AlbumHelper helper = AlbumHelper.getHelper(activity);
+        //AlbumHelper helper = AlbumHelper.getHelper(activity);
+        AlbumHelper helper = new AlbumHelper(activity);
         contentList = helper.getImagesBucketList(false);
         showAlbum(type);
         albumTv.setOnClickListener(view -> {

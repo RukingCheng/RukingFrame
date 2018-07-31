@@ -5,7 +5,6 @@ import android.content.Context;
 import android.database.Cursor;
 import android.provider.MediaStore.Images.Media;
 import android.provider.MediaStore.Images.Thumbnails;
-import android.support.annotation.NonNull;
 
 import com.photolibrary.bean.ImageAttr;
 import com.photolibrary.bean.ImageBucket;
@@ -23,25 +22,29 @@ public class AlbumHelper {
 
     private HashMap<String, ImageBucket> bucketList = new HashMap<>();
 
-    private static AlbumHelper instance;
+//    private static AlbumHelper instance;
 
-    private AlbumHelper() {
-    }
-
-    public static AlbumHelper getHelper(@NonNull Context context) {
-        if (instance == null) {
-            instance = new AlbumHelper();
-        }
-        instance.init(context);
-        return instance;
-    }
-
-    public void init(Context context) {
+    public AlbumHelper(Context context) {
         if (this.context == null) {
             this.context = context;
             cr = context.getContentResolver();
         }
     }
+
+//    public static AlbumHelper getHelper(@NonNull Context context) {
+//        if (instance == null) {
+//            instance = new AlbumHelper();
+//        }
+//        instance.init(context);
+//        return instance;
+//    }
+//
+//    public void init(Context context) {
+//        if (this.context == null) {
+//            this.context = context;
+//            cr = context.getContentResolver();
+//        }
+//    }
 
     private void getThumbnail() {
         String[] projection = {Thumbnails._ID, Thumbnails.IMAGE_ID, Thumbnails.DATA};

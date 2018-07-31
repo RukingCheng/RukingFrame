@@ -17,6 +17,7 @@ import com.photolibrary.R;
 import com.photolibrary.activity.ImagesActivity;
 import com.photolibrary.bean.ImageAttr;
 import com.photolibrary.util.GlideUtil;
+import com.ruking.frame.library.utils.RKWindowUtil;
 import com.ruking.frame.library.view.ToastUtil;
 
 import java.util.List;
@@ -44,10 +45,13 @@ public abstract class PictureSelectionAdapter extends RecyclerView.Adapter<Recyc
     }
 
 
+    @NonNull
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(mContext).inflate(R.layout.itme_picture,
                 parent, false);
+        view.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,
+                (int) (RKWindowUtil.getScreenWidth(mContext) / 4.0)));
         return new DescViewHolder(view);
     }
 
