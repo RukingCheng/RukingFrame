@@ -90,6 +90,20 @@ public class PictureSelectionModular {
 
     public void onResume() {
         adapter.notifyDataSetChanged();
+        showTempBut();
+    }
+
+    @SuppressLint("SetTextI18n")
+    private void showTempBut() {
+        try {
+            if (PictureSelectionCache.tempSelectBitmap.size() <= 0) {
+                albumBut.setText(R.string.album_complete);
+            } else
+                albumBut.setText(activity.getString(R.string.album_complete) + "(" +
+                        PictureSelectionCache
+                                .tempSelectBitmap.size() + "/" + PictureSelectionCache.num + ")");
+        } catch (Exception ignored) {
+        }
     }
 
     private void init() {
@@ -97,15 +111,9 @@ public class PictureSelectionModular {
         albumTv = rootView.findViewById(R.id.album_tv);
         albumBut = rootView.findViewById(R.id.album_but);
         adapter = new PictureSelectionAdapter(activity, what) {
-            @SuppressLint("SetTextI18n")
             @Override
             public void showTemp() {
-                if (PictureSelectionCache.tempSelectBitmap.size() <= 0) {
-                    albumBut.setText(R.string.album_complete);
-                } else
-                    albumBut.setText(activity.getString(R.string.album_complete) + "(" +
-                            PictureSelectionCache
-                                    .tempSelectBitmap.size() + "/" + PictureSelectionCache.num + ")");
+                showTempBut();
             }
         };
         adapter.showTemp();

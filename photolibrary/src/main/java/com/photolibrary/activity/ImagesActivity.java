@@ -130,6 +130,7 @@ public class ImagesActivity extends AppCompatActivity {
         bundle.putInt(ImagesActivity.TYPE, type);
         bundle.putInt("what", what);
         intent.putExtras(bundle);
+        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
         activity.startActivity(intent);
         activity.overridePendingTransition(0, 0);
     }
@@ -203,6 +204,11 @@ public class ImagesActivity extends AppCompatActivity {
                 PictureSelectionCache.tempSelectBitmap.put(attr.url, attr);
         }
         if (type == 0) {
+            if (imageAttrs.size() <= 1) {
+                tvTip.setVisibility(View.GONE);
+            } else {
+                tvTip.setVisibility(View.VISIBLE);
+            }
             imgeChoose.setVisibility(View.GONE);
             albumBut.setVisibility(View.GONE);
             findViewById(R.id.layout).setBackgroundColor(ContextCompat.getColor(this,

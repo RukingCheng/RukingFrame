@@ -20,6 +20,7 @@ import com.photolibrary.util.GlideUtil;
 import com.ruking.frame.library.utils.RKWindowUtil;
 import com.ruking.frame.library.view.ToastUtil;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -69,15 +70,30 @@ public abstract class PictureSelectionAdapter extends RecyclerView.Adapter<Recyc
             descHolder.itemChoose.setColorFilter(null);
         }
         descHolder.but.setOnClickListener(view -> {
-            for (ImageAttr attr1 : imageAttrs) {
-                attr1.width = descHolder.imageView.getWidth();
-                attr1.height = descHolder.imageView.getHeight();
-                int[] points1 = new int[2];
-                descHolder.imageView.getLocationInWindow(points1);
+            List<ImageAttr> imageAttrs2;
+            int position2;
+            if (imageAttrs.size() > 1000) {
+                imageAttrs2 = new ArrayList<>();
+                int j = position / 1000;
+                position2 = position % 1000;
+                for (int i = 1000 * j; i < ((1000 * (j + 1)) > imageAttrs.size() ? imageAttrs.size() : (1000 * (j + 1))); i++) {
+                    imageAttrs2.add(imageAttrs.get(i));
+                }
+            } else {
+                position2 = position;
+                imageAttrs2 = imageAttrs;
+            }
+            int width = descHolder.imageView.getWidth();
+            int height = descHolder.imageView.getHeight();
+            int[] points1 = new int[2];
+            descHolder.imageView.getLocationInWindow(points1);
+            for (ImageAttr attr1 : imageAttrs2) {
+                attr1.width = width;
+                attr1.height = height;
                 attr1.left = points1[0];
                 attr1.top = points1[1];
             }
-            ImagesActivity.starImageAttrsActivity((Activity) mContext, imageAttrs, position, 1, what);
+            ImagesActivity.starImageAttrsActivity((Activity) mContext, imageAttrs2, position2, 1, what);
         });
 
         descHolder.itemChoose.setOnClickListener(view -> {
