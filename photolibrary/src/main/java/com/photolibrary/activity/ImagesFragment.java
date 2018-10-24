@@ -40,6 +40,14 @@ public class ImagesFragment extends Fragment {
         }
         if (url != null) {
             GlideUtil.load(getContext(), progressView, url, photoView, R.mipmap.wuxianshitupian);
+            if (ImagesActivity.onLongClickImageListener != null) {
+                String finalUrl = url;
+                photoView.setOnLongClickListener(view12 -> {
+                    if (ImagesActivity.onLongClickImageListener != null) ImagesActivity
+                            .onLongClickImageListener.onLongClick(view12, finalUrl);
+                    return false;
+                });
+            }
         }
         return view;
     }

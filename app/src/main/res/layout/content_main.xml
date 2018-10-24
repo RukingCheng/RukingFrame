@@ -154,7 +154,7 @@
                 android:layout_marginLeft="20px"
                 android:layout_marginRight="20px"
                 android:background="#abc"
-                android:text="TOP"
+                android:text="ShadowActivity"
                 android:textAllCaps="false"
                 android:textColor="@android:color/white"
                 android:textSize="30px"

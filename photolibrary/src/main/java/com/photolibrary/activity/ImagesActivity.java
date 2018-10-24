@@ -24,6 +24,7 @@ import android.widget.TextView;
 import com.photolibrary.PictureSelectionCache;
 import com.photolibrary.R;
 import com.photolibrary.bean.ImageAttr;
+import com.photolibrary.listener.OnLongClickImageListener;
 import com.photolibrary.util.ColorUtil;
 import com.ruking.frame.library.utils.RKWindowUtil;
 import com.ruking.frame.library.view.ToastUtil;
@@ -58,6 +59,8 @@ public class ImagesActivity extends AppCompatActivity {
 
     private ImageView imgeChoose;
     private RKAnimationButton albumBut;
+    public static OnLongClickImageListener onLongClickImageListener;
+
 
     public static void starUrlsActivity(@NonNull Activity activity, @NonNull String...
             images) {
@@ -133,6 +136,12 @@ public class ImagesActivity extends AppCompatActivity {
         intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
         activity.startActivity(intent);
         activity.overridePendingTransition(0, 0);
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        onLongClickImageListener = null;
     }
 
     @SuppressLint("SetTextI18n")

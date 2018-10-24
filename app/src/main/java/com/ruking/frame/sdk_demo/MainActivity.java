@@ -20,6 +20,7 @@ import com.ruking.frame.library.base.RKBaseActivity;
 import com.ruking.frame.library.base.RKTransitionMode;
 import com.ruking.frame.sdk_demo.picturedemo.PhotoDemoActivity;
 import com.ruking.frame.sdk_demo.recycleviewdemo.LFRecyclerViewActivity;
+import com.ruking.frame.sdk_demo.shadow.ShadowActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -61,8 +62,9 @@ public class MainActivity extends RKBaseActivity
                 readyGo(PhotoDemoActivity.class);
                 return;
             case R.id.TOP:
-                type = 1;
-                break;
+//                type = 1;
+                readyGo(ShadowActivity.class);
+                return;
             case R.id.RIGHT:
                 type = 2;
                 break;
