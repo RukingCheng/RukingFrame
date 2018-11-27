@@ -5,6 +5,8 @@ import android.app.Activity;
 import android.app.ActivityManager;
 import android.content.Context;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Stack;
 
 /**
@@ -115,17 +117,22 @@ public class RKAppManager {
     }
 
     public void finishAllActivity(Class<?> cls) {
-        try {
-            for (Activity activity : activityStack) {
+        if (activityStack != null) {
+            List<Activity> integers = new ArrayList<>();
+            for (int i = 0; i < RKAppManager.getAppManager().getActivityStack().size(); i++) {
+                Activity activity = RKAppManager.getAppManager()
+                        .getActivityStack().get(i);
                 if (activity != null && (cls == null || !activity.getClass().equals(cls))) {
-                    activity.finish();
+                    integers.add(activity);
                 }
+            }
+            for (Activity integer : integers) {
+                finishActivity(integer);
             }
             if (cls == null) {
                 activityStack.clear();
                 activityStack = null;
             }
-        } catch (Exception ignored) {
         }
     }
 
