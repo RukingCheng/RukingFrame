@@ -1,5 +1,6 @@
 package com.ruking.frame.library.base;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.ActivityManager;
 import android.content.Context;
@@ -29,6 +30,10 @@ public class RKAppManager {
         return instance;
     }
 
+    public Stack<Activity> getActivityStack() {
+        return activityStack;
+    }
+
     /**
      * 添加Activity到堆栈
      */
@@ -49,8 +54,7 @@ public class RKAppManager {
      * 获取当前Activity（堆栈中最后一个压入的）
      */
     public Activity currentActivity() {
-        Activity activity = activityStack.lastElement();
-        return activity;
+        return activityStack.lastElement();
     }
 
     /**
@@ -68,7 +72,6 @@ public class RKAppManager {
         if (activity != null) {
             activityStack.remove(activity);
             activity.finish();
-            activity = null;
         }
     }
 
@@ -108,14 +111,20 @@ public class RKAppManager {
      * 结束所有Activity
      */
     public void finishAllActivity() {
+        finishAllActivity(null);
+    }
+
+    public void finishAllActivity(Class<?> cls) {
         try {
-            for (int i = 0, size = activityStack.size(); i < size; i++) {
-                if (null != activityStack.get(i)) {
-                    activityStack.get(i).finish();
+            for (Activity activity : activityStack) {
+                if (activity != null && (cls == null || !activity.getClass().equals(cls))) {
+                    activity.finish();
                 }
             }
-            activityStack.clear();
-            activityStack = null;
+            if (cls == null) {
+                activityStack.clear();
+                activityStack = null;
+            }
         } catch (Exception ignored) {
         }
     }
@@ -123,6 +132,7 @@ public class RKAppManager {
     /**
      * 退出应用程序
      */
+    @SuppressLint("NewApi")
     @SuppressWarnings("deprecation")
     public void appExit(Context context) {
         try {
