@@ -184,7 +184,7 @@ public class LFRecyclerView extends AutoRecyclerView {
         if (isLoadMore) {
             if (height > PULL_LOAD_MORE_DELTA) {
                 recyclerViewFooter.setState(LFRecyclerViewFooter.STATE_READY);
-                mPullLoading = true;
+                mPullLoading = false;
             } else {
                 recyclerViewFooter.setState(LFRecyclerViewFooter.STATE_NORMAL);
                 mPullLoading = false;
