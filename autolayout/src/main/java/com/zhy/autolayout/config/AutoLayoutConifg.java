@@ -4,6 +4,8 @@ import android.content.Context;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
 import android.content.res.Configuration;
+import android.util.DisplayMetrics;
+import android.view.WindowManager;
 
 import com.zhy.autolayout.utils.ScreenUtils;
 
@@ -91,15 +93,43 @@ public class AutoLayoutConifg {
             if (applicationInfo != null && applicationInfo.metaData != null) {
                 if (isScreenChange(context)) {
                     mDesignHeight = (int) applicationInfo.metaData.get(KEY_DESIGN_WIDTH);
-                    mDesignWidth = (int) applicationInfo.metaData.get(KEY_DESIGN_HEIGHT);
+//                    mDesignWidth = (int) applicationInfo.metaData.get(KEY_DESIGN_HEIGHT);
+                    mDesignWidth = (int) ((double) mDesignHeight * getScreenHeight(context) / getScreenWidth(context));
                 } else {
                     mDesignWidth = (int) applicationInfo.metaData.get(KEY_DESIGN_WIDTH);
-                    mDesignHeight = (int) applicationInfo.metaData.get(KEY_DESIGN_HEIGHT);
+//                    mDesignHeight = (int) applicationInfo.metaData.get(KEY_DESIGN_HEIGHT);
+                    mDesignHeight = (int) ((double) mDesignWidth * getScreenHeight(context) / getScreenWidth(context));
                 }
             }
         } catch (PackageManager.NameNotFoundException e) {
             throw new RuntimeException(
                     "you must set " + KEY_DESIGN_WIDTH + " and " + KEY_DESIGN_HEIGHT + "  in your manifest file.", e);
         }
+    }
+
+    /**
+     * 屏幕宽度
+     *
+     * @param context
+     * @return
+     */
+    private int getScreenWidth(Context context) {
+        WindowManager wm = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
+        DisplayMetrics outMetrics = new DisplayMetrics();
+        wm.getDefaultDisplay().getMetrics(outMetrics);
+        return outMetrics.widthPixels;
+    }
+
+    /**
+     * 屏幕高度
+     *
+     * @param context
+     * @return
+     */
+    private int getScreenHeight(Context context) {
+        WindowManager wm = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
+        DisplayMetrics outMetrics = new DisplayMetrics();
+        wm.getDefaultDisplay().getMetrics(outMetrics);
+        return outMetrics.heightPixels;
     }
 }

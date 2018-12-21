@@ -43,6 +43,9 @@ public class RKViewAnimationBase {
     private boolean isAnimationEffect = true;//是否点击执行动画
     private boolean onclickable = true;       //是否可以点击
 
+    private Paint roundPaint;
+    private Paint imagePaint;
+
     public RKViewAnimationBase(View view, AttributeSet attributeSet) {
         this.view = view;
         TypedArray ta = view.getContext().obtainStyledAttributes(attributeSet, R.styleable.rkframe);
@@ -80,14 +83,17 @@ public class RKViewAnimationBase {
         mPaint.setAntiAlias(true);
         ta.recycle();//为了保持以后使用的一致性，需要回收
         view.setOnLongClickListener(view1 -> true);
+        roundPaint = new Paint();
+        roundPaint.setColor(Color.WHITE);
+        roundPaint.setAntiAlias(true);
+        roundPaint.setStyle(Paint.Style.FILL);
+        roundPaint.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.DST_OUT));
+        imagePaint = new Paint();
+        imagePaint.setXfermode(null);
     }
 
     public void onSizeChanged(int w, int h) {
         RectF areas = new RectF();
-        //        areas.left = view.getPaddingLeft();
-        //        areas.top = view.getPaddingTop();
-        //        areas.right = w - view.getPaddingRight();
-        //        areas.bottom = h - view.getPaddingBottom();
         areas.left = 0;
         areas.top = 0;
         areas.right = w;
@@ -110,7 +116,7 @@ public class RKViewAnimationBase {
     }
 
     public void draw(Canvas canvas) {
-        canvas.saveLayer(new RectF(0, 0, canvas.getWidth(), canvas.getHeight()), null, Canvas
+        canvas.saveLayer(new RectF(0, 0, canvas.getWidth(), canvas.getHeight()), imagePaint, Canvas
                 .ALL_SAVE_FLAG);
     }
 
@@ -120,13 +126,96 @@ public class RKViewAnimationBase {
             mPaint.setStrokeWidth(mStrokeWidth * 2);
             mPaint.setColor(mStrokeColor);
             mPaint.setStyle(Paint.Style.STROKE);
-            canvas.drawPath(mClipPath, mPaint);
+            Path path = new Path();
+            path.moveTo(0, 0);
+            path.lineTo(view.getWidth(), 0);
+            path.lineTo(view.getWidth(), view.getHeight());
+            path.lineTo(0, view.getHeight());
+            path.lineTo(0, 0);
+            canvas.drawPath(path, mPaint);
         }
-        mPaint.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.DST_IN));
-        mPaint.setColor(Color.WHITE);
-        mPaint.setStyle(Paint.Style.FILL);
-        canvas.drawPath(mClipPath, mPaint);
+        if (mRoundAsCircle) {
+            float d = view.getWidth() >= view.getHeight() ? view.getHeight() : view.getWidth();
+            float r = d / 2;
+            drawTopLeft(canvas, r);
+            drawTopRight(canvas, r);
+            drawBottomLeft(canvas, r);
+            drawBottomRight(canvas, r);
+        } else {
+            drawTopLeft(canvas, radii[0]);
+            drawTopRight(canvas, radii[2]);
+            drawBottomLeft(canvas, radii[6]);
+            drawBottomRight(canvas, radii[4]);
+        }
         canvas.restore();
+    }
+
+    private void drawTopLeft(Canvas canvas, float r) {
+        if (r > 0) {
+            Path path = new Path();
+            path.moveTo(0, r);
+            path.lineTo(0, 0);
+            path.lineTo(r, 0);
+            path.arcTo(new RectF(0, 0, r * 2, r * 2),
+                    -90, -90);
+            path.close();
+            if (mStrokeWidth > 0) {
+                canvas.drawPath(path, mPaint);
+            }
+            canvas.drawPath(path, roundPaint);
+        }
+    }
+
+    private void drawTopRight(Canvas canvas, float r) {
+        if (r > 0) {
+            int width = view.getWidth();
+            Path path = new Path();
+            path.moveTo(width - r, 0);
+            path.lineTo(width, 0);
+            path.lineTo(width, r);
+            path.arcTo(new RectF(width - 2 * r, 0, width,
+                    r * 2), 0, -90);
+            path.close();
+            if (mStrokeWidth > 0) {
+                canvas.drawPath(path, mPaint);
+            }
+            canvas.drawPath(path, roundPaint);
+        }
+    }
+
+    private void drawBottomLeft(Canvas canvas, float r) {
+        if (r > 0) {
+            int height = view.getHeight();
+            Path path = new Path();
+            path.moveTo(0, height - r);
+            path.lineTo(0, height);
+            path.lineTo(r, height);
+            path.arcTo(new RectF(0, height - 2 * r,
+                    r * 2, height), 90, 90);
+            path.close();
+            if (mStrokeWidth > 0) {
+                canvas.drawPath(path, mPaint);
+            }
+            canvas.drawPath(path, roundPaint);
+        }
+    }
+
+    private void drawBottomRight(Canvas canvas, float r) {
+        if (r > 0) {
+            int height = view.getHeight();
+            int width = view.getWidth();
+            Path path = new Path();
+            path.moveTo(width - r, height);
+            path.lineTo(width, height);
+            path.lineTo(width, height - r);
+            path.arcTo(new RectF(width - 2 * r, height - 2
+                    * r, width, height), 0, 90);
+            path.close();
+            if (mStrokeWidth > 0) {
+                canvas.drawPath(path, mPaint);
+            }
+            canvas.drawPath(path, roundPaint);
+        }
     }
 
     public void onTouchEvent(MotionEvent ev) {
