@@ -82,10 +82,14 @@ public class RKAppManager {
      * 结束指定类名的Activity
      */
     public void finishActivity(Class<?> cls) {
+        List<Activity> integers = new ArrayList<>();
         for (Activity activity : activityStack) {
             if (activity.getClass().equals(cls)) {
-                finishActivity(activity);
+                integers.add(activity);
             }
+        }
+        for (Activity integer : integers) {
+            finishActivity(integer);
         }
     }
 
