@@ -4,8 +4,6 @@ group='com.github.RukingCheng'
 
 android {
     compileSdkVersion versions.compileSdk
-    buildToolsVersion versions.buildTools
-
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
@@ -26,7 +24,6 @@ android {
     lintOptions {
         abortOnError false
     }
-    buildToolsVersion '28.0.3'
 }
 
 dependencies {
