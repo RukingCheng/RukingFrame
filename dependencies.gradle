@@ -4,7 +4,7 @@ ext.versions = [
         publishVersion    : '1.0',
         publishVersionCode: 1,
 
-        supportLib        : '27.0.3',
+        supportLib        : '27.1.1',
         eventbus          : '3.1.1',
         slidableactivity  : '2.0.6',
         butterKnife       : '8.8.1'
