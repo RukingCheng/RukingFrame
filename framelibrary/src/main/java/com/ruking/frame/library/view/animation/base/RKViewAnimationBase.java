@@ -36,12 +36,12 @@ public class RKViewAnimationBase {
     private float[] radii = new float[8];   // top-left, top-right, bottom-right, bottom-left
     private Path mClipPath;                 // 剪裁区域路径
     private Paint mPaint;                   // 画笔
-    private boolean mRoundAsCircle = false; // 圆形
+    private boolean mRoundAsCircle; // 圆形
     private int mStrokeColor;               // 描边颜色
     private int mStrokeWidth;               // 描边半径
     private Region mAreaRegion;             // 内容区域
-    private boolean isAnimationEffect = true;//是否点击执行动画
-    private boolean onclickable = true;       //是否可以点击
+    private boolean isAnimationEffect;//是否点击执行动画
+    private boolean onclickable;       //是否可以点击
 
     private Paint roundPaint;
     private Paint imagePaint;
@@ -121,101 +121,59 @@ public class RKViewAnimationBase {
     }
 
     public void drawOff(Canvas canvas) {
+        Path path = new Path();
+        if (mRoundAsCircle) {
+            float d = view.getWidth() >= view.getHeight() ? view.getHeight() : view.getWidth();
+            float r = d / 2 - AutoUtils.getPercentWidth1px();
+            float wP = view.getWidth() / 2 - r;
+            float hP = view.getHeight() / 2 - r;
+            path.moveTo(0, r + hP);
+            path.lineTo(0, 0);
+            path.lineTo(r + wP, 0);
+            path.lineTo(r + wP, hP);
+            path.arcTo(new RectF(wP, hP, view.getWidth() - wP, view.getHeight() - hP),
+                    -90, -359);
+            path.lineTo(r + wP, hP);
+            path.lineTo(r + wP, 0);
+            path.lineTo(view.getWidth(), 0);
+            path.lineTo(view.getWidth(), view.getHeight());
+            path.lineTo(0, view.getHeight());
+        } else {
+            path.moveTo(0, radii[0]);
+            path.lineTo(0, 0);
+            path.lineTo(radii[0], 0);
+            path.arcTo(new RectF(0, 0, radii[0] * 2, radii[0] * 2),
+                    -90, -90);
+            path.lineTo(0, radii[0]);
+            path.lineTo(0, view.getHeight() - radii[6]);
+            path.arcTo(new RectF(0, view.getHeight() - radii[6] * 2, radii[6] * 2, view.getHeight()),
+                    -180, -90);
+            path.lineTo(radii[6], view.getHeight());
+            path.lineTo(view.getWidth() - radii[4], view.getHeight());
+            path.arcTo(new RectF(view.getWidth() - radii[4] * 2, view.getHeight() - radii[4] * 2,
+                            view.getWidth(), view.getHeight()),
+                    -270, -90);
+            path.lineTo(view.getWidth(), view.getHeight() - radii[4]);
+            path.lineTo(view.getWidth(), radii[2]);
+            path.arcTo(new RectF(view.getWidth() - radii[2] * 2, 0,
+                            view.getWidth(), radii[2] * 2),
+                    -360, -90);
+            path.lineTo(view.getWidth() - radii[2], 0);
+            path.lineTo(radii[0], 0);
+            path.lineTo(view.getWidth(), 0);
+            path.lineTo(view.getWidth(), view.getHeight());
+            path.lineTo(0, view.getHeight());
+        }
+        path.close();
         if (mStrokeWidth > 0) {
             mPaint.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.SRC_OVER));
             mPaint.setStrokeWidth(mStrokeWidth * 2);
             mPaint.setColor(mStrokeColor);
             mPaint.setStyle(Paint.Style.STROKE);
-            Path path = new Path();
-            path.moveTo(0, 0);
-            path.lineTo(view.getWidth(), 0);
-            path.lineTo(view.getWidth(), view.getHeight());
-            path.lineTo(0, view.getHeight());
-            path.lineTo(0, 0);
             canvas.drawPath(path, mPaint);
         }
-        if (mRoundAsCircle) {
-            float d = view.getWidth() >= view.getHeight() ? view.getHeight() : view.getWidth();
-            float r = d / 2;
-            drawTopLeft(canvas, r);
-            drawTopRight(canvas, r);
-            drawBottomLeft(canvas, r);
-            drawBottomRight(canvas, r);
-        } else {
-            drawTopLeft(canvas, radii[0]);
-            drawTopRight(canvas, radii[2]);
-            drawBottomLeft(canvas, radii[6]);
-            drawBottomRight(canvas, radii[4]);
-        }
+        canvas.drawPath(path, roundPaint);
         canvas.restore();
-    }
-
-    private void drawTopLeft(Canvas canvas, float r) {
-        if (r > 0) {
-            Path path = new Path();
-            path.moveTo(0, r);
-            path.lineTo(0, 0);
-            path.lineTo(r, 0);
-            path.arcTo(new RectF(0, 0, r * 2, r * 2),
-                    -90, -90);
-            path.close();
-            if (mStrokeWidth > 0) {
-                canvas.drawPath(path, mPaint);
-            }
-            canvas.drawPath(path, roundPaint);
-        }
-    }
-
-    private void drawTopRight(Canvas canvas, float r) {
-        if (r > 0) {
-            int width = view.getWidth();
-            Path path = new Path();
-            path.moveTo(width - r, 0);
-            path.lineTo(width, 0);
-            path.lineTo(width, r);
-            path.arcTo(new RectF(width - 2 * r, 0, width,
-                    r * 2), 0, -90);
-            path.close();
-            if (mStrokeWidth > 0) {
-                canvas.drawPath(path, mPaint);
-            }
-            canvas.drawPath(path, roundPaint);
-        }
-    }
-
-    private void drawBottomLeft(Canvas canvas, float r) {
-        if (r > 0) {
-            int height = view.getHeight();
-            Path path = new Path();
-            path.moveTo(0, height - r);
-            path.lineTo(0, height);
-            path.lineTo(r, height);
-            path.arcTo(new RectF(0, height - 2 * r,
-                    r * 2, height), 90, 90);
-            path.close();
-            if (mStrokeWidth > 0) {
-                canvas.drawPath(path, mPaint);
-            }
-            canvas.drawPath(path, roundPaint);
-        }
-    }
-
-    private void drawBottomRight(Canvas canvas, float r) {
-        if (r > 0) {
-            int height = view.getHeight();
-            int width = view.getWidth();
-            Path path = new Path();
-            path.moveTo(width - r, height);
-            path.lineTo(width, height);
-            path.lineTo(width, height - r);
-            path.arcTo(new RectF(width - 2 * r, height - 2
-                    * r, width, height), 0, 90);
-            path.close();
-            if (mStrokeWidth > 0) {
-                canvas.drawPath(path, mPaint);
-            }
-            canvas.drawPath(path, roundPaint);
-        }
     }
 
     public void onTouchEvent(MotionEvent ev) {

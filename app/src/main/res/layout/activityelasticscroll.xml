@@ -158,7 +158,7 @@
                 <com.ruking.frame.library.view.animation.RKAnimationButton
                     android:id="@+id/but_06"
                     style="?android:attr/borderlessButtonStyle"
-                    android:layout_width="120px"
+                    android:layout_width="160px"
                     android:layout_height="120px"
                     android:layout_margin="20px"
                     android:background="#55BB22"
@@ -337,7 +337,7 @@
 
                 <com.ruking.frame.library.view.animation.RKAnimationLinearLayout
                     android:layout_width="120px"
-                    android:layout_height="120px"
+                    android:layout_height="160px"
                     android:layout_margin="20px"
                     android:background="#e25f43"
                     android:gravity="center"
