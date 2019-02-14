@@ -61,7 +61,6 @@ public class JCVideoPlayerStandard extends JCVideoPlayer {
         thumbImageView = findViewById(R.id.thumb);
         loadingProgressBar = findViewById(R.id.loading);
         tinyBackImageView = findViewById(R.id.back_tiny);
-//        findViewById(R.id.menuBut).setOnClickListener(this);
         thumbImageView.setOnClickListener(this);
         backButton.setOnClickListener(this);
         tinyBackImageView.setOnClickListener(this);
@@ -199,44 +198,6 @@ public class JCVideoPlayerStandard extends JCVideoPlayer {
             backPress();
         } else if (i == R.id.back_tiny) {
             backPress();
-//        } else if (i == R.id.menuBut) {
-//            if (TextUtils.isEmpty(url)) {
-//                return;
-//            }
-//            new Thread(() -> {
-//                try {
-//                    File file = new File(url);
-//                    String picPath = FileUtils.getSystemImagePath();
-//                    String dstPath = picPath + file.getName();
-//                    if (AttachmentStore.copy(url, dstPath) != -1) {
-//                        if (ContentResolverUtil.updateVideo
-//                                ((Activity) getContext(), dstPath)) {
-//                            ((Activity) getContext()).runOnUiThread(() -> {
-//                                try {
-//                                    ToastUtil.show(getContext(), R.string.save_to_device);
-//                                    Uri uri = Uri.fromFile(new File(dstPath));
-//                                    Intent intent1 = new Intent(Intent.ACTION_MEDIA_SCANNER_SCAN_FILE);
-//                                    intent1.setData(uri);
-//                                    getContext().sendBroadcast(intent1);
-//                                } catch (Exception e) {
-//                                    e.printStackTrace();
-//                                }
-//                            });
-//                            return;
-//                        }
-//                    }
-//                } catch (Exception e) {
-//                    e.printStackTrace();
-//                }
-//                ((Activity) getContext()).runOnUiThread(() -> {
-//                    try {
-//                        ToastUtil.show(getContext(),
-//                                "保存失败");
-//                    } catch (Exception e) {
-//                        e.printStackTrace();
-//                    }
-//                });
-//            }).start();
         }
     }
 

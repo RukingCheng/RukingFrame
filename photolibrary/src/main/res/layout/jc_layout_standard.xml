@@ -92,11 +92,12 @@
 
     <ImageView
         android:id="@+id/back_tiny"
-        android:layout_width="48px"
-        android:layout_height="48px"
+        android:layout_width="80px"
+        android:layout_height="80px"
         android:layout_marginLeft="12px"
         android:layout_marginTop="12px"
-        android:background="@mipmap/guanbi_w"
+        android:padding="20px"
+        android:src="@mipmap/back_x"
         android:visibility="visible"/>
 
     <com.zhy.autolayout.AutoLinearLayout
@@ -108,9 +109,10 @@
 
         <ImageView
             android:id="@+id/back"
-            android:layout_width="46px"
+            android:layout_width="80px"
             android:layout_height="match_parent"
-            android:paddingLeft="28px"
+            android:paddingLeft="30px"
+            android:paddingRight="30px"
             android:scaleType="centerInside"
             android:src="@drawable/umeng_socialize_back_icon"
             tools:ignore="RtlSymmetry"/>
@@ -120,10 +122,10 @@
             android:layout_width="0px"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:paddingLeft="20px"
             android:textColor="@android:color/white"
             android:textSize="36px"
-            tools:ignore="RtlSymmetry"/>
+            tools:ignore="RtlSymmetry"
+            tools:text="hhhhh"/>
 
         <com.ruking.frame.library.view.animation.RKAnimationButton
             android:id="@+id/menuBut"
