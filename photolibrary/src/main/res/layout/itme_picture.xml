@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="400px"
-    tools:ignore="PxUsage,RtlHardcoded">
+    tools:ignore="PxUsage,RtlHardcoded,ContentDescription">
 
     <ImageView
         android:id="@+id/image_view"
@@ -17,6 +17,16 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@drawable/rk_choice_item_bg"/>
+
+    <ImageView
+        android:id="@+id/start"
+        android:layout_width="40px"
+        android:layout_height="40px"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center_vertical"
+        android:src="@drawable/play_btn_select"
+        android:visibility="gone"/>
 
     <ImageView
         android:id="@+id/item_choose"

@@ -145,6 +145,7 @@ public class PhotoDemoActivity extends RKBaseActivity {
                                     .setBackgroundColorRes(R.color.colorPrimary)
                                     .setTextColorRes(android.R.color.white))
                             .setOnClickListener((dialog, button) -> {
+                                PictureSelectionCache.isVideo = true;
                                 startActivity(PictureSelectionModular.getPictureSelectionModularIntent
                                         (activity, PictureActivity.class, imageAttrs));
                                 dialog.dismiss();

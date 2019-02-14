@@ -95,7 +95,11 @@ public abstract class PictureSelectionAdapter extends RecyclerView.Adapter<Recyc
             }
             ImagesActivity.starImageAttrsActivity((Activity) mContext, imageAttrs2, position2, 1, what);
         });
-
+        if (attr.type == 1) {
+            descHolder.start.setVisibility(View.VISIBLE);
+        } else {
+            descHolder.start.setVisibility(View.GONE);
+        }
         descHolder.itemChoose.setOnClickListener(view -> {
             if (PictureSelectionCache.tempSelectBitmap.containsKey(attr.url)) {
                 attr.isSelected = false;
@@ -128,6 +132,7 @@ public abstract class PictureSelectionAdapter extends RecyclerView.Adapter<Recyc
         private ImageView imageView;
         private ImageView itemChoose;
         private View but;
+        private View start;
 
         @SuppressLint("CutPasteId")
         DescViewHolder(View itemView) {
@@ -135,6 +140,7 @@ public abstract class PictureSelectionAdapter extends RecyclerView.Adapter<Recyc
             this.imageView = itemView.findViewById(R.id.image_view);
             this.itemChoose = itemView.findViewById(R.id.item_choose);
             this.but = itemView.findViewById(R.id.but);
+            this.start = itemView.findViewById(R.id.start);
         }
     }
 

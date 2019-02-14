@@ -26,6 +26,7 @@ import com.photolibrary.R;
 import com.photolibrary.bean.ImageAttr;
 import com.photolibrary.listener.OnLongClickImageListener;
 import com.photolibrary.util.ColorUtil;
+import com.photolibrary.widget.jcvideoplayer.JCVideoPlayer;
 import com.ruking.frame.library.utils.RKWindowUtil;
 import com.ruking.frame.library.view.ToastUtil;
 import com.ruking.frame.library.view.animation.RKAnimationButton;
@@ -306,6 +307,9 @@ public class ImagesActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
+        if (JCVideoPlayer.backPress()) {
+            return;
+        }
         finishWithAnim();
     }
 

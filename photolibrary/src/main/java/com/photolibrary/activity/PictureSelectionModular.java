@@ -172,11 +172,15 @@ public class PictureSelectionModular {
         if (type >= contentList.size()) type = -1;
         if (type == -1) {
             for (int i = 0; i < contentList.size(); i++) {
-                dataList.addAll(contentList.get(i).imageList);
+                for (int j = contentList.get(i).imageList.size() - 1; j >= 0; j--) {
+                    dataList.add(contentList.get(i).imageList.get(j));
+                }
             }
             albumTv.setText(activity.getString(R.string.album_all) + "\t\t▼");
         } else {
-            dataList = contentList.get(type).imageList;
+            for (int i = contentList.get(type).imageList.size() - 1; i >= 0; i--) {
+                dataList.add(contentList.get(type).imageList.get(i));
+            }
             albumTv.setText(contentList.get(type).bucketName + "\t\t▼");
         }
         this.type = type;

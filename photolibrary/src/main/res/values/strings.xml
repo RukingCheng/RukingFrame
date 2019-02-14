@@ -5,4 +5,8 @@
     <string name="album_all">所有图片</string>
     <string name="album_complete">完成</string>
     <string name="album_err">请选择图片</string>
+
+    <string name="tips_not_wifi">您当前正在使用移动网络，继续播放将消耗流量</string>
+    <string name="tips_not_wifi_confirm">继续播放</string>
+    <string name="tips_not_wifi_cancel">停止播放</string>
 </resources>

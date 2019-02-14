@@ -12,6 +12,17 @@
         android:layout_height="match_parent"
         android:layout_centerInParent="true"/>
 
+    <ImageView
+        android:id="@+id/start"
+        android:layout_width="90px"
+        android:layout_height="90px"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center_vertical"
+        android:src="@drawable/play_btn_select"
+        android:visibility="gone"
+        tools:ignore="ContentDescription,PxUsage"/>
+
     <com.wang.avi.AVLoadingIndicatorView
         android:id="@+id/progressView"
         android:layout_width="80px"

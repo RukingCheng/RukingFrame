@@ -21,6 +21,7 @@ public class PictureSelectionCache {
     public static final int PICTURE_SELECTION_CACHE = 0xab123;
     public static Map<String, ImageAttr> tempSelectBitmap = new HashMap<>();
     public static int num = 9;
+    public static boolean isVideo = false;
     public static Activity activity;
 
     public static List<ImageAttr> getImagetAttr() {

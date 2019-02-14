@@ -3,9 +3,10 @@ package com.photolibrary.util;
 import android.content.ContentResolver;
 import android.content.Context;
 import android.database.Cursor;
-import android.provider.MediaStore.Images.Media;
+import android.provider.MediaStore;
 import android.provider.MediaStore.Images.Thumbnails;
 
+import com.photolibrary.PictureSelectionCache;
 import com.photolibrary.bean.ImageAttr;
 import com.photolibrary.bean.ImageBucket;
 
@@ -74,14 +75,33 @@ public class AlbumHelper {
 
     private void buildImagesBucketList() {
         getThumbnail();
-        String columns[] = new String[]{Media._ID, Media.BUCKET_ID, Media.PICASA_ID, Media.DATA, Media.DISPLAY_NAME,
-                Media.TITLE, Media.SIZE, Media.BUCKET_DISPLAY_NAME};
-        Cursor cur = cr.query(Media.EXTERNAL_CONTENT_URI, columns, null, null, null);
+        Cursor cur1 = cr.query(MediaStore.Images.Media.EXTERNAL_CONTENT_URI,
+                new String[]{MediaStore.Images.Media._ID, MediaStore.Images.Media.BUCKET_ID,
+                        MediaStore.Images.Media.DATA,
+                        MediaStore.Images.Media.DISPLAY_NAME,
+                        MediaStore.Images.Media.TITLE, MediaStore.Audio.Media.SIZE,
+                        MediaStore.Images.Media.BUCKET_DISPLAY_NAME},
+                null, null, null);
+        setData(cur1, 0);
+        if (PictureSelectionCache.isVideo) {
+            Cursor cur = cr.query(MediaStore.Video.Media.EXTERNAL_CONTENT_URI,
+                    new String[]{MediaStore.Video.Media._ID, MediaStore.Video.Media.BUCKET_ID,
+                            MediaStore.Video.Media.DATA,
+                            MediaStore.Video.Media.DISPLAY_NAME,
+                            MediaStore.Video.Media.TITLE, MediaStore.Audio.Media.SIZE,
+                            MediaStore.Video.Media.BUCKET_DISPLAY_NAME},
+                    null, null, null);
+            setData(cur, 1);
+        }
+        hasBuildImagesBucketList = true;
+    }
+
+    private void setData(Cursor cur, int type) {
         if (cur != null && cur.moveToFirst()) {
-            int photoIDIndex = cur.getColumnIndexOrThrow(Media._ID);
-            int photoPathIndex = cur.getColumnIndexOrThrow(Media.DATA);
-            int bucketDisplayNameIndex = cur.getColumnIndexOrThrow(Media.BUCKET_DISPLAY_NAME);
-            int bucketIdIndex = cur.getColumnIndexOrThrow(Media.BUCKET_ID);
+            int photoIDIndex = cur.getColumnIndexOrThrow(MediaStore.Video.Media._ID);
+            int photoPathIndex = cur.getColumnIndexOrThrow(MediaStore.Video.Media.DATA);
+            int bucketDisplayNameIndex = cur.getColumnIndexOrThrow(MediaStore.Video.Media.BUCKET_DISPLAY_NAME);
+            int bucketIdIndex = cur.getColumnIndexOrThrow(MediaStore.Video.Media.BUCKET_ID);
             do {
                 String _id = cur.getString(photoIDIndex);
                 String path = cur.getString(photoPathIndex);
@@ -98,12 +118,12 @@ public class AlbumHelper {
                 ImageAttr imageItem = new ImageAttr();
                 imageItem.imageId = _id;
                 imageItem.url = path;
+                imageItem.type = type;
                 imageItem.thumbnailUrl = thumbnailList.get(_id);
                 bucket.imageList.add(imageItem);
 
             } while (cur.moveToNext());
         }
-        hasBuildImagesBucketList = true;
     }
 
     public List<ImageBucket> getImagesBucketList(boolean refresh) {
