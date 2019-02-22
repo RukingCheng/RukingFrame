@@ -1,5 +1,6 @@
 package com.ruking.frame.library.utils;
 
+import android.annotation.SuppressLint;
 import android.net.ParseException;
 
 import java.text.SimpleDateFormat;
@@ -28,7 +29,6 @@ public class RKIDCardUtil {
      * 2 （2）计算模 Y = mod(S, 11) （3）通过模得到对应的校验码 Y: 0 1 2 3 4 5 6 7 8 9 10 校验码: 1 0
      * X 9 8 7 6 5 4 3 2
      */
-
     /**
      * 功能：身份证的有效验证
      *
@@ -51,12 +51,15 @@ public class RKIDCardUtil {
         // =======================(end)========================
 
         // ================ 数字 除最后以为都为数字 ================
-        if (IDStr.length() == 18) {
-            Ai = IDStr.substring(0, 17);
-        } else if (IDStr.length() == 15) {
-            Ai = IDStr.substring(0, 6) + "19" + IDStr.substring(6, 15);
+        switch (IDStr.length()){
+            case 18:
+                Ai = IDStr.substring(0, 17);
+                break;
+            case 15:
+                Ai = IDStr.substring(0, 6) + "19" + IDStr.substring(6, 15);
+                break;
         }
-        if (isNumeric(Ai) == false) {
+        if (!isNumeric(Ai)) {
             errorInfo = "身份证15位号码都应为数字 ; 18位号码除最后一位外，都应为数字。";
             return errorInfo;
         }
@@ -66,11 +69,12 @@ public class RKIDCardUtil {
         String strYear = Ai.substring(6, 10);// 年份
         String strMonth = Ai.substring(10, 12);// 月份
         String strDay = Ai.substring(12, 14);// 月份
-        if (isDate(strYear + "-" + strMonth + "-" + strDay) == false) {
+        if (!isDate(strYear + "-" + strMonth + "-" + strDay)) {
             errorInfo = "身份证生日无效。";
             return errorInfo;
         }
         GregorianCalendar gc = new GregorianCalendar();
+        @SuppressLint("SimpleDateFormat")
         SimpleDateFormat s = new SimpleDateFormat("yyyy-MM-dd");
         try {
             if ((gc.get(Calendar.YEAR) - Integer.parseInt(strYear)) > 150
@@ -114,7 +118,7 @@ public class RKIDCardUtil {
         Ai = Ai + strVerifyCode;
 
         if (IDStr.length() == 18) {
-            if (Ai.equals(IDStr) == false) {
+            if (!Ai.equals(IDStr)) {
                 errorInfo = "身份证无效，不是合法的身份证号码";
                 return errorInfo;
             }
@@ -179,11 +183,7 @@ public class RKIDCardUtil {
     private boolean isNumeric(String str) {
         Pattern pattern = Pattern.compile("[0-9]*");
         Matcher isNum = pattern.matcher(str);
-        if (isNum.matches()) {
-            return true;
-        } else {
-            return false;
-        }
+        return isNum.matches();
     }
 
     /**
@@ -196,11 +196,7 @@ public class RKIDCardUtil {
         Pattern pattern = Pattern
                 .compile("^((\\d{2}(([02468][048])|([13579][26]))[\\-\\/\\s]?((((0?[13578])|(1[02]))[\\-\\/\\s]?((0?[1-9])|([1-2][0-9])|(3[01])))|(((0?[469])|(11))[\\-\\/\\s]?((0?[1-9])|([1-2][0-9])|(30)))|(0?2[\\-\\/\\s]?((0?[1-9])|([1-2][0-9])))))|(\\d{2}(([02468][1235679])|([13579][01345789]))[\\-\\/\\s]?((((0?[13578])|(1[02]))[\\-\\/\\s]?((0?[1-9])|([1-2][0-9])|(3[01])))|(((0?[469])|(11))[\\-\\/\\s]?((0?[1-9])|([1-2][0-9])|(30)))|(0?2[\\-\\/\\s]?((0?[1-9])|(1[0-9])|(2[0-8]))))))(\\s(((0?[0-9])|([1-2][0-3]))\\:([0-5]?[0-9])((\\s)|(\\:([0-5]?[0-9])))))?$");
         Matcher m = pattern.matcher(strDate);
-        if (m.matches()) {
-            return true;
-        } else {
-            return false;
-        }
+        return m.matches();
     }
 
 //    public static void main(String[] args) throws ParseException {
