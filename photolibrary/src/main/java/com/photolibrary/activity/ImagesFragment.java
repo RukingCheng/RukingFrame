@@ -1,6 +1,7 @@
 package com.photolibrary.activity;
 
 import android.annotation.SuppressLint;
+import android.graphics.BitmapFactory;
 import android.graphics.PointF;
 import android.net.Uri;
 import android.os.Bundle;
@@ -24,6 +25,7 @@ import com.photolibrary.R;
 import com.photolibrary.bean.ImageAttr;
 import com.photolibrary.util.GlideUtil;
 import com.photolibrary.widget.jcvideoplayer.JCVideoPlayerStandard;
+import com.ruking.frame.library.utils.RKWindowUtil;
 import com.ruking.frame.library.view.ToastUtil;
 
 import java.io.File;
@@ -88,8 +90,19 @@ public class ImagesFragment extends Fragment {
                         // 将保存的图片地址给SubsamplingScaleImageView,这里注意设置ImageViewState设置初始显示比例
                         if (progressView != null)
                             progressView.setVisibility(View.GONE);
+                        //获取Options对象
+                        BitmapFactory.Options options = new BitmapFactory.Options();
+                        //仅做解码处理，不加载到内存
+                        options.inJustDecodeBounds = true;
+                        //解析文件
+                        BitmapFactory.decodeFile(resource.getAbsolutePath(), options);
+                        //获取宽高
+                        float imgWidth = options.outWidth;
+                        float pWidth = imgWidth;
+                        if (getActivity() != null)
+                            pWidth = RKWindowUtil.getScreenWidth(getActivity());
                         subsamplingScaleImageView.setImage(ImageSource.uri(Uri.fromFile(resource)), new
-                                ImageViewState(1F, new PointF(0, 0), 0));
+                                ImageViewState(pWidth / imgWidth, new PointF(0, 0), 0));
 
                     }
                 });
