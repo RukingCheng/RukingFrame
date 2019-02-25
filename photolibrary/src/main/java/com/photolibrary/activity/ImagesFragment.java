@@ -24,7 +24,6 @@ import com.photolibrary.R;
 import com.photolibrary.bean.ImageAttr;
 import com.photolibrary.util.GlideUtil;
 import com.photolibrary.widget.jcvideoplayer.JCVideoPlayerStandard;
-import com.ruking.frame.library.utils.Logger;
 import com.ruking.frame.library.view.ToastUtil;
 
 import java.io.File;
@@ -79,7 +78,6 @@ public class ImagesFragment extends Fragment {
             }
         }
         if (url != null) {
-            Logger.e("demo", url);
             if ((url.startsWith("http://") || url.startsWith("https://")) && (url.endsWith(".jpg") || url.endsWith(".JPG"))) {
                 photoView.setVisibility(View.GONE);
                 subsamplingScaleImageView.setVisibility(View.VISIBLE);
