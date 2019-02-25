@@ -12,6 +12,13 @@
         android:layout_height="match_parent"
         android:layout_centerInParent="true"/>
 
+    <com.davemorrissey.labs.subscaleview.SubsamplingScaleImageView
+        android:id="@+id/subsamplingScaleImageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:visibility="gone"/>
+
     <ImageView
         android:id="@+id/start"
         android:layout_width="90px"
