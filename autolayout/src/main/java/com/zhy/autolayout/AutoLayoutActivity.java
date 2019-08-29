@@ -1,12 +1,9 @@
 package com.zhy.autolayout;
 
 import android.content.Context;
-import android.content.res.Configuration;
 import android.support.v7.app.AppCompatActivity;
 import android.util.AttributeSet;
 import android.view.View;
-
-import com.zhy.autolayout.config.AutoLayoutConifg;
 
 public class AutoLayoutActivity extends AppCompatActivity {
     private static final String LAYOUT_LINEARLAYOUT = "LinearLayout";
@@ -59,9 +56,9 @@ public class AutoLayoutActivity extends AppCompatActivity {
         return super.onCreateView(name, context, attrs);
     }
 
-    @Override
-    public void onConfigurationChanged(Configuration newConfig) {
-        super.onConfigurationChanged(newConfig);
-        AutoLayoutConifg.newInstance(this);
-    }
+//    @Override
+//    public void onConfigurationChanged(Configuration newConfig) {
+//        AutoLayoutConifg.newInstance(this);
+//        super.onConfigurationChanged(newConfig);
+//    }
 }
