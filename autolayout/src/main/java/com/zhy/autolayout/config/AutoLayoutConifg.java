@@ -45,6 +45,9 @@ public class AutoLayoutConifg {
         return sIntance;
     }
 
+    public static void newInstance(Context context) {
+        sIntance.getMetaData(context);
+    }
 
     public int getScreenWidth() {
         return mScreenWidth;
