@@ -20,7 +20,9 @@ import com.photolibrary.util.GlideUtil;
 import com.ruking.frame.library.utils.RKWindowUtil;
 import com.ruking.frame.library.view.ToastUtil;
 
+import java.io.File;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 /**
@@ -41,6 +43,23 @@ public abstract class PictureSelectionAdapter extends RecyclerView.Adapter<Recyc
     }
 
     public void setImageAttrs(@NonNull List<ImageAttr> imageAttrs) {
+        Collections.sort(imageAttrs, (o1, o2) -> {
+            long time1 = 0;
+            long time2 = 0;
+            try {
+                File file = new File(o1.url);
+                time1 = file.lastModified();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+            try {
+                File file = new File(o2.url);
+                time2 = file.lastModified();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+            return Long.compare(time2, time1);
+        });
         this.imageAttrs = imageAttrs;
         notifyDataSetChanged();
     }

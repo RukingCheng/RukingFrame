@@ -15,6 +15,7 @@ public class ImageAttr implements Serializable {
     public int type;//0:图片，1：视频
 
     public String imageId;
+    public String name;
     public boolean isSelected = false;
 
 }

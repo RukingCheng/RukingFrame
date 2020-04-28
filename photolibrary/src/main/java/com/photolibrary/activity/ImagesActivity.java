@@ -15,6 +15,7 @@ import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.content.ContextCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
+import android.text.TextUtils;
 import android.view.View;
 import android.view.ViewTreeObserver;
 import android.widget.ImageView;
@@ -161,7 +162,7 @@ public class ImagesActivity extends AppCompatActivity {
         imageAttrs = (List<ImageAttr>) intent.getSerializableExtra(IMAGE_ATTR);
         curPosition = intent.getIntExtra(CUR_POSITION, 0);
         type = intent.getIntExtra(TYPE, 0);
-        tvTip.setText(String.format(getString(R.string.image_index), (curPosition + 1), imageAttrs.size()));
+        setTipText();
         viewPager = findViewById(R.id.viewPager);
         TestFragmentAdapter adapter = new TestFragmentAdapter(getSupportFragmentManager());
         viewPager.setAdapter(adapter);
@@ -205,7 +206,7 @@ public class ImagesActivity extends AppCompatActivity {
             @Override
             public void onPageSelected(int position) {
                 curPosition = position;
-                tvTip.setText(String.format(getString(R.string.image_index), (curPosition + 1), imageAttrs.size()));
+                setTipText();
                 if (type != 0) showImgeChoose();
             }
         });
@@ -271,6 +272,17 @@ public class ImagesActivity extends AppCompatActivity {
                 finish();
             });
         }
+    }
+
+    @SuppressLint("SetTextI18n")
+    private void setTipText() {
+        String text = "";
+        ImageAttr attr = imageAttrs.get(curPosition);
+        if (!TextUtils.isEmpty(attr.name)) {
+            text = attr.name + "\n";
+        }
+        tvTip.setText(text + String.format(getString(R.string.image_index), (curPosition + 1),
+                imageAttrs.size()));
     }
 
     private void showImgeChoose() {
