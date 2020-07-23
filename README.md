@@ -26,7 +26,7 @@
   
 ### 二维码扫一扫
 ``` 
-     implementation 'com.github.RukingCheng.RukingFrame:simplezxing:1.0.5.4'
+     implementation 'com.github.RukingCheng.RukingFrame:simplezxing:1.0.5.6'
 ```
      代码来源：[https://github.com/GuoJinyu/SimpleZXing](https://github.com/GuoJinyu/SimpleZXing)
 
