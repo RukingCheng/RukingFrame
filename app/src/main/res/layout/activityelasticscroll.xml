@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              xmlns:app="http://schemas.android.com/apk/res-auto"
-              xmlns:tools="http://schemas.android.com/tools"
-              android:id="@+id/whole_view"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent"
-              android:background="#fff"
-              android:orientation="vertical"
-              tools:ignore="TooManyViews,PxUsage,HardcodedText,ObsoleteLayoutParam,ContentDescription">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/whole_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:orientation="vertical"
+    tools:ignore="TooManyViews,PxUsage,HardcodedText,ObsoleteLayoutParam,ContentDescription">
 
     <com.ruking.frame.library.view.animation.RKElasticScrollView
         android:layout_width="match_parent"
@@ -32,12 +32,12 @@
                     android:layout_alignParentBottom="true"
                     android:contentDescription="@string/app_name"
                     android:scaleType="fitEnd"
-                    android:src="@drawable/test"/>
+                    android:src="@drawable/test" />
 
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="@color/color_e0e25f43"/>
+                    android:background="@color/color_e0e25f43" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -54,7 +54,7 @@
                         app:round_as_circle="true"
                         app:round_corner_bottom_right="0px"
                         app:stroke_color="#E39E83"
-                        app:stroke_width="4px"/>
+                        app:stroke_width="4px" />
                 </LinearLayout>
             </RelativeLayout>
 
@@ -66,7 +66,7 @@
                 android:gravity="center"
                 android:text="RKAnimationButton"
                 android:textColor="@android:color/white"
-                android:textSize="32px"/>
+                android:textSize="32px" />
 
             <com.ruking.frame.library.view.custom.RKFlowLayout
                 android:layout_width="match_parent"
@@ -86,7 +86,7 @@
                     app:round_corner="40px"
                     app:round_corner_top_left="0px"
                     app:stroke_color="#e00"
-                    app:stroke_width="2px"/>
+                    app:stroke_width="2px" />
 
                 <com.ruking.frame.library.view.animation.RKAnimationButton
                     android:id="@+id/but_02"
@@ -102,7 +102,7 @@
                     app:round_corner="40px"
                     app:round_corner_top_right="0px"
                     app:stroke_color="#e00"
-                    app:stroke_width="2px"/>
+                    app:stroke_width="2px" />
 
                 <com.ruking.frame.library.view.animation.RKAnimationButton
                     android:id="@+id/but_03"
@@ -118,7 +118,7 @@
                     app:round_corner="40px"
                     app:round_corner_bottom_left="0px"
                     app:stroke_color="#e00"
-                    app:stroke_width="2px"/>
+                    app:stroke_width="2px" />
 
                 <com.ruking.frame.library.view.animation.RKAnimationButton
                     android:id="@+id/but_04"
@@ -136,7 +136,7 @@
                     app:round_corner="40px"
                     app:round_corner_bottom_right="0px"
                     app:stroke_color="#e00"
-                    app:stroke_width="2px"/>
+                    app:stroke_width="2px" />
 
                 <com.ruking.frame.library.view.animation.RKAnimationButton
                     android:id="@+id/but_05"
@@ -153,7 +153,7 @@
                     app:onclickable="true"
                     app:round_corner="40px"
                     app:stroke_color="#e00"
-                    app:stroke_width="2px"/>
+                    app:stroke_width="2px" />
 
                 <com.ruking.frame.library.view.animation.RKAnimationButton
                     android:id="@+id/but_06"
@@ -168,7 +168,95 @@
                     android:textSize="30px"
                     app:round_as_circle="true"
                     app:stroke_color="#e00"
-                    app:stroke_width="2px"/>
+                    app:stroke_width="2px" />
+            </com.ruking.frame.library.view.custom.RKFlowLayout>
+
+            <com.ruking.frame.library.view.custom.RKFlowLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <View
+                    android:layout_width="300px"
+                    android:layout_height="60px"
+                    android:background="#000" />
+                <View
+                    android:layout_width="300px"
+                    android:layout_height="60px"
+                    android:background="#000" />
+
+                <View
+                    android:layout_width="300px"
+                    android:layout_height="40px"
+                    android:background="#555" />
+
+                <View
+                    android:layout_width="300px"
+                    android:layout_height="30px"
+                    android:background="#999" />
+
+                <View
+                    android:layout_width="300px"
+                    android:layout_height="30px"
+                    android:background="#132" />
+
+                <View
+                    android:layout_width="300px"
+                    android:layout_height="30px"
+                    android:background="#456" />
+
+                <View
+                    android:layout_width="300px"
+                    android:layout_height="30px"
+                    android:background="#876" />
+
+                <View
+                    android:layout_width="300px"
+                    android:layout_height="50px"
+                    android:background="#765" />
+
+                <View
+                    android:layout_width="300px"
+                    android:layout_height="50px"
+                    android:background="#6d4" />
+                <View
+                    android:layout_width="300px"
+                    android:layout_height="60px"
+                    android:background="#000" />
+
+                <View
+                    android:layout_width="300px"
+                    android:layout_height="40px"
+                    android:background="#555" />
+
+                <View
+                    android:layout_width="300px"
+                    android:layout_height="60px"
+                    android:background="#999" />
+
+                <View
+                    android:layout_width="300px"
+                    android:layout_height="30px"
+                    android:background="#132" />
+
+                <View
+                    android:layout_width="300px"
+                    android:layout_height="30px"
+                    android:background="#456" />
+
+                <View
+                    android:layout_width="300px"
+                    android:layout_height="30px"
+                    android:background="#876" />
+
+                <View
+                    android:layout_width="300px"
+                    android:layout_height="50px"
+                    android:background="#765" />
+
+                <View
+                    android:layout_width="300px"
+                    android:layout_height="50px"
+                    android:background="#6d4" />
             </com.ruking.frame.library.view.custom.RKFlowLayout>
 
             <TextView
@@ -179,7 +267,7 @@
                 android:gravity="center"
                 android:text="RKAnimationLinearLayout"
                 android:textColor="@android:color/white"
-                android:textSize="32px"/>
+                android:textSize="32px" />
 
             <com.ruking.frame.library.view.custom.RKFlowLayout
                 android:layout_width="match_parent"
@@ -203,7 +291,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="60px"
                         android:scaleType="fitCenter"
-                        android:src="@drawable/test"/>
+                        android:src="@drawable/test" />
 
                     <TextView
                         android:layout_width="match_parent"
@@ -213,7 +301,7 @@
                         android:gravity="center"
                         android:text="1"
                         android:textColor="@android:color/white"
-                        android:textSize="32px"/>
+                        android:textSize="32px" />
                 </com.ruking.frame.library.view.animation.RKAnimationLinearLayout>
 
                 <com.ruking.frame.library.view.animation.RKAnimationLinearLayout
@@ -233,7 +321,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="60px"
                         android:scaleType="fitCenter"
-                        android:src="@drawable/test"/>
+                        android:src="@drawable/test" />
 
                     <TextView
                         android:layout_width="match_parent"
@@ -243,7 +331,7 @@
                         android:gravity="center"
                         android:text="2"
                         android:textColor="@android:color/white"
-                        android:textSize="32px"/>
+                        android:textSize="32px" />
                 </com.ruking.frame.library.view.animation.RKAnimationLinearLayout>
 
                 <com.ruking.frame.library.view.animation.RKAnimationLinearLayout
@@ -263,7 +351,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="60px"
                         android:scaleType="fitCenter"
-                        android:src="@drawable/test"/>
+                        android:src="@drawable/test" />
 
                     <TextView
                         android:layout_width="match_parent"
@@ -273,7 +361,7 @@
                         android:gravity="center"
                         android:text="3"
                         android:textColor="@android:color/white"
-                        android:textSize="32px"/>
+                        android:textSize="32px" />
                 </com.ruking.frame.library.view.animation.RKAnimationLinearLayout>
 
                 <com.ruking.frame.library.view.animation.RKAnimationLinearLayout
@@ -293,7 +381,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="60px"
                         android:scaleType="fitCenter"
-                        android:src="@drawable/test"/>
+                        android:src="@drawable/test" />
 
                     <TextView
                         android:layout_width="match_parent"
@@ -303,7 +391,7 @@
                         android:gravity="center"
                         android:text="4"
                         android:textColor="@android:color/white"
-                        android:textSize="32px"/>
+                        android:textSize="32px" />
                 </com.ruking.frame.library.view.animation.RKAnimationLinearLayout>
 
                 <com.ruking.frame.library.view.animation.RKAnimationLinearLayout
@@ -322,7 +410,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="60px"
                         android:scaleType="fitCenter"
-                        android:src="@drawable/test"/>
+                        android:src="@drawable/test" />
 
                     <TextView
                         android:layout_width="match_parent"
@@ -332,7 +420,7 @@
                         android:gravity="center"
                         android:text="5"
                         android:textColor="@android:color/white"
-                        android:textSize="32px"/>
+                        android:textSize="32px" />
                 </com.ruking.frame.library.view.animation.RKAnimationLinearLayout>
 
                 <com.ruking.frame.library.view.animation.RKAnimationLinearLayout
@@ -350,7 +438,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="60px"
                         android:scaleType="fitCenter"
-                        android:src="@drawable/test"/>
+                        android:src="@drawable/test" />
 
                     <TextView
                         android:layout_width="match_parent"
@@ -360,7 +448,7 @@
                         android:gravity="center"
                         android:text="6"
                         android:textColor="@android:color/white"
-                        android:textSize="32px"/>
+                        android:textSize="32px" />
                 </com.ruking.frame.library.view.animation.RKAnimationLinearLayout>
             </com.ruking.frame.library.view.custom.RKFlowLayout>
 
@@ -372,7 +460,7 @@
                 android:gravity="center"
                 android:text="RKAnimationRelativeLayout"
                 android:textColor="@android:color/white"
-                android:textSize="32px"/>
+                android:textSize="32px" />
 
             <com.ruking.frame.library.view.custom.RKFlowLayout
                 android:layout_width="match_parent"
@@ -394,7 +482,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:scaleType="fitCenter"
-                        android:src="@drawable/test"/>
+                        android:src="@drawable/test" />
 
                     <TextView
                         android:layout_width="match_parent"
@@ -404,7 +492,7 @@
                         android:gravity="center"
                         android:text="1"
                         android:textColor="@android:color/white"
-                        android:textSize="32px"/>
+                        android:textSize="32px" />
                 </com.ruking.frame.library.view.animation.RKAnimationRelativeLayout>
 
                 <com.ruking.frame.library.view.animation.RKAnimationRelativeLayout
@@ -423,7 +511,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:scaleType="fitCenter"
-                        android:src="@drawable/test"/>
+                        android:src="@drawable/test" />
 
                     <TextView
                         android:layout_width="match_parent"
@@ -433,7 +521,7 @@
                         android:gravity="center"
                         android:text="2"
                         android:textColor="@android:color/white"
-                        android:textSize="32px"/>
+                        android:textSize="32px" />
                 </com.ruking.frame.library.view.animation.RKAnimationRelativeLayout>
 
                 <com.ruking.frame.library.view.animation.RKAnimationRelativeLayout
@@ -452,7 +540,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:scaleType="fitCenter"
-                        android:src="@drawable/test"/>
+                        android:src="@drawable/test" />
 
                     <TextView
                         android:layout_width="match_parent"
@@ -462,7 +550,7 @@
                         android:gravity="center"
                         android:text="3"
                         android:textColor="@android:color/white"
-                        android:textSize="32px"/>
+                        android:textSize="32px" />
                 </com.ruking.frame.library.view.animation.RKAnimationRelativeLayout>
 
                 <com.ruking.frame.library.view.animation.RKAnimationRelativeLayout
@@ -481,7 +569,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:scaleType="fitCenter"
-                        android:src="@drawable/test"/>
+                        android:src="@drawable/test" />
 
                     <TextView
                         android:layout_width="match_parent"
@@ -491,7 +579,7 @@
                         android:gravity="center"
                         android:text="4"
                         android:textColor="@android:color/white"
-                        android:textSize="32px"/>
+                        android:textSize="32px" />
                 </com.ruking.frame.library.view.animation.RKAnimationRelativeLayout>
 
                 <com.ruking.frame.library.view.animation.RKAnimationRelativeLayout
@@ -509,7 +597,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:scaleType="fitCenter"
-                        android:src="@drawable/test"/>
+                        android:src="@drawable/test" />
 
                     <TextView
                         android:layout_width="match_parent"
@@ -519,7 +607,7 @@
                         android:gravity="center"
                         android:text="5"
                         android:textColor="@android:color/white"
-                        android:textSize="32px"/>
+                        android:textSize="32px" />
                 </com.ruking.frame.library.view.animation.RKAnimationRelativeLayout>
 
                 <com.ruking.frame.library.view.animation.RKAnimationRelativeLayout
@@ -537,7 +625,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:scaleType="fitCenter"
-                        android:src="@drawable/test"/>
+                        android:src="@drawable/test" />
 
                     <TextView
                         android:layout_width="match_parent"
@@ -547,7 +635,7 @@
                         android:gravity="center"
                         android:text="6"
                         android:textColor="@android:color/white"
-                        android:textSize="32px"/>
+                        android:textSize="32px" />
                 </com.ruking.frame.library.view.animation.RKAnimationRelativeLayout>
 
             </com.ruking.frame.library.view.custom.RKFlowLayout>
@@ -560,7 +648,7 @@
                 android:gravity="center"
                 android:text="RKAnimationFrameLayout"
                 android:textColor="@android:color/white"
-                android:textSize="32px"/>
+                android:textSize="32px" />
 
             <com.ruking.frame.library.view.custom.RKFlowLayout
                 android:layout_width="match_parent"
@@ -582,7 +670,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/test"/>
+                        android:src="@drawable/test" />
 
                     <TextView
                         android:layout_width="match_parent"
@@ -593,7 +681,7 @@
                         android:gravity="center"
                         android:text="1"
                         android:textColor="@android:color/white"
-                        android:textSize="32px"/>
+                        android:textSize="32px" />
                 </com.ruking.frame.library.view.animation.RKAnimationFrameLayout>
 
                 <com.ruking.frame.library.view.animation.RKAnimationFrameLayout
@@ -612,7 +700,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/test"/>
+                        android:src="@drawable/test" />
 
                     <TextView
                         android:layout_width="match_parent"
@@ -623,7 +711,7 @@
                         android:gravity="center"
                         android:text="2"
                         android:textColor="@android:color/white"
-                        android:textSize="32px"/>
+                        android:textSize="32px" />
                 </com.ruking.frame.library.view.animation.RKAnimationFrameLayout>
 
                 <com.ruking.frame.library.view.animation.RKAnimationFrameLayout
@@ -642,7 +730,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/test"/>
+                        android:src="@drawable/test" />
 
                     <TextView
                         android:layout_width="match_parent"
@@ -653,7 +741,7 @@
                         android:gravity="center"
                         android:text="3"
                         android:textColor="@android:color/white"
-                        android:textSize="32px"/>
+                        android:textSize="32px" />
                 </com.ruking.frame.library.view.animation.RKAnimationFrameLayout>
 
                 <com.ruking.frame.library.view.animation.RKAnimationFrameLayout
@@ -672,7 +760,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/test"/>
+                        android:src="@drawable/test" />
 
                     <TextView
                         android:layout_width="match_parent"
@@ -683,7 +771,7 @@
                         android:gravity="center"
                         android:text="4"
                         android:textColor="@android:color/white"
-                        android:textSize="32px"/>
+                        android:textSize="32px" />
                 </com.ruking.frame.library.view.animation.RKAnimationFrameLayout>
 
                 <com.ruking.frame.library.view.animation.RKAnimationFrameLayout
@@ -701,7 +789,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/test"/>
+                        android:src="@drawable/test" />
 
                     <TextView
                         android:layout_width="match_parent"
@@ -712,7 +800,7 @@
                         android:gravity="center"
                         android:text="5"
                         android:textColor="@android:color/white"
-                        android:textSize="32px"/>
+                        android:textSize="32px" />
                 </com.ruking.frame.library.view.animation.RKAnimationFrameLayout>
 
                 <com.ruking.frame.library.view.animation.RKAnimationFrameLayout
@@ -730,7 +818,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/test"/>
+                        android:src="@drawable/test" />
 
                     <TextView
                         android:layout_width="match_parent"
@@ -741,7 +829,7 @@
                         android:gravity="center"
                         android:text="6"
                         android:textColor="@android:color/white"
-                        android:textSize="32px"/>
+                        android:textSize="32px" />
                 </com.ruking.frame.library.view.animation.RKAnimationFrameLayout>
 
             </com.ruking.frame.library.view.custom.RKFlowLayout>
@@ -754,7 +842,7 @@
                 android:gravity="center"
                 android:text="RKSinkingView"
                 android:textColor="@android:color/white"
-                android:textSize="32px"/>
+                android:textSize="32px" />
 
 
             <com.ruking.frame.library.view.animation.RKAnimationFrameLayout
@@ -777,7 +865,7 @@
                     app:maxProgress="100"
                     app:progressColor="#f09"
                     app:progressTextSize="60px"
-                    app:upColor="#90a39E83"/>
+                    app:upColor="#90a39E83" />
             </com.ruking.frame.library.view.animation.RKAnimationFrameLayout>
 
             <LinearLayout
@@ -799,7 +887,7 @@
                     android:textSize="20px"
                     app:round_as_circle="true"
                     app:stroke_color="#E39E83"
-                    app:stroke_width="2px"/>
+                    app:stroke_width="2px" />
 
                 <com.ruking.frame.library.view.animation.RKAnimationButton
                     android:id="@+id/but02"
@@ -814,7 +902,7 @@
                     android:textSize="20px"
                     app:round_as_circle="true"
                     app:stroke_color="#E39E83"
-                    app:stroke_width="2px"/>
+                    app:stroke_width="2px" />
             </LinearLayout>
 
             <com.ruking.frame.library.view.animation.RKAnimationButton
@@ -822,8 +910,8 @@
                 style="?android:attr/borderlessButtonStyle"
                 android:layout_width="160px"
                 android:layout_height="160px"
-                android:layout_marginBottom="40px"
                 android:layout_marginTop="40px"
+                android:layout_marginBottom="40px"
                 android:background="#55BB22"
                 android:text="BACK"
                 android:textAllCaps="false"
@@ -832,7 +920,7 @@
                 app:round_as_circle="true"
                 app:round_corner_bottom_right="0px"
                 app:stroke_color="#E39E83"
-                app:stroke_width="10px"/>
+                app:stroke_width="10px" />
         </LinearLayout>
     </com.ruking.frame.library.view.animation.RKElasticScrollView>
 

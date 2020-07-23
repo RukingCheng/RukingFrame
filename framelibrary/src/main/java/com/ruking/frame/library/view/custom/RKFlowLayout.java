@@ -131,6 +131,7 @@ public class RKFlowLayout extends AutoViewGroup {
                 // 将当前行的childView保存，然后开启新的ArrayList保存下一行的childView
                 mAllViews.add(lineViews);
                 lineWidth = 0;// 重置行宽
+                lineHeight = 0;
                 lineViews = new ArrayList<>();
             }
             //如果不需要换行，则累加
