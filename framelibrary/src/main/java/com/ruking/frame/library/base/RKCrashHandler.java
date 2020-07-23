@@ -128,7 +128,7 @@ public class RKCrashHandler implements UncaughtExceptionHandler {
         if (ex == null) {
             return false;
         }
-        final StringBuffer sb = new StringBuffer();
+        final StringBuilder sb = new StringBuilder();
         Writer writer = new StringWriter();
         PrintWriter printWriter = new PrintWriter(writer);
         ex.printStackTrace(printWriter);
