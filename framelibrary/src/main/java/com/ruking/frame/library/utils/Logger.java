@@ -34,6 +34,10 @@ public class Logger {
         showList();
     }
 
+    public static List<LoggerTag> getLoggerTags() {
+        return loggerTags;
+    }
+
     public static void clearAdapter() {
         adapters.clear();
     }

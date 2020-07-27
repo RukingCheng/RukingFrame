@@ -5,6 +5,8 @@ import android.app.Activity;
 import android.content.ClipData;
 import android.content.ClipboardManager;
 import android.content.Context;
+import android.os.Handler;
+import android.os.Message;
 import android.text.TextUtils;
 import android.view.MotionEvent;
 import android.view.View;
@@ -19,6 +21,8 @@ import com.ruking.frame.library.view.animation.RKAnimationButton;
 import com.zhy.autolayout.AutoFrameLayout;
 import com.zhy.autolayout.AutoLinearLayout;
 
+import java.util.List;
+
 /**
  * @author Ruking.Cheng
  * @descrilbe 日志可视化
@@ -31,20 +35,26 @@ public class RKLoggerViewUtil {
     private TextView mFrameTagText;
     private ScrollView mFrameTagScroll;
     private AutoLinearLayout mFrameTagLayout;
-    private LoggerAdapter mLoggerAdapter = loggerTags -> mActivity.runOnUiThread(new Runnable() {
-        public void run() {
-            StringBuilder sb = new StringBuilder();
-            for (int i = 0; i < loggerTags.size(); i++) {
-                LoggerTag loggerTag = loggerTags.get(i);
-                sb.append(loggerTag.getTag()).append("：").append(loggerTag.getMsg());
-                if (i != loggerTags.size() - 1) {
-                    sb.append("\n");
+    private LoggerAdapter mLoggerAdapter;
+
+    @SuppressLint("HandlerLeak")
+    private Handler eventProcessingHandler = new Handler() {
+        public void handleMessage(Message msg) {
+            mActivity.runOnUiThread(() -> {
+                List<LoggerTag> loggerTags = Logger.getLoggerTags();
+                StringBuilder sb = new StringBuilder();
+                for (int i = 0; i < loggerTags.size(); i++) {
+                    LoggerTag loggerTag = loggerTags.get(i);
+                    sb.append(loggerTag.getTag()).append("：").append(loggerTag.getMsg());
+                    if (i != loggerTags.size() - 1) {
+                        sb.append("\n");
+                    }
                 }
-            }
-            mFrameTagText.setText(sb.toString());
-            mFrameTagScroll.scrollTo(0, mFrameTagText.getBottom());
+                mFrameTagText.setText(sb.toString());
+                mFrameTagScroll.scrollTo(0, mFrameTagText.getBottom());
+            });
         }
-    });
+    };
 
     @SuppressLint("ClickableViewAccessibility")
     public RKLoggerViewUtil(Activity activity) {
@@ -78,6 +88,10 @@ public class RKLoggerViewUtil {
             }
             return true;
         });
+        mLoggerAdapter = loggerTags -> {
+            eventProcessingHandler.removeMessages(1);
+            eventProcessingHandler.sendEmptyMessageDelayed(1, 300);
+        };
     }
 
     public void onResume() {
