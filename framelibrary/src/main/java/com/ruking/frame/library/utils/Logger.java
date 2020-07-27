@@ -15,7 +15,7 @@ import java.util.List;
  * @date on 2017/8/23 8:54
  */
 public class Logger {
-
+    public static int logMaxSize = 100;
     public static int viewHeight = 0;
     //设为false关闭日志
     private static boolean LOG_ENABLE = false;
@@ -56,7 +56,7 @@ public class Logger {
 
     private static void addLoggerTagList(int i, String tag, String msg) {
         if (LOG_ENABLE_VIEW) {
-            if (loggerTags.size() > 100) {
+            if (loggerTags.size() > logMaxSize) {
                 loggerTags.remove(0);
             }
             loggerTags.add(new LoggerTag(i, tag, msg));

@@ -27,24 +27,28 @@ import com.zhy.autolayout.AutoLinearLayout;
  * @date on 2020-07-27 17:01
  */
 public class RKLoggerViewUtil {
+    private Activity mActivity;
     private TextView mFrameTagText;
     private ScrollView mFrameTagScroll;
     private AutoLinearLayout mFrameTagLayout;
-    private LoggerAdapter mLoggerAdapter = loggerTags -> {
-        StringBuilder sb = new StringBuilder();
-        for (int i = 0; i < loggerTags.size(); i++) {
-            LoggerTag loggerTag = loggerTags.get(i);
-            sb.append(loggerTag.getTag()).append("：").append(loggerTag.getMsg());
-            if (i != loggerTags.size() - 1) {
-                sb.append("\n");
+    private LoggerAdapter mLoggerAdapter = loggerTags -> mActivity.runOnUiThread(new Runnable() {
+        public void run() {
+            StringBuilder sb = new StringBuilder();
+            for (int i = 0; i < loggerTags.size(); i++) {
+                LoggerTag loggerTag = loggerTags.get(i);
+                sb.append(loggerTag.getTag()).append("：").append(loggerTag.getMsg());
+                if (i != loggerTags.size() - 1) {
+                    sb.append("\n");
+                }
             }
+            mFrameTagText.setText(sb.toString());
+            mFrameTagScroll.scrollTo(0, mFrameTagText.getBottom());
         }
-        mFrameTagText.setText(sb.toString());
-        mFrameTagScroll.scrollTo(0, mFrameTagText.getBottom());
-    };
+    });
 
     @SuppressLint("ClickableViewAccessibility")
     public RKLoggerViewUtil(Activity activity) {
+        mActivity = activity;
         RKAnimationButton frameTagBut01 = activity.findViewById(R.id.frame_tag_but01);
         RKAnimationButton frameTagBut02 = activity.findViewById(R.id.frame_tag_but02);
         AutoFrameLayout frameTagTipLayout = activity.findViewById(R.id.frame_tag_tip_layout);
