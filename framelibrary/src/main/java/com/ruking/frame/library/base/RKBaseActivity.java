@@ -20,6 +20,7 @@ import com.r0adkll.slidr.Slidr;
 import com.r0adkll.slidr.model.SlidrConfig;
 import com.r0adkll.slidr.model.SlidrPosition;
 import com.ruking.frame.library.R;
+import com.ruking.frame.library.utils.RKLoggerViewUtil;
 import com.ruking.frame.library.utils.RKWindowUtil;
 import com.zhy.autolayout.AutoLayoutActivity;
 
@@ -41,7 +42,7 @@ public abstract class RKBaseActivity extends AutoLayoutActivity {
     protected Activity activity = null;
     protected View viewStatusBarPlace;
     protected FrameLayout frameLayoutContentPlace;
-
+    private RKLoggerViewUtil mRKLoggerViewUtil;
 
     @TargetApi(Build.VERSION_CODES.ECLAIR)
     @Override
@@ -101,6 +102,7 @@ public abstract class RKBaseActivity extends AutoLayoutActivity {
             EventBus.getDefault().register(this);
         }
         RKAppManager.getAppManager().addActivity(this);
+        mRKLoggerViewUtil = new RKLoggerViewUtil(this);
     }
 
     protected void setSlidr() {
@@ -226,14 +228,23 @@ public abstract class RKBaseActivity extends AutoLayoutActivity {
             }
         } catch (Exception ignored) {
         }
+        mRKLoggerViewUtil.onPause();
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        mRKLoggerViewUtil.onResume();
+    }
 
     /**
      * 是否打开EventBus
      */
     public abstract boolean isBindEventBusHere();
 
+    public void initTag() {
+        mRKLoggerViewUtil.onResume();
+    }
 
     /**
      * 状态栏颜色

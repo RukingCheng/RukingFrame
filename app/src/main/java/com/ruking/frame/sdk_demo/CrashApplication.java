@@ -20,6 +20,7 @@ public class CrashApplication extends Application {
         mInstance = this;
         EventBus.builder().addIndex(new MyEventBusIndex()).installDefaultEventBus();
         Logger.setLogEnable(true);
+        Logger.setLogEnableView(true);
         RKCrashHandler.getInstance(this, MainActivity.class);
     }
 

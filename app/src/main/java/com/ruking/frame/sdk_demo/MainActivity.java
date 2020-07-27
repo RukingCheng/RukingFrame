@@ -18,6 +18,7 @@ import android.widget.ImageView;
 import com.photolibrary.activity.ImagesActivity;
 import com.ruking.frame.library.base.RKBaseActivity;
 import com.ruking.frame.library.base.RKTransitionMode;
+import com.ruking.frame.library.utils.Logger;
 import com.ruking.frame.sdk_demo.picturedemo.PhotoDemoActivity;
 import com.ruking.frame.sdk_demo.recycleviewdemo.LFRecyclerViewActivity;
 import com.ruking.frame.sdk_demo.shadow.ShadowActivity;
@@ -54,6 +55,7 @@ public class MainActivity extends RKBaseActivity
 
     @OnClick({R.id.LEFT, R.id.TOP, R.id.RIGHT, R.id.BOTTOM, R.id.SCALE, R.id.FADE, R.id.elasticScrollActivity, R.id.listView, R.id.CategoryActivity, R.id.dialogactivity})
     void OnClick(View view) {
+        Logger.e("会后悔", view.toString());
         int type = 0;
         switch (view.getId()) {
             case R.id.LEFT:
