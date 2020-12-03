@@ -73,7 +73,11 @@ public class RKAppManager {
     public void finishActivity(Activity activity) {
         if (activity != null) {
             activityStack.remove(activity);
-            activity.finish();
+            if (activity instanceof RKBaseActivity) {
+                ((RKBaseActivity) activity).superFinish();
+            } else {
+                activity.finish();
+            }
         }
     }
 

@@ -208,6 +208,10 @@ public abstract class RKBaseActivity extends AutoLayoutActivity {
         }
     }
 
+    public void superFinish() {
+        super.finish();
+    }
+
     @Override
     protected void onDestroy() {
         super.onDestroy();

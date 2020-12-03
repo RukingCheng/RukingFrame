@@ -2,12 +2,12 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/RukingFrame.iml" filepath="$PROJECT_DIR$/RukingFrame.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/autolayout/autolayout.iml" filepath="$PROJECT_DIR$/autolayout/autolayout.iml" />
-      <module fileurl="file://$PROJECT_DIR$/framelibrary/framelibrary.iml" filepath="$PROJECT_DIR$/framelibrary/framelibrary.iml" />
-      <module fileurl="file://$PROJECT_DIR$/photolibrary/photolibrary.iml" filepath="$PROJECT_DIR$/photolibrary/photolibrary.iml" />
-      <module fileurl="file://$PROJECT_DIR$/simplezxing/simplezxing.iml" filepath="$PROJECT_DIR$/simplezxing/simplezxing.iml" />
+      <module fileurl="file://$PROJECT_DIR$/RukingFrame.iml" filepath="$PROJECT_DIR$/RukingFrame.iml" group="RukingFrame" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" group="RukingFrame/app" />
+      <module fileurl="file://$PROJECT_DIR$/autolayout/autolayout.iml" filepath="$PROJECT_DIR$/autolayout/autolayout.iml" group="RukingFrame/autolayout" />
+      <module fileurl="file://$PROJECT_DIR$/framelibrary/framelibrary.iml" filepath="$PROJECT_DIR$/framelibrary/framelibrary.iml" group="RukingFrame/framelibrary" />
+      <module fileurl="file://$PROJECT_DIR$/photolibrary/photolibrary.iml" filepath="$PROJECT_DIR$/photolibrary/photolibrary.iml" group="RukingFrame/photolibrary" />
+      <module fileurl="file://$PROJECT_DIR$/simplezxing/simplezxing.iml" filepath="$PROJECT_DIR$/simplezxing/simplezxing.iml" group="RukingFrame/simplezxing" />
     </modules>
   </component>
 </project>
