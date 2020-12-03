@@ -5,6 +5,8 @@ import android.app.Activity;
 import android.app.ActivityManager;
 import android.content.Context;
 
+import com.ruking.frame.library.R;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Stack;
@@ -78,7 +80,7 @@ public class RKAppManager {
             } else {
                 activity.finish();
             }
-            activity.overridePendingTransition(0, 0);
+            activity.overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
         }
     }
 
