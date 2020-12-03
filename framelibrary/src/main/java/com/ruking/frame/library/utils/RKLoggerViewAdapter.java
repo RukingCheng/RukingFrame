@@ -1,6 +1,8 @@
 package com.ruking.frame.library.utils;
 
 import android.annotation.SuppressLint;
+import android.content.ClipData;
+import android.content.ClipboardManager;
 import android.content.Context;
 import android.graphics.Color;
 import android.support.annotation.NonNull;
@@ -13,6 +15,8 @@ import android.widget.TextView;
 
 import com.ruking.frame.library.R;
 import com.ruking.frame.library.bean.LoggerTag;
+import com.ruking.frame.library.view.ToastUtil;
+import com.zhy.autolayout.AutoLinearLayout;
 
 /**
  * @author Ruking.Cheng
@@ -59,6 +63,16 @@ public class RKLoggerViewAdapter extends RecyclerView.Adapter<RecyclerView.ViewH
                 descHolder.mItemText.setTextColor(Color.parseColor("#FFFFFF"));
                 break;
         }
+        descHolder.mItemLayout.setOnClickListener(v -> {
+            ClipboardManager cm = (ClipboardManager) mContext.getSystemService(Context.CLIPBOARD_SERVICE);
+            if (cm != null) {
+                // 创建普通字符型ClipData
+                ClipData mClipData = ClipData.newPlainText("Label", descHolder.mItemText.getText());
+                // 将ClipData内容放到系统剪贴板里。
+                cm.setPrimaryClip(mClipData);
+                ToastUtil.show(mContext, "复制成功");
+            }
+        });
     }
 
     @Override
@@ -70,12 +84,14 @@ public class RKLoggerViewAdapter extends RecyclerView.Adapter<RecyclerView.ViewH
     private static class DescViewHolder extends RecyclerView.ViewHolder {
         private ImageView mItemImag;
         private TextView mItemText;
+        private AutoLinearLayout mItemLayout;
 
         @SuppressLint("CutPasteId")
         DescViewHolder(View itemView) {
             super(itemView);
             mItemImag = itemView.findViewById(R.id.item_imag);
             mItemText = itemView.findViewById(R.id.item_text);
+            mItemLayout = itemView.findViewById(R.id.item_layout);
         }
     }
 
