@@ -78,6 +78,7 @@ public class RKAppManager {
             } else {
                 activity.finish();
             }
+            activity.overridePendingTransition(0, 0);
         }
     }
 
