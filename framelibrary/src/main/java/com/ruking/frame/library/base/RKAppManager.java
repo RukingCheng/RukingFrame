@@ -75,11 +75,7 @@ public class RKAppManager {
     public void finishActivity(Activity activity) {
         if (activity != null) {
             activityStack.remove(activity);
-            if (activity instanceof RKBaseActivity) {
-                ((RKBaseActivity) activity).superFinish();
-            } else {
-                activity.finish();
-            }
+            activity.finish();
             activity.overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
         }
     }
